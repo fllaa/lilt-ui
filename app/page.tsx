@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/registry/lilt/ui/badge";
 import { Button } from "@/registry/lilt/ui/button";
@@ -12,24 +13,24 @@ import { ScribbleArrow } from "@/registry/lilt/ui/icons";
 
 const traits = [
   {
-    title: "Borders, not shadows",
     description:
       "Hierarchy comes from 1px borders and warm surface shifts. Nothing floats, nothing looms.",
+    title: "Borders, not shadows",
   },
   {
-    title: "One gentle lift",
     description:
       "Hover movement is capped at 2px, and reduced-motion mode removes it entirely.",
+    title: "One gentle lift",
   },
   {
-    title: "Mint is a guest",
     description:
       "The pale mint accent is a swappable default. Rebrand by replacing four semantic tokens.",
+    title: "Mint is a guest",
   },
   {
-    title: "AAA-minded text",
     description:
       "Long-form text stays near-black on near-white. Pastels carry status and personality only.",
+    title: "AAA-minded text",
   },
 ];
 
@@ -46,8 +47,8 @@ export default function Home() {
           </h1>
           <p className="max-w-[52ch] text-lg leading-relaxed text-[var(--lilt-text-muted)]">
             Copy-paste React components built on Base UI and Tailwind v4,
-            wearing warm paper surfaces, hand-drawn icons, and a swappable
-            mint accent. Yours to own, edit, and rebrand.
+            wearing warm paper surfaces, hand-drawn icons, and a swappable mint
+            accent. Yours to own, edit, and rebrand.
           </p>
           <div className="flex flex-wrap items-end gap-6">
             <div className="flex flex-wrap items-center gap-3">

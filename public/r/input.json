@@ -3,14 +3,11 @@
   "name": "input",
   "title": "Input",
   "description": "Text input: 48px height, 16px radius, warm field surface, focus ring in Lilt green.",
-  "registryDependencies": [
-    "@lilt/theme",
-    "@lilt/utils"
-  ],
+  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
   "files": [
     {
       "path": "registry/lilt/ui/input.tsx",
-      "content": "import type { InputHTMLAttributes } from \"react\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Input({\n  className,\n  ...props\n}: InputHTMLAttributes<HTMLInputElement>) {\n  return (\n    <input\n      className={cn(\n        \"min-h-12 w-full rounded-[var(--radius-control)] border border-[var(--lilt-border)] bg-[var(--lilt-field)] px-4 text-base text-[var(--lilt-text)] outline-none transition-[border-color,background-color] placeholder:text-[var(--lilt-text-subtle)] hover:border-[var(--lilt-border-strong)] focus:border-[var(--lilt-focus)] focus:ring-2 focus:ring-[color-mix(in_oklab,var(--lilt-focus)_25%,transparent)] disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-[var(--lilt-danger)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "content": "import type { InputHTMLAttributes } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Input = ({\n  className,\n  ...props\n}: InputHTMLAttributes<HTMLInputElement>) => (\n  <input\n    className={cn(\n      \"min-h-12 w-full rounded-[var(--radius-control)] border border-[var(--lilt-border)] bg-[var(--lilt-field)] px-4 text-base text-[var(--lilt-text)] outline-none transition-[border-color,background-color] placeholder:text-[var(--lilt-text-subtle)] hover:border-[var(--lilt-border-strong)] focus:border-[var(--lilt-focus)] focus:ring-2 focus:ring-[color-mix(in_oklab,var(--lilt-focus)_25%,transparent)] disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-[var(--lilt-danger)]\",\n      className\n    )}\n    {...props}\n  />\n);\n",
       "type": "registry:ui"
     }
   ],

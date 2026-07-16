@@ -3,14 +3,11 @@
   "name": "label",
   "title": "Label",
   "description": "Form label in Lilt's small-semibold style.",
-  "registryDependencies": [
-    "@lilt/theme",
-    "@lilt/utils"
-  ],
+  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
   "files": [
     {
       "path": "registry/lilt/ui/label.tsx",
-      "content": "import type { LabelHTMLAttributes } from \"react\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Label({\n  className,\n  ...props\n}: LabelHTMLAttributes<HTMLLabelElement>) {\n  return (\n    <label\n      className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n      {...props}\n    />\n  );\n}\n",
+      "content": "import type { LabelHTMLAttributes } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Label = ({\n  className,\n  ...props\n}: LabelHTMLAttributes<HTMLLabelElement>) => (\n  // oxlint-disable-next-line jsx-a11y/label-has-associated-control -- passthrough primitive; callers supply htmlFor/id or wrap a control themselves\n  <label\n    className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n    {...props}\n  />\n);\n",
       "type": "registry:ui"
     }
   ],

@@ -3,17 +3,12 @@
   "name": "tooltip",
   "title": "Tooltip",
   "description": "Inverted-surface tooltip (near-black on light, near-white on dark). Share timing with one TooltipProvider per app.",
-  "dependencies": [
-    "@base-ui/react"
-  ],
-  "registryDependencies": [
-    "@lilt/theme",
-    "@lilt/utils"
-  ],
+  "dependencies": ["@base-ui/react"],
+  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
   "files": [
     {
       "path": "registry/lilt/ui/tooltip.tsx",
-      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Tooltip as BaseTooltip } from \"@base-ui/react/tooltip\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\n/** Wrap your app (or a subtree) once so tooltips share timing. */\nexport function TooltipProvider({\n  delay = 300,\n  ...props\n}: ComponentProps<typeof BaseTooltip.Provider>) {\n  return <BaseTooltip.Provider delay={delay} {...props} />;\n}\n\nexport function Tooltip(props: ComponentProps<typeof BaseTooltip.Root>) {\n  return <BaseTooltip.Root {...props} />;\n}\n\nexport function TooltipTrigger(\n  props: ComponentProps<typeof BaseTooltip.Trigger>,\n) {\n  return <BaseTooltip.Trigger {...props} />;\n}\n\nexport function TooltipContent({\n  children,\n  className,\n  sideOffset = 8,\n  ...props\n}: ComponentProps<typeof BaseTooltip.Positioner>) {\n  return (\n    <BaseTooltip.Portal>\n      <BaseTooltip.Positioner\n        className=\"z-50\"\n        sideOffset={sideOffset}\n        {...props}\n      >\n        <BaseTooltip.Popup\n          className={cn(\n            \"origin-[var(--transform-origin)] rounded-[var(--radius-control-sm)] bg-[var(--lilt-button)] px-3 py-1.5 text-sm font-medium text-[var(--lilt-button-text)] outline-none transition-[opacity,transform] duration-[var(--duration-fast)] ease-[var(--ease-out)] data-[starting-style]:scale-[0.985] data-[starting-style]:opacity-0 data-[ending-style]:scale-[0.985] data-[ending-style]:opacity-0\",\n            className,\n          )}\n        >\n          {children}\n        </BaseTooltip.Popup>\n      </BaseTooltip.Positioner>\n    </BaseTooltip.Portal>\n  );\n}\n",
+      "content": "\"use client\";\n\nimport { Tooltip as BaseTooltip } from \"@base-ui/react/tooltip\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\n/** Wrap your app (or a subtree) once so tooltips share timing. */\nexport const TooltipProvider = ({\n  delay = 300,\n  ...props\n}: ComponentProps<typeof BaseTooltip.Provider>) => (\n  <BaseTooltip.Provider delay={delay} {...props} />\n);\n\nexport const Tooltip = (props: ComponentProps<typeof BaseTooltip.Root>) => (\n  <BaseTooltip.Root {...props} />\n);\n\nexport const TooltipTrigger = (\n  props: ComponentProps<typeof BaseTooltip.Trigger>\n) => <BaseTooltip.Trigger {...props} />;\n\nexport const TooltipContent = ({\n  children,\n  className,\n  sideOffset = 8,\n  ...props\n}: ComponentProps<typeof BaseTooltip.Positioner>) => (\n  <BaseTooltip.Portal>\n    <BaseTooltip.Positioner className=\"z-50\" sideOffset={sideOffset} {...props}>\n      <BaseTooltip.Popup\n        className={cn(\n          \"origin-[var(--transform-origin)] rounded-[var(--radius-control-sm)] bg-[var(--lilt-button)] px-3 py-1.5 text-sm font-medium text-[var(--lilt-button-text)] outline-none transition-[opacity,transform] duration-[var(--duration-fast)] ease-[var(--ease-out)] data-[starting-style]:scale-[0.985] data-[starting-style]:opacity-0 data-[ending-style]:scale-[0.985] data-[ending-style]:opacity-0\",\n          className\n        )}\n      >\n        {children}\n      </BaseTooltip.Popup>\n    </BaseTooltip.Positioner>\n  </BaseTooltip.Portal>\n);\n",
       "type": "registry:ui"
     }
   ],

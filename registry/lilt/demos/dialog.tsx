@@ -15,14 +15,16 @@ import {
 export default function DialogDemo() {
   return (
     <Dialog>
-      <DialogTrigger render={<Button variant="secondary">Archive project</Button>} />
+      <DialogTrigger
+        render={<Button variant="secondary">Archive project</Button>}
+      />
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Archive this project?</DialogTitle>
         </DialogHeader>
         <DialogDescription>
-          It moves out of your workspace but nothing is deleted. You can
-          restore it any time from the archive.
+          It moves out of your workspace but nothing is deleted. You can restore
+          it any time from the archive.
         </DialogDescription>
         <DialogFooter>
           <DialogClose render={<Button>Archive it</Button>} />

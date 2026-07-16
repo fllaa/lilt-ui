@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/registry/lilt/ui/badge";
+import type { BadgeVariant } from "@/registry/lilt/ui/badge";
 import {
   Table,
   TableBody,
@@ -15,6 +16,16 @@ const projects = [
   { name: "Harbor", status: "Needs review", updated: "Yesterday" },
   { name: "Quilt", status: "Draft", updated: "3 days ago" },
 ];
+
+const statusVariant = (status: string): BadgeVariant => {
+  if (status === "Needs review") {
+    return "warning";
+  }
+  if (status === "Draft") {
+    return "outline";
+  }
+  return "default";
+};
 
 export default function TableDemo() {
   return (
@@ -32,15 +43,7 @@ export default function TableDemo() {
             <TableRow key={project.name}>
               <TableCell className="font-semibold">{project.name}</TableCell>
               <TableCell>
-                <Badge
-                  variant={
-                    project.status === "Needs review"
-                      ? "warning"
-                      : project.status === "Draft"
-                        ? "outline"
-                        : "default"
-                  }
-                >
+                <Badge variant={statusVariant(project.status)}>
                   {project.status}
                 </Badge>
               </TableCell>

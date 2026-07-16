@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+
 import { Button } from "@/registry/lilt/ui/button";
 
 export const metadata: Metadata = {
@@ -26,10 +27,10 @@ export default function DocsPage() {
           What is Lilt UI?
         </h1>
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
-          Lilt UI is a shadcn-compatible component registry for the Lilt
-          design language: precise structure, warm near-white and
-          neutral-charcoal surfaces, a swappable pale-mint accent, hand-drawn
-          icons, and restrained physical interaction.
+          Lilt UI is a shadcn-compatible component registry for the Lilt design
+          language: precise structure, warm near-white and neutral-charcoal
+          surfaces, a swappable pale-mint accent, hand-drawn icons, and
+          restrained physical interaction.
         </p>
       </header>
 
@@ -61,7 +62,10 @@ export default function DocsPage() {
         <ul className="grid gap-2 leading-relaxed text-[var(--lilt-text-muted)]">
           {rules.map((rule) => (
             <li className="flex gap-3" key={rule}>
-              <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-[var(--lilt-primary)]" />
+              <span
+                aria-hidden
+                className="mt-2 size-1.5 shrink-0 rounded-full bg-[var(--lilt-primary)]"
+              />
               {rule}
             </li>
           ))}

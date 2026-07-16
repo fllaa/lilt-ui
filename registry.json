@@ -127,10 +127,7 @@
       "type": "registry:lib",
       "title": "Utils",
       "description": "cn() class-merge helper used by every Lilt component.",
-      "dependencies": [
-        "clsx",
-        "tailwind-merge"
-      ],
+      "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
           "path": "registry/lilt/lib/utils.ts",
@@ -143,9 +140,7 @@
       "type": "registry:ui",
       "title": "Icons",
       "description": "Lilt's hand-drawn interface icon set.",
-      "registryDependencies": [
-        "@lilt/theme"
-      ],
+      "registryDependencies": ["@lilt/theme"],
       "files": [
         {
           "path": "registry/lilt/ui/icons.tsx",
@@ -158,9 +153,7 @@
       "type": "registry:ui",
       "title": "Theme Provider",
       "description": "Light/dark theme context with localStorage persistence and system-preference fallback.",
-      "registryDependencies": [
-        "@lilt/theme"
-      ],
+      "registryDependencies": ["@lilt/theme"],
       "files": [
         {
           "path": "registry/lilt/ui/theme-provider.tsx",
@@ -173,30 +166,21 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Pill-shaped for md/lg, 12px radius compact. Variants: primary, secondary, soft, danger. 2px hover lift.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/button.tsx",
           "type": "registry:ui"
         }
       ],
-      "dependencies": [
-        "@base-ui/react"
-      ]
+      "dependencies": ["@base-ui/react"]
     },
     {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
       "description": "Form label in Lilt's small-semibold style.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/label.tsx",
@@ -209,10 +193,7 @@
       "type": "registry:ui",
       "title": "Input",
       "description": "Text input: 48px height, 16px radius, warm field surface, focus ring in Lilt green.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/input.tsx",
@@ -225,10 +206,7 @@
       "type": "registry:ui",
       "title": "Textarea",
       "description": "Multi-line input matching the Input recipe.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/textarea.tsx",
@@ -241,10 +219,7 @@
       "type": "registry:ui",
       "title": "Card",
       "description": "Bordered surface card with optional interactive hover lift. Includes Header/Title/Description/Content/Footer.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/card.tsx",
@@ -257,10 +232,7 @@
       "type": "registry:ui",
       "title": "Badge",
       "description": "Pill badge. Pastel backgrounds always pair with AAA-minded text tokens.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/badge.tsx",
@@ -273,10 +245,7 @@
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "Loading placeholder using the secondary surface. Opacity-only pulse, reduced-motion friendly.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/skeleton.tsx",
@@ -289,11 +258,7 @@
       "type": "registry:ui",
       "title": "Alert",
       "description": "Status block with hand-drawn icon. Variants: info, success, warning, danger.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/alert.tsx",
@@ -306,11 +271,7 @@
       "type": "registry:ui",
       "title": "Breadcrumb",
       "description": "Breadcrumb navigation with Lilt's hand-drawn arrow separators.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/breadcrumb.tsx",
@@ -323,10 +284,7 @@
       "type": "registry:ui",
       "title": "Table",
       "description": "Semantic table with eyebrow-style headers inside a bordered, scrollable card.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/table.tsx",
@@ -339,10 +297,7 @@
       "type": "registry:ui",
       "title": "Segmented Nav",
       "description": "Pill-shaped page navigation bar. Renders links or buttons per item.",
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/segmented-nav.tsx",
@@ -355,14 +310,8 @@
       "type": "registry:ui",
       "title": "Checkbox",
       "description": "Base UI checkbox with Lilt skin: 24px rounded box, hand-drawn check, indeterminate minus.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/checkbox.tsx",
@@ -375,13 +324,8 @@
       "type": "registry:ui",
       "title": "Radio Group",
       "description": "Base UI radio group: round items with inner dot indicator.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/radio-group.tsx",
@@ -394,13 +338,8 @@
       "type": "registry:ui",
       "title": "Switch",
       "description": "Base UI switch: 48x28 pill track, mint when checked.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/switch.tsx",
@@ -413,14 +352,8 @@
       "type": "registry:ui",
       "title": "Field",
       "description": "Form field wiring labels, descriptions, and errors automatically (Base UI Field). Includes the 'Optional, no pressure' note.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/input"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/input"],
       "files": [
         {
           "path": "registry/lilt/ui/field.tsx",
@@ -433,14 +366,8 @@
       "type": "registry:ui",
       "title": "Select",
       "description": "Base UI select styled like Lilt inputs. Borderful popup, no shadows, dropdown positioning.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/select.tsx",
@@ -453,13 +380,8 @@
       "type": "registry:ui",
       "title": "Avatar",
       "description": "Round avatar with mint-soft initials fallback.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/avatar.tsx",
@@ -472,13 +394,8 @@
       "type": "registry:ui",
       "title": "Separator",
       "description": "Accessible 1px rule in both orientations.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/separator.tsx",
@@ -491,14 +408,8 @@
       "type": "registry:ui",
       "title": "Dialog",
       "description": "Base UI dialog in Lilt style: dialog radius, blurred green-black backdrop, eyebrow header, icon-only close. Borders, no shadows.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/dialog.tsx",
@@ -511,13 +422,8 @@
       "type": "registry:ui",
       "title": "Tooltip",
       "description": "Inverted-surface tooltip (near-black on light, near-white on dark). Share timing with one TooltipProvider per app.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/tooltip.tsx",
@@ -530,13 +436,8 @@
       "type": "registry:ui",
       "title": "Popover",
       "description": "Bordered surface popover with title and description parts.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/popover.tsx",
@@ -549,14 +450,8 @@
       "type": "registry:ui",
       "title": "Dropdown Menu",
       "description": "Base UI menu with Lilt popup skin: groups, checkbox items, submenus, danger items in muted brick red.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/dropdown-menu.tsx",
@@ -569,14 +464,8 @@
       "type": "registry:ui",
       "title": "Toast",
       "description": "Stacked, swipeable notifications. Exports a global toast manager plus a <Toaster /> to mount once.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/toast.tsx",
@@ -589,13 +478,8 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "Base UI tabs wearing the Lilt pill skin. For page-level navigation links, use segmented-nav instead.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
         {
           "path": "registry/lilt/ui/tabs.tsx",
@@ -608,14 +492,8 @@
       "type": "registry:ui",
       "title": "Accordion",
       "description": "Border-separated accordion with hand-drawn chevron and smooth height transition.",
-      "dependencies": [
-        "@base-ui/react"
-      ],
-      "registryDependencies": [
-        "@lilt/theme",
-        "@lilt/utils",
-        "@lilt/icons"
-      ],
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
           "path": "registry/lilt/ui/accordion.tsx",

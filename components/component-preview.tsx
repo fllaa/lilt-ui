@@ -1,22 +1,25 @@
 import fs from "node:fs";
 import path from "node:path";
+
 import { CodeBlock } from "@/components/code-block";
 import { demos } from "@/registry/lilt/demos";
 
-export function DemoFrame({ name }: { name: string }) {
+export const DemoFrame = ({ name }: { name: string }) => {
   const Demo = demos[name];
-  if (!Demo) return null;
+  if (!Demo) {
+    return null;
+  }
   return (
     <div className="flex min-h-64 items-center justify-center rounded-[var(--radius-card)] border border-[var(--lilt-border)] bg-[var(--lilt-canvas)] p-8">
       <Demo />
     </div>
   );
-}
+};
 
-export function ComponentPreview({ name }: { name: string }) {
+export const ComponentPreview = ({ name }: { name: string }) => {
   const source = fs.readFileSync(
     path.join(process.cwd(), "registry/lilt/demos", `${name}.tsx`),
-    "utf8",
+    "utf-8"
   );
 
   return (
@@ -33,4 +36,4 @@ export function ComponentPreview({ name }: { name: string }) {
       </details>
     </div>
   );
-}
+};

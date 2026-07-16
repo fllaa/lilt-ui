@@ -1,49 +1,42 @@
 "use client";
 
-import type { ComponentProps } from "react";
 import { Tooltip as BaseTooltip } from "@base-ui/react/tooltip";
+import type { ComponentProps } from "react";
+
 import { cn } from "@/registry/lilt/lib/utils";
 
 /** Wrap your app (or a subtree) once so tooltips share timing. */
-export function TooltipProvider({
+export const TooltipProvider = ({
   delay = 300,
   ...props
-}: ComponentProps<typeof BaseTooltip.Provider>) {
-  return <BaseTooltip.Provider delay={delay} {...props} />;
-}
+}: ComponentProps<typeof BaseTooltip.Provider>) => (
+  <BaseTooltip.Provider delay={delay} {...props} />
+);
 
-export function Tooltip(props: ComponentProps<typeof BaseTooltip.Root>) {
-  return <BaseTooltip.Root {...props} />;
-}
+export const Tooltip = (props: ComponentProps<typeof BaseTooltip.Root>) => (
+  <BaseTooltip.Root {...props} />
+);
 
-export function TooltipTrigger(
-  props: ComponentProps<typeof BaseTooltip.Trigger>,
-) {
-  return <BaseTooltip.Trigger {...props} />;
-}
+export const TooltipTrigger = (
+  props: ComponentProps<typeof BaseTooltip.Trigger>
+) => <BaseTooltip.Trigger {...props} />;
 
-export function TooltipContent({
+export const TooltipContent = ({
   children,
   className,
   sideOffset = 8,
   ...props
-}: ComponentProps<typeof BaseTooltip.Positioner>) {
-  return (
-    <BaseTooltip.Portal>
-      <BaseTooltip.Positioner
-        className="z-50"
-        sideOffset={sideOffset}
-        {...props}
+}: ComponentProps<typeof BaseTooltip.Positioner>) => (
+  <BaseTooltip.Portal>
+    <BaseTooltip.Positioner className="z-50" sideOffset={sideOffset} {...props}>
+      <BaseTooltip.Popup
+        className={cn(
+          "origin-[var(--transform-origin)] rounded-[var(--radius-control-sm)] bg-[var(--lilt-button)] px-3 py-1.5 text-sm font-medium text-[var(--lilt-button-text)] outline-none transition-[opacity,transform] duration-[var(--duration-fast)] ease-[var(--ease-out)] data-[starting-style]:scale-[0.985] data-[starting-style]:opacity-0 data-[ending-style]:scale-[0.985] data-[ending-style]:opacity-0",
+          className
+        )}
       >
-        <BaseTooltip.Popup
-          className={cn(
-            "origin-[var(--transform-origin)] rounded-[var(--radius-control-sm)] bg-[var(--lilt-button)] px-3 py-1.5 text-sm font-medium text-[var(--lilt-button-text)] outline-none transition-[opacity,transform] duration-[var(--duration-fast)] ease-[var(--ease-out)] data-[starting-style]:scale-[0.985] data-[starting-style]:opacity-0 data-[ending-style]:scale-[0.985] data-[ending-style]:opacity-0",
-            className,
-          )}
-        >
-          {children}
-        </BaseTooltip.Popup>
-      </BaseTooltip.Positioner>
-    </BaseTooltip.Portal>
-  );
-}
+        {children}
+      </BaseTooltip.Popup>
+    </BaseTooltip.Positioner>
+  </BaseTooltip.Portal>
+);

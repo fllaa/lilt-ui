@@ -16,17 +16,17 @@ import {
 } from "@/registry/lilt/ui/icons";
 
 const icons = [
-  { name: "SparkIcon", Icon: SparkIcon },
-  { name: "ArrowIcon", Icon: ArrowIcon },
-  { name: "ChevronIcon", Icon: ChevronIcon },
-  { name: "CheckIcon", Icon: CheckIcon },
-  { name: "CloseIcon", Icon: CloseIcon },
-  { name: "MinusIcon", Icon: MinusIcon },
-  { name: "MenuIcon", Icon: MenuIcon },
-  { name: "SunIcon", Icon: SunIcon },
-  { name: "MoonIcon", Icon: MoonIcon },
-  { name: "InfoIcon", Icon: InfoIcon },
-  { name: "WarningIcon", Icon: WarningIcon },
+  { Icon: SparkIcon, name: "SparkIcon" },
+  { Icon: ArrowIcon, name: "ArrowIcon" },
+  { Icon: ChevronIcon, name: "ChevronIcon" },
+  { Icon: CheckIcon, name: "CheckIcon" },
+  { Icon: CloseIcon, name: "CloseIcon" },
+  { Icon: MinusIcon, name: "MinusIcon" },
+  { Icon: MenuIcon, name: "MenuIcon" },
+  { Icon: SunIcon, name: "SunIcon" },
+  { Icon: MoonIcon, name: "MoonIcon" },
+  { Icon: InfoIcon, name: "InfoIcon" },
+  { Icon: WarningIcon, name: "WarningIcon" },
 ];
 
 export default function IconsDemo() {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { SegmentedNav } from "@/registry/lilt/ui/segmented-nav";
 
 const items = [

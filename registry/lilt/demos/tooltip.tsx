@@ -15,7 +15,12 @@ export default function TooltipDemo() {
       <Tooltip>
         <TooltipTrigger
           render={
-            <Button aria-label="Open menu" iconOnly size="sm" variant="secondary">
+            <Button
+              aria-label="Open menu"
+              iconOnly
+              size="sm"
+              variant="secondary"
+            >
               <MenuIcon size={16} />
             </Button>
           }

@@ -12,7 +12,9 @@ import {
 export default function PopoverDemo() {
   return (
     <Popover>
-      <PopoverTrigger render={<Button variant="secondary">What is Lilt?</Button>} />
+      <PopoverTrigger
+        render={<Button variant="secondary">What is Lilt?</Button>}
+      />
       <PopoverContent>
         <PopoverTitle>Precision with a playful rhythm</PopoverTitle>
         <PopoverDescription>

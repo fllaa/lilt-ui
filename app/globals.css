@@ -4,8 +4,10 @@
 /* Docs app only: prefer the next/font-loaded families over the literal
    stacks lilt.css declares for link-tag consumers. */
 @theme {
-  --font-display: var(--font-space-grotesk), "Space Grotesk", "DM Sans", sans-serif;
-  --font-sans: var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    var(--font-space-grotesk), "Space Grotesk", "DM Sans", sans-serif;
+  --font-sans:
+    var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Shiki dual-theme switching (docs code blocks). */

@@ -11,8 +11,8 @@ export default function ToastDemo() {
         <Button
           onClick={() =>
             toast.add({
-              title: "Nice. Everything is up to date.",
               description: "Your changes synced a moment ago.",
+              title: "Nice. Everything is up to date.",
             })
           }
           variant="soft"
@@ -22,12 +22,17 @@ export default function ToastDemo() {
         <Button
           onClick={() =>
             toast.promise(
-              new Promise((resolve) => setTimeout(resolve, 1600)),
+              // oxlint-disable-next-line promise/avoid-new -- wraps the timer-based setTimeout API, no async alternative exists
+              new Promise<void>((resolve) => {
+                setTimeout(() => {
+                  resolve();
+                }, 1600);
+              }),
               {
+                error: { title: "Publishing failed. Try again." },
                 loading: { title: "Publishing…" },
                 success: { title: "Published. Go take a walk." },
-                error: { title: "Publishing failed. Try again." },
-              },
+              }
             )
           }
           variant="secondary"

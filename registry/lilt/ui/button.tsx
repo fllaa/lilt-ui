@@ -1,25 +1,26 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { ArrowIcon } from "@/registry/lilt/ui/icons";
+import type { ReactNode } from "react";
+
 import { cn } from "@/registry/lilt/lib/utils";
+import { ArrowIcon } from "@/registry/lilt/ui/icons";
 
 const buttonVariants = {
+  danger:
+    "border-transparent bg-[var(--lilt-danger-soft)] text-[var(--lilt-danger-text)] hover:bg-[var(--lilt-danger-soft-hover)]",
   primary:
     "border-[var(--lilt-button-border)] bg-[var(--lilt-button)] text-[var(--lilt-button-text)] hover:bg-[var(--lilt-button-hover)]",
   secondary:
     "border-[var(--lilt-border-strong)] bg-transparent text-[var(--lilt-text)] hover:bg-[var(--lilt-surface-2)]",
   soft: "border-transparent bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)] hover:bg-[var(--lilt-primary)]",
-  danger:
-    "border-transparent bg-[var(--lilt-danger-soft)] text-[var(--lilt-danger-text)] hover:bg-[var(--lilt-danger-soft-hover)]",
 };
 
 const buttonSizes = {
-  sm: "min-h-10 rounded-[var(--radius-control-sm)] px-4 text-sm",
-  md: "min-h-12 rounded-full px-5 text-base",
   lg: "min-h-14 rounded-full px-6 text-base",
+  md: "min-h-12 rounded-full px-5 text-base",
+  sm: "min-h-10 rounded-[var(--radius-control-sm)] px-4 text-sm",
 };
 
 export type ButtonVariant = keyof typeof buttonVariants;
@@ -33,7 +34,7 @@ export interface ButtonProps extends useRender.ComponentProps<"button"> {
   variant?: ButtonVariant;
 }
 
-export function Button({
+export const Button = ({
   children,
   className,
   icon,
@@ -42,10 +43,9 @@ export function Button({
   size = "md",
   variant = "primary",
   ...props
-}: ButtonProps) {
-  return useRender({
+}: ButtonProps) =>
+  useRender({
     defaultTagName: "button",
-    render,
     props: mergeProps<"button">(
       {
         children: (
@@ -66,11 +66,11 @@ export function Button({
           buttonVariants[variant],
           buttonSizes[size],
           iconOnly && "aspect-square px-0",
-          className,
+          className
         ),
         type: render ? undefined : "button",
       },
-      props,
+      props
     ),
+    render,
   });
-}

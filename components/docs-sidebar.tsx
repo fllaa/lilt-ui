@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { cn } from "@/registry/lilt/lib/utils";
 
 interface SidebarGroup {
@@ -15,16 +16,16 @@ const guides = [
   { href: "/docs/theming", title: "Theming" },
 ];
 
-export function DocsSidebar({ groups }: { groups: SidebarGroup[] }) {
-  const pathname = usePathname();
+const linkClassName = (active: boolean) =>
+  cn(
+    "block rounded-[var(--radius-control-sm)] px-3 py-1.5 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]",
+    active
+      ? "bg-[var(--lilt-primary-soft)] font-semibold text-[var(--lilt-primary-text)]"
+      : "text-[var(--lilt-text-muted)] hover:bg-[var(--lilt-surface-2)] hover:text-[var(--lilt-text)]"
+  );
 
-  const linkClassName = (active: boolean) =>
-    cn(
-      "block rounded-[var(--radius-control-sm)] px-3 py-1.5 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]",
-      active
-        ? "bg-[var(--lilt-primary-soft)] font-semibold text-[var(--lilt-primary-text)]"
-        : "text-[var(--lilt-text-muted)] hover:bg-[var(--lilt-surface-2)] hover:text-[var(--lilt-text)]",
-    );
+export const DocsSidebar = ({ groups }: { groups: SidebarGroup[] }) => {
+  const pathname = usePathname();
 
   return (
     <nav aria-label="Docs" className="grid content-start gap-6">
@@ -65,4 +66,4 @@ export function DocsSidebar({ groups }: { groups: SidebarGroup[] }) {
       ))}
     </nav>
   );
-}
+};

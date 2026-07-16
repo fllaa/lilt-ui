@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import type { ReactNode } from "react";
 
 type Theme = "light" | "dark";
 
@@ -19,16 +13,20 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
+const getInitialTheme = (): Theme => {
+  if (typeof window === "undefined") {
+    return "light";
+  }
   const saved = window.localStorage.getItem("lilt-theme");
-  if (saved === "light" || saved === "dark") return saved;
+  if (saved === "light" || saved === "dark") {
+    return saved;
+  }
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
-}
+};
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
@@ -41,19 +39,23 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo(
     () => ({
-      theme,
       setTheme,
+      theme,
       toggleTheme: () =>
         setTheme((current) => (current === "light" ? "dark" : "light")),
     }),
-    [theme],
+    [theme]
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
-}
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};
 
-export function useTheme() {
+export const useTheme = () => {
   const value = useContext(ThemeContext);
-  if (!value) throw new Error("useTheme must be used within ThemeProvider");
+  if (!value) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
   return value;
-}
+};

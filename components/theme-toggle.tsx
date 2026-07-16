@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { MoonIcon, SunIcon } from "@/registry/lilt/ui/icons";
 import { useTheme } from "@/registry/lilt/ui/theme-provider";
 
-export function ThemeToggle() {
+export const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // oxlint-disable-next-line react/react-compiler -- intentional: this setState must run only after hydration (not as a lazy initializer) so the first client render matches the server-rendered markup; flipping to true post-mount is what lets us safely show the localStorage-derived theme afterward.
   useEffect(() => setMounted(true), []);
 
   return (
@@ -28,4 +30,4 @@ export function ThemeToggle() {
       )}
     </button>
   );
-}
+};

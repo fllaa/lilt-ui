@@ -29,7 +29,10 @@
       "buttonText": { "$type": "color", "$value": "#F7F8F3" },
       "buttonBorder": { "$type": "color", "$value": "#121713" },
       "primary": { "$type": "color", "$value": "{color.primitive.mint}" },
-      "primarySoft": { "$type": "color", "$value": "{color.primitive.mintSoft}" },
+      "primarySoft": {
+        "$type": "color",
+        "$value": "{color.primitive.mintSoft}"
+      },
       "primaryText": { "$type": "color", "$value": "#164C35" },
       "focus": { "$type": "color", "$value": "#167F55" },
       "warning": { "$type": "color", "$value": "{color.primitive.peach}" },
@@ -69,8 +72,14 @@
   },
   "typography": {
     "family": {
-      "display": { "$type": "fontFamily", "$value": ["Space Grotesk", "DM Sans", "sans-serif"] },
-      "body": { "$type": "fontFamily", "$value": ["DM Sans", "system-ui", "sans-serif"] }
+      "display": {
+        "$type": "fontFamily",
+        "$value": ["Space Grotesk", "DM Sans", "sans-serif"]
+      },
+      "body": {
+        "$type": "fontFamily",
+        "$value": ["DM Sans", "system-ui", "sans-serif"]
+      }
     },
     "size": {
       "caption": { "$type": "dimension", "$value": "12px" },

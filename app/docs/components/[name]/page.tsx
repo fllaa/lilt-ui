@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { CodeBlock } from "@/components/code-block";
 import { ComponentPreview } from "@/components/component-preview";
 import { docEntries, getDocEntry } from "@/lib/docs";
 
-export function generateStaticParams() {
-  return docEntries.map((entry) => ({ name: entry.name }));
-}
+export const generateStaticParams = () =>
+  docEntries.map((entry) => ({ name: entry.name }));
 
-export async function generateMetadata({
+export const generateMetadata = async ({
   params,
 }: {
   params: Promise<{ name: string }>;
-}): Promise<Metadata> {
+}): Promise<Metadata> => {
   const { name } = await params;
   const entry = getDocEntry(name);
   return { title: `${entry?.title ?? name} — Lilt UI` };
-}
+};
 
 const a11yNotes: Record<string, string[]> = {
+  accordion: [
+    "Triggers are buttons inside headings; arrow keys move between them.",
+  ],
   button: [
     "Icon-only buttons require an aria-label.",
     "Focus ring is a 2px Lilt-green ring with a 2px offset, visible in both modes.",
@@ -27,33 +30,28 @@ const a11yNotes: Record<string, string[]> = {
     "Focus moves into the dialog on open and returns to the trigger on close.",
     "Escape closes. The title is announced via the dialog's accessible name.",
   ],
-  select: [
-    "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
-    "The trigger needs an aria-label when used without a visible label — or wrap it in a Field.",
+  "dropdown-menu": [
+    "Full keyboard navigation with type-ahead. Danger items are styled, not hidden.",
   ],
   field: [
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
   ],
-  toast: [
-    "Toasts are announced politely by screen readers and pause on hover or focus.",
-    "F6 moves focus into the toast viewport; swipe or the close button dismisses.",
+  "segmented-nav": [
+    'Selected item carries aria-current="page". Use href items for real navigation.',
+  ],
+  select: [
+    "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
+    "The trigger needs an aria-label when used without a visible label — or wrap it in a Field.",
   ],
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",
   ],
-  accordion: [
-    "Triggers are buttons inside headings; arrow keys move between them.",
+  toast: [
+    "Toasts are announced politely by screen readers and pause on hover or focus.",
+    "F6 moves focus into the toast viewport; swipe or the close button dismisses.",
   ],
-  tooltip: [
-    "Appears on focus as well as hover, and never traps the pointer.",
-  ],
-  "segmented-nav": [
-    "Selected item carries aria-current=\"page\". Use href items for real navigation.",
-  ],
-  "dropdown-menu": [
-    "Full keyboard navigation with type-ahead. Danger items are styled, not hidden.",
-  ],
+  tooltip: ["Appears on focus as well as hover, and never traps the pointer."],
 };
 
 export default async function ComponentPage({
@@ -63,7 +61,9 @@ export default async function ComponentPage({
 }) {
   const { name } = await params;
   const entry = getDocEntry(name);
-  if (!entry) notFound();
+  if (!entry) {
+    notFound();
+  }
 
   const notes = a11yNotes[name];
 

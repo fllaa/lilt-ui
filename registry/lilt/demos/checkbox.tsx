@@ -20,7 +20,10 @@ export default function CheckboxDemo() {
       </div>
       <div className="flex items-center gap-3">
         <Checkbox disabled id="checkbox-demo-disabled" />
-        <Label className="font-medium opacity-50" htmlFor="checkbox-demo-disabled">
+        <Label
+          className="font-medium opacity-50"
+          htmlFor="checkbox-demo-disabled"
+        >
           Disabled
         </Label>
       </div>

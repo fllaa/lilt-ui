@@ -1,6 +1,7 @@
 "use client";
 
 import { Toast as BaseToast } from "@base-ui/react/toast";
+
 import { CloseIcon } from "@/registry/lilt/ui/icons";
 
 /**
@@ -9,7 +10,7 @@ import { CloseIcon } from "@/registry/lilt/ui/icons";
  */
 export const toast = BaseToast.createToastManager();
 
-function ToastList() {
+const ToastList = () => {
   const { toasts } = BaseToast.useToastManager();
   return toasts.map((item) => (
     <BaseToast.Root
@@ -31,17 +32,15 @@ function ToastList() {
       </BaseToast.Content>
     </BaseToast.Root>
   ));
-}
+};
 
 /** Mount once, e.g. in your root layout. */
-export function Toaster() {
-  return (
-    <BaseToast.Provider toastManager={toast}>
-      <BaseToast.Portal>
-        <BaseToast.Viewport className="fixed right-4 bottom-4 z-50 mx-auto w-[calc(100vw-2rem)] sm:right-8 sm:bottom-8 sm:w-[22.5rem]">
-          <ToastList />
-        </BaseToast.Viewport>
-      </BaseToast.Portal>
-    </BaseToast.Provider>
-  );
-}
+export const Toaster = () => (
+  <BaseToast.Provider toastManager={toast}>
+    <BaseToast.Portal>
+      <BaseToast.Viewport className="fixed right-4 bottom-4 z-50 mx-auto w-[calc(100vw-2rem)] sm:right-8 sm:bottom-8 sm:w-[22.5rem]">
+        <ToastList />
+      </BaseToast.Viewport>
+    </BaseToast.Portal>
+  </BaseToast.Provider>
+);

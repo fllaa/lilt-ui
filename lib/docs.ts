@@ -8,32 +8,32 @@ export interface DocEntry {
 }
 
 const packByName: Record<string, string> = {
+  accordion: "Structure",
+  alert: "Display",
+  avatar: "Display",
+  badge: "Display",
+  breadcrumb: "Structure",
   button: "Core",
   card: "Core",
-  dialog: "Core",
-  field: "Core",
-  "segmented-nav": "Core",
-  label: "Form",
-  input: "Form",
-  textarea: "Form",
   checkbox: "Form",
-  "radio-group": "Form",
-  switch: "Form",
-  select: "Form",
-  tooltip: "Overlay",
-  popover: "Overlay",
+  dialog: "Core",
   "dropdown-menu": "Overlay",
-  toast: "Overlay",
-  badge: "Display",
-  avatar: "Display",
-  alert: "Display",
-  skeleton: "Display",
-  separator: "Display",
+  field: "Core",
   icons: "Display",
-  tabs: "Structure",
-  accordion: "Structure",
+  input: "Form",
+  label: "Form",
+  popover: "Overlay",
+  "radio-group": "Form",
+  "segmented-nav": "Core",
+  select: "Form",
+  separator: "Display",
+  skeleton: "Display",
+  switch: "Form",
   table: "Structure",
-  breadcrumb: "Structure",
+  tabs: "Structure",
+  textarea: "Form",
+  toast: "Overlay",
+  tooltip: "Overlay",
 };
 
 const packOrder = ["Core", "Form", "Overlay", "Display", "Structure"];
@@ -41,17 +41,16 @@ const packOrder = ["Core", "Form", "Overlay", "Display", "Structure"];
 export const docEntries: DocEntry[] = registry.items
   .filter((item) => packByName[item.name])
   .map((item) => ({
-    name: item.name,
-    title: item.title,
     description: item.description,
+    name: item.name,
     pack: packByName[item.name],
+    title: item.title,
   }));
 
 export const docsByPack = packOrder.map((pack) => ({
-  pack,
   entries: docEntries.filter((entry) => entry.pack === pack),
+  pack,
 }));
 
-export function getDocEntry(name: string) {
-  return docEntries.find((entry) => entry.name === name);
-}
+export const getDocEntry = (name: string) =>
+  docEntries.find((entry) => entry.name === name);

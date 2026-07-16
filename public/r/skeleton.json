@@ -3,14 +3,11 @@
   "name": "skeleton",
   "title": "Skeleton",
   "description": "Loading placeholder using the secondary surface. Opacity-only pulse, reduced-motion friendly.",
-  "registryDependencies": [
-    "@lilt/theme",
-    "@lilt/utils"
-  ],
+  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
   "files": [
     {
       "path": "registry/lilt/ui/skeleton.tsx",
-      "content": "import type { HTMLAttributes } from \"react\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Skeleton({\n  className,\n  ...props\n}: HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\n        \"animate-pulse rounded-[var(--radius-control-sm)] bg-[var(--lilt-surface-2)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "content": "import type { HTMLAttributes } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Skeleton = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLDivElement>) => (\n  <div\n    className={cn(\n      \"animate-pulse rounded-[var(--radius-control-sm)] bg-[var(--lilt-surface-2)]\",\n      className\n    )}\n    {...props}\n  />\n);\n",
       "type": "registry:ui"
     }
   ],

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { CodeBlock } from "@/components/code-block";
 
 export const metadata: Metadata = {
@@ -49,8 +50,8 @@ export default function InstallationPage() {
           Get Lilt into your project
         </h1>
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
-          Lilt UI works in any React project with Tailwind v4 — Next.js,
-          Vite, anything the shadcn CLI supports.
+          Lilt UI works in any React project with Tailwind v4 — Next.js, Vite,
+          anything the shadcn CLI supports.
         </p>
       </header>
 
@@ -71,8 +72,8 @@ export default function InstallationPage() {
         </h2>
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
           Each component brings its dependencies with it — the Lilt theme
-          variables merge into your CSS automatically, and Base UI is
-          installed when a component needs it.
+          variables merge into your CSS automatically, and Base UI is installed
+          when a component needs it.
         </p>
         <CodeBlock code={addCommand} lang="bash" />
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
@@ -82,9 +83,8 @@ export default function InstallationPage() {
           Delete the boilerplate <code>--background</code>/
           <code>--foreground</code> variables and the unlayered{" "}
           <code>body</code> rule from <code>globals.css</code> — unlayered
-          styles beat Lilt&apos;s <code>@layer base</code> body styling, so
-          the page keeps Next&apos;s default background until they&apos;re
-          gone.
+          styles beat Lilt&apos;s <code>@layer base</code> body styling, so the
+          page keeps Next&apos;s default background until they&apos;re gone.
         </p>
       </section>
 
@@ -101,8 +101,8 @@ export default function InstallationPage() {
         <CodeBlock code={fontsSnippet} lang="html" />
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
           If your <code>@theme</code> already defines <code>--font-sans</code>{" "}
-          (create-next-app sets it to Geist), the CLI keeps your value —
-          replace it with the DM Sans stack yourself:{" "}
+          (create-next-app sets it to Geist), the CLI keeps your value — replace
+          it with the DM Sans stack yourself:{" "}
           <code>
             --font-sans: &quot;DM Sans&quot;, ui-sans-serif, system-ui,
             sans-serif;
@@ -118,8 +118,8 @@ export default function InstallationPage() {
           Add <code>@lilt/theme-provider</code> and wrap your app. Dark mode
           flips on the <code>.dark</code> class; the provider also sets{" "}
           <code>data-theme</code> and persists the choice. The{" "}
-          <code>isolate</code> wrapper keeps Base UI popups above your
-          content without z-index wars.
+          <code>isolate</code> wrapper keeps Base UI popups above your content
+          without z-index wars.
         </p>
         <CodeBlock code={themeProviderSnippet} />
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">

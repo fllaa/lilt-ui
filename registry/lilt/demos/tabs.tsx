@@ -10,13 +10,22 @@ export default function TabsDemo() {
         <TabsTab value="preview">Preview</TabsTab>
         <TabsTab value="history">History</TabsTab>
       </TabsList>
-      <TabsPanel className="text-sm leading-relaxed text-[var(--lilt-text-muted)]" value="write">
+      <TabsPanel
+        className="text-sm leading-relaxed text-[var(--lilt-text-muted)]"
+        value="write"
+      >
         Draft in peace. Nothing autosubmits, nothing rushes you.
       </TabsPanel>
-      <TabsPanel className="text-sm leading-relaxed text-[var(--lilt-text-muted)]" value="preview">
+      <TabsPanel
+        className="text-sm leading-relaxed text-[var(--lilt-text-muted)]"
+        value="preview"
+      >
         Exactly what readers will see, in the same warm light.
       </TabsPanel>
-      <TabsPanel className="text-sm leading-relaxed text-[var(--lilt-text-muted)]" value="history">
+      <TabsPanel
+        className="text-sm leading-relaxed text-[var(--lilt-text-muted)]"
+        value="history"
+      >
         Every version kept. Restore anything with one click.
       </TabsPanel>
     </Tabs>

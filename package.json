@@ -2,13 +2,17 @@
   "name": "lilt-ui",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "shadcn build && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "oxlint",
+    "format": "oxfmt",
     "registry:build": "shadcn build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",
@@ -23,16 +27,17 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
-    "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20.19.9",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
-    "eslint": "^9.32.0",
-    "eslint-config-next": "15.3.1",
     "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "ultracite": "7.9.4"
   },
   "overrides": {
     "@types/react": "19.1.2",

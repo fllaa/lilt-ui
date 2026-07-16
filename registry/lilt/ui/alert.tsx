@@ -1,31 +1,32 @@
 import type { HTMLAttributes } from "react";
-import { InfoIcon, SparkIcon, WarningIcon } from "@/registry/lilt/ui/icons";
+
 import { cn } from "@/registry/lilt/lib/utils";
+import { InfoIcon, SparkIcon, WarningIcon } from "@/registry/lilt/ui/icons";
 
 const alertVariants = {
+  danger: {
+    className: "bg-[var(--lilt-danger-soft)]",
+    icon: WarningIcon,
+    iconClassName: "text-[var(--lilt-danger-text)]",
+    role: "alert" as const,
+  },
   info: {
     className: "bg-[var(--lilt-primary-soft)]",
-    iconClassName: "text-[var(--lilt-primary-text)]",
     icon: InfoIcon,
+    iconClassName: "text-[var(--lilt-primary-text)]",
     role: "status" as const,
   },
   success: {
     className: "bg-[var(--lilt-primary-soft)]",
-    iconClassName: "text-[var(--lilt-primary-text)]",
     icon: SparkIcon,
+    iconClassName: "text-[var(--lilt-primary-text)]",
     role: "status" as const,
   },
   warning: {
     className: "bg-[var(--lilt-warning)]",
+    icon: WarningIcon,
     iconClassName: "text-[var(--lilt-text)]",
-    icon: WarningIcon,
     role: "status" as const,
-  },
-  danger: {
-    className: "bg-[var(--lilt-danger-soft)]",
-    iconClassName: "text-[var(--lilt-danger-text)]",
-    icon: WarningIcon,
-    role: "alert" as const,
   },
 };
 
@@ -35,20 +36,24 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   variant?: AlertVariant;
 }
 
-export function Alert({
+export const Alert = ({
   children,
   className,
   variant = "info",
   ...props
-}: AlertProps) {
-  const { className: variantClassName, icon: Icon, iconClassName, role } =
-    alertVariants[variant];
+}: AlertProps) => {
+  const {
+    className: variantClassName,
+    icon: Icon,
+    iconClassName,
+    role,
+  } = alertVariants[variant];
   return (
     <div
       className={cn(
         "flex gap-3 rounded-[var(--radius-card)] p-4 text-[var(--lilt-text)]",
         variantClassName,
-        className,
+        className
       )}
       role={role}
       {...props}
@@ -57,25 +62,21 @@ export function Alert({
       <div className="grid gap-1">{children}</div>
     </div>
   );
-}
+};
 
-export function AlertTitle({
+export const AlertTitle = ({
   className,
   ...props
-}: HTMLAttributes<HTMLParagraphElement>) {
-  return (
-    <p
-      className={cn("text-sm font-semibold tracking-[-0.01em]", className)}
-      {...props}
-    />
-  );
-}
+}: HTMLAttributes<HTMLParagraphElement>) => (
+  <p
+    className={cn("text-sm font-semibold tracking-[-0.01em]", className)}
+    {...props}
+  />
+);
 
-export function AlertDescription({
+export const AlertDescription = ({
   className,
   ...props
-}: HTMLAttributes<HTMLParagraphElement>) {
-  return (
-    <p className={cn("text-sm leading-relaxed", className)} {...props} />
-  );
-}
+}: HTMLAttributes<HTMLParagraphElement>) => (
+  <p className={cn("text-sm leading-relaxed", className)} {...props} />
+);

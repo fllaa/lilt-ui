@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { CodeBlock } from "@/components/code-block";
 import tokens from "@/tokens/lilt.tokens.json";
 
@@ -19,17 +20,18 @@ const rebrandSnippet = `:root {
   --lilt-focus: #b6a6f5;
 }`;
 
-function kebab(name: string) {
-  return name.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
-}
+const kebab = (name: string) =>
+  name
+    .replaceAll(/(?<lower>[a-z0-9])(?<upper>[A-Z])/gu, "$<lower>-$<upper>")
+    .toLowerCase();
 
-function SwatchTable({
+const SwatchTable = ({
   mode,
   colors,
 }: {
   mode: "light" | "dark";
   colors: Record<string, { $value: string }>;
-}) {
+}) => {
   const primitives = tokens.color.primitive as Record<
     string,
     { $value: string }
@@ -51,15 +53,18 @@ function SwatchTable({
           {Object.entries(colors).map(([name, token]) => {
             const raw = token.$value;
             const resolved = raw.startsWith("{")
-              ? primitives[raw.slice(raw.lastIndexOf(".") + 1, -1)]?.$value ??
-                raw
+              ? (primitives[raw.slice(raw.lastIndexOf(".") + 1, -1)]?.$value ??
+                raw)
               : raw;
             return (
               <tr className="border-b border-[var(--lilt-border)]" key={name}>
                 <td className="px-4 py-2.5 font-mono text-xs">
                   --lilt-{kebab(name)}
                 </td>
-                <td className="px-4 py-2.5">
+                <td
+                  aria-label={`Swatch color for ${resolved}`}
+                  className="px-4 py-2.5"
+                >
                   <span className="inline-flex items-center gap-2">
                     <span
                       className="inline-block size-5 rounded-md border border-[var(--lilt-border)]"
@@ -75,7 +80,7 @@ function SwatchTable({
       </table>
     </div>
   );
-}
+};
 
 export default function ThemingPage() {
   return (
@@ -88,10 +93,10 @@ export default function ThemingPage() {
           Tokens, and how to make Lilt yours
         </h1>
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
-          Every component reads semantic <code>--lilt-*</code> variables —
-          never raw hex values. The tables below render live from{" "}
-          <code>tokens/lilt.tokens.json</code>, the canonical W3C-format
-          token source.
+          Every component reads semantic <code>--lilt-*</code> variables — never
+          raw hex values. The tables below render live from{" "}
+          <code>tokens/lilt.tokens.json</code>, the canonical W3C-format token
+          source.
         </p>
       </header>
 
@@ -100,9 +105,9 @@ export default function ThemingPage() {
           Rebranding: mint is a guest
         </h2>
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
-          The pale mint accent is a swappable default. To rebrand, replace
-          four semantic values per mode and keep the contrast rules — every
-          button, badge, focus ring, and selection follows automatically:
+          The pale mint accent is a swappable default. To rebrand, replace four
+          semantic values per mode and keep the contrast rules — every button,
+          badge, focus ring, and selection follows automatically:
         </p>
         <CodeBlock code={rebrandSnippet} lang="css" />
       </section>
@@ -128,8 +133,8 @@ export default function ThemingPage() {
         <ul className="grid gap-2 leading-relaxed text-[var(--lilt-text-muted)]">
           <li>
             <strong className="text-[var(--lilt-text)]">Radius roles:</strong>{" "}
-            12px compact controls, 16px controls and cards, 20px dialogs,
-            pills for md/lg buttons.
+            12px compact controls, 16px controls and cards, 20px dialogs, pills
+            for md/lg buttons.
           </li>
           <li>
             <strong className="text-[var(--lilt-text)]">Motion:</strong> 140ms

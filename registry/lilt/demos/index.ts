@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+
 import AccordionDemo from "./accordion";
 import AlertDemo from "./alert";
 import AvatarDemo from "./avatar";

@@ -19,11 +19,7 @@ export default function FieldDemo() {
       </Field>
       <Field>
         <FieldLabel>Email</FieldLabel>
-        <FieldControl
-          placeholder="you@example.com"
-          required
-          type="email"
-        />
+        <FieldControl placeholder="you@example.com" required type="email" />
         <FieldError match="valueMissing">
           An email is required — we only use it to sign you in.
         </FieldError>

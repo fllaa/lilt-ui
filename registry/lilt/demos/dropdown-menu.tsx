@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { Button } from "@/registry/lilt/ui/button";
 import {
   DropdownMenu,
@@ -17,7 +18,9 @@ export default function DropdownMenuDemo() {
   const [digest, setDigest] = useState(true);
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="secondary">Project options</Button>} />
+      <DropdownMenuTrigger
+        render={<Button variant="secondary">Project options</Button>}
+      />
       <DropdownMenuContent>
         <DropdownMenuGroup>
           <DropdownMenuGroupLabel>Project</DropdownMenuGroupLabel>
@@ -25,10 +28,7 @@ export default function DropdownMenuDemo() {
           <DropdownMenuItem>Duplicate</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={digest}
-          onCheckedChange={setDigest}
-        >
+        <DropdownMenuCheckboxItem checked={digest} onCheckedChange={setDigest}>
           Weekly digest
         </DropdownMenuCheckboxItem>
         <DropdownMenuSeparator />
