@@ -692,6 +692,61 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "A searchable select on a real text input. Filtering built in, empty state included.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "One trigger, one panel, a smooth height. Supports hidden-until-found.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Native scrolling with quiet lilt scrollbars that appear when needed.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "A nav landmark of round page links. The current page carries aria-current.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

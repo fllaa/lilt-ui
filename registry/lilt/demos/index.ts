@@ -9,6 +9,8 @@ import BreadcrumbDemo from "./breadcrumb";
 import ButtonDemo from "./button";
 import CardDemo from "./card";
 import CheckboxDemo from "./checkbox";
+import CollapsibleDemo from "./collapsible";
+import ComboboxDemo from "./combobox";
 import ContextMenuDemo from "./context-menu";
 import DialogDemo from "./dialog";
 import DrawerDemo from "./drawer";
@@ -23,9 +25,11 @@ import KbdDemo from "./kbd";
 import LabelDemo from "./label";
 import MenubarDemo from "./menubar";
 import NumberFieldDemo from "./number-field";
+import PaginationDemo from "./pagination";
 import PopoverDemo from "./popover";
 import ProgressDemo from "./progress";
 import RadioGroupDemo from "./radio-group";
+import ScrollAreaDemo from "./scroll-area";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
 import SkeletonDemo from "./skeleton";
@@ -50,6 +54,8 @@ export const demos: Record<string, ComponentType> = {
   button: ButtonDemo,
   card: CardDemo,
   checkbox: CheckboxDemo,
+  collapsible: CollapsibleDemo,
+  combobox: ComboboxDemo,
   "context-menu": ContextMenuDemo,
   dialog: DialogDemo,
   drawer: DrawerDemo,
@@ -64,9 +70,11 @@ export const demos: Record<string, ComponentType> = {
   label: LabelDemo,
   menubar: MenubarDemo,
   "number-field": NumberFieldDemo,
+  pagination: PaginationDemo,
   popover: PopoverDemo,
   progress: ProgressDemo,
   "radio-group": RadioGroupDemo,
+  "scroll-area": ScrollAreaDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
   skeleton: SkeletonDemo,

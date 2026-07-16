@@ -30,6 +30,14 @@ const a11yNotes: Record<string, string[]> = {
     "Icon-only buttons require an aria-label.",
     "Focus ring is a 2px Lilt-green ring with a 2px offset, visible in both modes.",
   ],
+  collapsible: [
+    "The trigger is a real button with aria-expanded and aria-controls wired automatically.",
+    "hiddenUntilFound lets browser find-in-page open the panel.",
+  ],
+  combobox: [
+    "A real text input with combobox semantics — arrows navigate, Enter selects, Escape closes.",
+    "Give it a visible label or wrap it in a Field; the clear and open buttons carry their own aria-labels.",
+  ],
   "context-menu": [
     "Long-press opens it on touch; arrow keys and type-ahead navigate once open.",
     "Context menus are a shortcut, not the only path — mirror actions somewhere clickable.",
@@ -73,9 +81,17 @@ const a11yNotes: Record<string, string[]> = {
     "Arrow keys step, Shift+Arrow steps by 10; values clamp to min/max and steppers repeat on hold.",
     "The scrub label still works as a plain label for assistive tech — scrubbing is pointer-only sugar.",
   ],
+  pagination: [
+    "A nav landmark labeled 'Pagination'; the current page carries aria-current=page.",
+    "Previous and Next keep text labels, not just arrows.",
+  ],
   progress: [
     "Announced as a progressbar named by its label; the value is exposed via aria-valuenow.",
     "value={null} renders indeterminate — it announces as busy, not as 0%.",
+  ],
+  "scroll-area": [
+    "The viewport is keyboard-focusable and shows the lilt focus ring, so arrow keys scroll.",
+    "Scrolling stays native underneath — screen readers and trackpads behave normally.",
   ],
   select: [
     "Full keyboard support: arrows, type-ahead, Home/End, Escape.",

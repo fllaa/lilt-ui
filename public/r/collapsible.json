@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible",
+  "title": "Collapsible",
+  "description": "One trigger, one panel, a smooth height. Supports hidden-until-found.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/collapsible.tsx",
+      "content": "\"use client\";\n\nimport { Collapsible as BaseCollapsible } from \"@base-ui/react/collapsible\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\nimport { ChevronIcon } from \"@/registry/lilt/ui/icons\";\n\nexport const Collapsible = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseCollapsible.Root>) => (\n  <BaseCollapsible.Root className={cn(\"flex flex-col\", className)} {...props} />\n);\n\nexport const CollapsibleTrigger = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseCollapsible.Trigger>) => (\n  <BaseCollapsible.Trigger\n    className={cn(\n      \"group flex min-h-11 items-center gap-2 rounded-[var(--radius-control-sm)] text-left font-display text-base font-semibold tracking-[-0.01em] text-[var(--lilt-text)] outline-none transition-colors hover:text-[var(--lilt-primary-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]\",\n      className\n    )}\n    {...props}\n  >\n    {children}\n    <ChevronIcon\n      className=\"shrink-0 text-[var(--lilt-text-subtle)] transition-transform duration-[var(--duration-fast)] ease-[var(--ease-out)] group-data-[panel-open]:rotate-180\"\n      size={18}\n    />\n  </BaseCollapsible.Trigger>\n);\n\nexport const CollapsiblePanel = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseCollapsible.Panel>) => (\n  <BaseCollapsible.Panel\n    className={cn(\n      \"h-[var(--collapsible-panel-height)] overflow-hidden transition-[height] duration-[var(--duration-base)] ease-[var(--ease-out)] data-[starting-style]:h-0 data-[ending-style]:h-0\",\n      className\n    )}\n    {...props}\n  >\n    <div className=\"pt-2 pb-1 text-sm leading-relaxed text-[var(--lilt-text-muted)]\">\n      {children}\n    </div>\n  </BaseCollapsible.Panel>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

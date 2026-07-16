@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area",
+  "title": "Scroll Area",
+  "description": "Native scrolling with quiet lilt scrollbars that appear when needed.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/scroll-area.tsx",
+      "content": "\"use client\";\n\nimport { ScrollArea as BaseScrollArea } from \"@base-ui/react/scroll-area\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const ScrollBar = ({\n  className,\n  orientation = \"vertical\",\n  ...props\n}: ComponentProps<typeof BaseScrollArea.Scrollbar>) => (\n  <BaseScrollArea.Scrollbar\n    className={cn(\n      \"pointer-events-none flex touch-none p-0.5 opacity-0 transition-opacity duration-[var(--duration-base)] select-none data-[hovering]:pointer-events-auto data-[hovering]:opacity-100 data-[scrolling]:pointer-events-auto data-[scrolling]:opacity-100 data-[scrolling]:transition-none data-[orientation=horizontal]:h-2.5 data-[orientation=horizontal]:flex-col data-[orientation=vertical]:w-2.5\",\n      className\n    )}\n    orientation={orientation}\n    {...props}\n  >\n    <BaseScrollArea.Thumb className=\"flex-1 rounded-full bg-[var(--lilt-border-strong)]\" />\n  </BaseScrollArea.Scrollbar>\n);\n\nexport const ScrollArea = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseScrollArea.Root>) => (\n  <BaseScrollArea.Root\n    className={cn(\"relative overflow-hidden\", className)}\n    {...props}\n  >\n    <BaseScrollArea.Viewport className=\"size-full rounded-[inherit] outline-none focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)]\">\n      <BaseScrollArea.Content>{children}</BaseScrollArea.Content>\n    </BaseScrollArea.Viewport>\n    <ScrollBar />\n    <BaseScrollArea.Corner />\n  </BaseScrollArea.Root>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
