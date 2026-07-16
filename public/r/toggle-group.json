@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "title": "Toggle Group",
+  "description": "A pill rail of toggles with roving focus. Single or multiple selection.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/toggle"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/toggle-group.tsx",
+      "content": "\"use client\";\n\nimport { ToggleGroup as BaseToggleGroup } from \"@base-ui/react/toggle-group\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\nimport { Toggle } from \"@/registry/lilt/ui/toggle\";\n\nexport const ToggleGroup = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseToggleGroup>) => (\n  <BaseToggleGroup\n    className={cn(\n      \"flex w-fit gap-1 rounded-full border border-[var(--lilt-border)] bg-[var(--lilt-surface)] p-1 data-[orientation=vertical]:flex-col\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const ToggleGroupItem = ({\n  className,\n  ...props\n}: ComponentProps<typeof Toggle> & { value: string }) => (\n  <Toggle\n    className={cn(\"rounded-full border-transparent\", className)}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

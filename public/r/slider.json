@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider",
+  "title": "Slider",
+  "description": "Single or range slider on native range inputs. Mint fill, 24px thumbs.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/slider.tsx",
+      "content": "\"use client\";\n\nimport { Slider as BaseSlider } from \"@base-ui/react/slider\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport interface SliderProps extends ComponentProps<typeof BaseSlider.Root> {\n  /**\n   * Accessible name for each thumb, in value order (e.g. [\"Min\", \"Max\"]).\n   * Base UI requires labeling every thumb input; skip this only when a\n   * visible SliderLabel already names a single-thumb slider.\n   */\n  thumbLabels?: string[];\n}\n\nexport const Slider = ({\n  children,\n  className,\n  thumbLabels,\n  ...props\n}: SliderProps) => {\n  const rawValue = props.value ?? props.defaultValue;\n  const thumbCount = Array.isArray(rawValue) ? rawValue.length : 1;\n\n  return (\n    <BaseSlider.Root\n      className={cn(\n        \"flex w-full flex-col gap-1 data-[disabled]:pointer-events-none data-[disabled]:opacity-45\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n      <BaseSlider.Control className=\"flex min-h-11 w-full touch-none items-center select-none\">\n        <BaseSlider.Track className=\"h-1.5 w-full rounded-full border border-[var(--lilt-border)] bg-[var(--lilt-surface-2)] select-none\">\n          <BaseSlider.Indicator className=\"rounded-full bg-[var(--lilt-primary)] select-none\" />\n          {Array.from({ length: thumbCount }, (_, index) => (\n            <BaseSlider.Thumb\n              aria-label={thumbLabels?.[index]}\n              className=\"size-6 rounded-full border border-[var(--lilt-border-strong)] bg-[var(--lilt-surface)] transition-[scale] duration-[var(--duration-fast)] ease-[var(--ease-out)] select-none has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-[var(--lilt-focus)] has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-[var(--lilt-canvas)] data-[dragging]:scale-110\"\n              index={index}\n              key={index}\n            />\n          ))}\n        </BaseSlider.Track>\n      </BaseSlider.Control>\n    </BaseSlider.Root>\n  );\n};\n\nexport const SliderLabel = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseSlider.Label>) => (\n  <BaseSlider.Label\n    className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n    {...props}\n  />\n);\n\nexport const SliderValue = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseSlider.Value>) => (\n  <BaseSlider.Value\n    className={cn(\n      \"text-sm text-[var(--lilt-text-muted)] tabular-nums\",\n      className\n    )}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

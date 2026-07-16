@@ -125,6 +125,17 @@ export const ChevronIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const PlusIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path
+      d="M12.05 5.5c-.05 4.3-.05 8.7 0 13M5.5 12.05c4.3-.1 8.7-.05 13-.05"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.8"
+    />
+  </IconBase>
+);
+
 export const MinusIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path

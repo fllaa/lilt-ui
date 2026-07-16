@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp",
+  "title": "Input OTP",
+  "description": "One-time code entry that pastes, autofills, and announces like a single field.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/input-otp.tsx",
+      "content": "\"use client\";\n\nimport { OTPField } from \"@base-ui/react/otp-field\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\nimport { MinusIcon } from \"@/registry/lilt/ui/icons\";\n\nexport const InputOTP = ({\n  className,\n  ...props\n}: ComponentProps<typeof OTPField.Root>) => (\n  <OTPField.Root\n    className={cn(\"group flex items-center gap-2\", className)}\n    {...props}\n  />\n);\n\nexport interface InputOTPSlotProps extends ComponentProps<\n  typeof OTPField.Input\n> {\n  /**\n   * Zero-based slot position. Together with `length`, slots after the first\n   * get an automatic `aria-label` of \"Character N of L\". The first slot keeps\n   * its accessible name from the field's associated label.\n   */\n  index?: number;\n  /** Total number of slots, used with `index` to build the aria-label. */\n  length?: number;\n}\n\nexport const InputOTPSlot = ({\n  className,\n  index,\n  length,\n  ...props\n}: InputOTPSlotProps) => (\n  <OTPField.Input\n    aria-label={\n      index !== undefined && length !== undefined && index > 0\n        ? `Character ${index + 1} of ${length}`\n        : undefined\n    }\n    className={cn(\n      \"size-12 rounded-[var(--radius-control-sm)] border border-[var(--lilt-border)] bg-[var(--lilt-field)] text-center font-display text-lg font-semibold text-[var(--lilt-text)] outline-none transition-[border-color] focus:border-[var(--lilt-focus)] focus:ring-2 focus:ring-[color-mix(in_oklab,var(--lilt-focus)_25%,transparent)] data-[disabled]:opacity-45 data-[invalid]:border-[var(--lilt-danger)] group-data-[complete]:border-[var(--lilt-primary)]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const InputOTPSeparator = ({\n  className,\n  ...props\n}: ComponentProps<typeof OTPField.Separator>) => (\n  <OTPField.Separator\n    className={cn(\"flex text-[var(--lilt-text-subtle)]\", className)}\n    {...props}\n  >\n    <MinusIcon size={16} />\n  </OTPField.Separator>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

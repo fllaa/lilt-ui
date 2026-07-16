@@ -13,17 +13,22 @@ import DropdownMenuDemo from "./dropdown-menu";
 import FieldDemo from "./field";
 import IconsDemo from "./icons";
 import InputDemo from "./input";
+import InputOtpDemo from "./input-otp";
 import LabelDemo from "./label";
+import NumberFieldDemo from "./number-field";
 import PopoverDemo from "./popover";
 import RadioGroupDemo from "./radio-group";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
 import SkeletonDemo from "./skeleton";
+import SliderDemo from "./slider";
 import SwitchDemo from "./switch";
 import TableDemo from "./table";
 import TabsDemo from "./tabs";
 import TextareaDemo from "./textarea";
 import ToastDemo from "./toast";
+import ToggleDemo from "./toggle";
+import ToggleGroupDemo from "./toggle-group";
 import TooltipDemo from "./tooltip";
 
 export const demos: Record<string, ComponentType> = {
@@ -40,16 +45,21 @@ export const demos: Record<string, ComponentType> = {
   field: FieldDemo,
   icons: IconsDemo,
   input: InputDemo,
+  "input-otp": InputOtpDemo,
   label: LabelDemo,
+  "number-field": NumberFieldDemo,
   popover: PopoverDemo,
   "radio-group": RadioGroupDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
   skeleton: SkeletonDemo,
+  slider: SliderDemo,
   switch: SwitchDemo,
   table: TableDemo,
   tabs: TabsDemo,
   textarea: TextareaDemo,
   toast: ToastDemo,
+  toggle: ToggleDemo,
+  "toggle-group": ToggleGroupDemo,
   tooltip: TooltipDemo,
 };

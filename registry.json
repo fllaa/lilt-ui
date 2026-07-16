@@ -499,6 +499,76 @@
         "@lilt/theme-provider"
       ],
       "files": []
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A pressed/unpressed button. Mint when on, honest aria-pressed underneath.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A pill rail of toggles with roving focus. Single or multiple selection.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/toggle"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Single or range slider on native range inputs. Mint fill, 24px thumbs.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "Numeric input with steppers and a scrubbable label. Hold to repeat.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/number-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "One-time code entry that pastes, autofills, and announces like a single field.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/input-otp.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

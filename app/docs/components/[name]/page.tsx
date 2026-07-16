@@ -37,9 +37,21 @@ const a11yNotes: Record<string, string[]> = {
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
   ],
+  "input-otp": [
+    "Acts as one field: paste fills every slot, Backspace walks backward, SMS autofill works via one-time-code.",
+    "Slots after the first carry 'Character N of L' labels so focus position is announced.",
+  ],
+  "number-field": [
+    "Arrow keys step, Shift+Arrow steps by 10; values clamp to min/max and steppers repeat on hold.",
+    "The scrub label still works as a plain label for assistive tech — scrubbing is pointer-only sugar.",
+  ],
   select: [
     "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
     "The trigger needs an aria-label when used without a visible label — or wrap it in a Field.",
+  ],
+  slider: [
+    "Each thumb is a native range input: arrows step, Shift+Arrow large-steps, Home/End jump.",
+    "Label single sliders with SliderLabel; pass thumbLabels for ranges.",
   ],
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",
@@ -48,6 +60,14 @@ const a11yNotes: Record<string, string[]> = {
   toast: [
     "Toasts are announced politely by screen readers and pause on hover or focus.",
     "F6 moves focus into the toast viewport; swipe or the close button dismisses.",
+  ],
+  toggle: [
+    "Uses aria-pressed — keep the label identical in both states and let the style change.",
+    "Icon-only toggles require an aria-label.",
+  ],
+  "toggle-group": [
+    "One tab stop; arrow keys move between options.",
+    "The group needs an aria-label; each icon-only item needs its own.",
   ],
   tooltip: ["Appears on focus as well as hover, and never traps the pointer."],
 };
