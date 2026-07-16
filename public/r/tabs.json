@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "title": "Tabs",
+  "description": "Base UI tabs wearing the Lilt pill skin. For page-level navigation links, use segmented-nav instead.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/tabs.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Tabs as BaseTabs } from \"@base-ui/react/tabs\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Tabs({\n  className,\n  ...props\n}: ComponentProps<typeof BaseTabs.Root>) {\n  return (\n    <BaseTabs.Root className={cn(\"flex flex-col gap-4\", className)} {...props} />\n  );\n}\n\nexport function TabsList({\n  className,\n  ...props\n}: ComponentProps<typeof BaseTabs.List>) {\n  return (\n    <BaseTabs.List\n      className={cn(\n        \"flex w-fit max-w-full gap-1 overflow-x-auto rounded-full border border-[var(--lilt-border)] bg-[var(--lilt-surface)] p-1\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport function TabsTab({\n  className,\n  ...props\n}: ComponentProps<typeof BaseTabs.Tab>) {\n  return (\n    <BaseTabs.Tab\n      className={cn(\n        \"inline-flex min-h-10 shrink-0 items-center rounded-full px-4 text-sm font-semibold text-[var(--lilt-text-muted)] outline-none transition-colors hover:bg-[var(--lilt-surface-2)] hover:text-[var(--lilt-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] data-[selected]:bg-[var(--lilt-button)] data-[selected]:text-[var(--lilt-button-text)] data-[selected]:hover:bg-[var(--lilt-button)] data-[disabled]:pointer-events-none data-[disabled]:opacity-45\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport function TabsPanel({\n  className,\n  ...props\n}: ComponentProps<typeof BaseTabs.Panel>) {\n  return (\n    <BaseTabs.Panel\n      className={cn(\n        \"rounded-[var(--radius-control-sm)] outline-none focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

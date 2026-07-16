@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "style",
+  "title": "Lilt Style",
+  "description": "Initialize a project with the Lilt look: theme, utils, and theme provider.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/theme-provider"
+  ],
+  "files": [],
+  "type": "registry:style"
+}
