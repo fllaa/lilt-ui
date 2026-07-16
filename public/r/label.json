@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "title": "Label",
+  "description": "Form label in Lilt's small-semibold style.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/label.tsx",
+      "content": "import type { LabelHTMLAttributes } from \"react\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Label({\n  className,\n  ...props\n}: LabelHTMLAttributes<HTMLLabelElement>) {\n  return (\n    <label\n      className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert",
+  "title": "Alert",
+  "description": "Status block with hand-drawn icon. Variants: info, success, warning, danger.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/alert.tsx",
+      "content": "import type { HTMLAttributes } from \"react\";\nimport { InfoIcon, SparkIcon, WarningIcon } from \"@/registry/lilt/ui/icons\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nconst alertVariants = {\n  info: {\n    className: \"bg-[var(--lilt-primary-soft)]\",\n    iconClassName: \"text-[var(--lilt-primary-text)]\",\n    icon: InfoIcon,\n    role: \"status\" as const,\n  },\n  success: {\n    className: \"bg-[var(--lilt-primary-soft)]\",\n    iconClassName: \"text-[var(--lilt-primary-text)]\",\n    icon: SparkIcon,\n    role: \"status\" as const,\n  },\n  warning: {\n    className: \"bg-[var(--lilt-warning)]\",\n    iconClassName: \"text-[var(--lilt-text)]\",\n    icon: WarningIcon,\n    role: \"status\" as const,\n  },\n  danger: {\n    className: \"bg-[var(--lilt-danger-soft)]\",\n    iconClassName: \"text-[var(--lilt-danger-text)]\",\n    icon: WarningIcon,\n    role: \"alert\" as const,\n  },\n};\n\nexport type AlertVariant = keyof typeof alertVariants;\n\nexport interface AlertProps extends HTMLAttributes<HTMLDivElement> {\n  variant?: AlertVariant;\n}\n\nexport function Alert({\n  children,\n  className,\n  variant = \"info\",\n  ...props\n}: AlertProps) {\n  const { className: variantClassName, icon: Icon, iconClassName, role } =\n    alertVariants[variant];\n  return (\n    <div\n      className={cn(\n        \"flex gap-3 rounded-[var(--radius-card)] p-4 text-[var(--lilt-text)]\",\n        variantClassName,\n        className,\n      )}\n      role={role}\n      {...props}\n    >\n      <Icon className={cn(\"mt-0.5 shrink-0\", iconClassName)} size={20} />\n      <div className=\"grid gap-1\">{children}</div>\n    </div>\n  );\n}\n\nexport function AlertTitle({\n  className,\n  ...props\n}: HTMLAttributes<HTMLParagraphElement>) {\n  return (\n    <p\n      className={cn(\"text-sm font-semibold tracking-[-0.01em]\", className)}\n      {...props}\n    />\n  );\n}\n\nexport function AlertDescription({\n  className,\n  ...props\n}: HTMLAttributes<HTMLParagraphElement>) {\n  return (\n    <p className={cn(\"text-sm leading-relaxed\", className)} {...props} />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

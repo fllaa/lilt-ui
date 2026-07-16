@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge",
+  "title": "Badge",
+  "description": "Pill badge. Pastel backgrounds always pair with AAA-minded text tokens.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/badge.tsx",
+      "content": "import type { HTMLAttributes } from \"react\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nconst badgeVariants = {\n  default:\n    \"border-transparent bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)]\",\n  warning: \"border-transparent bg-[var(--lilt-warning)] text-[var(--lilt-text)]\",\n  highlight:\n    \"border-transparent bg-[var(--lilt-highlight)] text-[var(--lilt-text)]\",\n  danger:\n    \"border-transparent bg-[var(--lilt-danger-soft)] text-[var(--lilt-danger-text)]\",\n  outline:\n    \"border-[var(--lilt-border-strong)] bg-transparent text-[var(--lilt-text-muted)]\",\n};\n\nexport type BadgeVariant = keyof typeof badgeVariants;\n\nexport interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {\n  variant?: BadgeVariant;\n}\n\nexport function Badge({\n  className,\n  variant = \"default\",\n  ...props\n}: BadgeProps) {\n  return (\n    <span\n      className={cn(\n        \"inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-semibold\",\n        badgeVariants[variant],\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

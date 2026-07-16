@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb",
+  "title": "Breadcrumb",
+  "description": "Breadcrumb navigation with Lilt's hand-drawn arrow separators.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/breadcrumb.tsx",
+      "content": "import type {\n  AnchorHTMLAttributes,\n  HTMLAttributes,\n  LiHTMLAttributes,\n  OlHTMLAttributes,\n} from \"react\";\nimport { ArrowIcon } from \"@/registry/lilt/ui/icons\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Breadcrumb(props: HTMLAttributes<HTMLElement>) {\n  return <nav aria-label=\"Breadcrumb\" {...props} />;\n}\n\nexport function BreadcrumbList({\n  className,\n  ...props\n}: OlHTMLAttributes<HTMLOListElement>) {\n  return (\n    <ol\n      className={cn(\n        \"flex flex-wrap items-center gap-2 text-sm text-[var(--lilt-text-muted)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport function BreadcrumbItem({\n  className,\n  ...props\n}: LiHTMLAttributes<HTMLLIElement>) {\n  return (\n    <li\n      className={cn(\"inline-flex items-center gap-2\", className)}\n      {...props}\n    />\n  );\n}\n\nexport function BreadcrumbLink({\n  className,\n  ...props\n}: AnchorHTMLAttributes<HTMLAnchorElement>) {\n  return (\n    <a\n      className={cn(\n        \"rounded-[var(--radius-control-sm)] px-1 py-0.5 outline-none transition-colors hover:text-[var(--lilt-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport function BreadcrumbPage({\n  className,\n  ...props\n}: HTMLAttributes<HTMLSpanElement>) {\n  return (\n    <span\n      aria-current=\"page\"\n      className={cn(\"px-1 py-0.5 font-semibold text-[var(--lilt-text)]\", className)}\n      {...props}\n    />\n  );\n}\n\nexport function BreadcrumbSeparator({\n  className,\n  ...props\n}: LiHTMLAttributes<HTMLLIElement>) {\n  return (\n    <li\n      aria-hidden=\"true\"\n      className={cn(\"text-[var(--lilt-text-subtle)]\", className)}\n      role=\"presentation\"\n      {...props}\n    >\n      <ArrowIcon size={14} />\n    </li>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
