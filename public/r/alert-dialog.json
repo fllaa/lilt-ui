@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog",
+  "title": "Alert Dialog",
+  "description": "Confirmation that requires an explicit choice. No backdrop dismiss, no X — pick an answer.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/alert-dialog.tsx",
+      "content": "\"use client\";\n\nimport { AlertDialog as BaseAlertDialog } from \"@base-ui/react/alert-dialog\";\nimport type { ComponentProps, ReactNode } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const AlertDialog = (\n  props: ComponentProps<typeof BaseAlertDialog.Root>\n) => <BaseAlertDialog.Root {...props} />;\n\nexport const AlertDialogTrigger = (\n  props: ComponentProps<typeof BaseAlertDialog.Trigger>\n) => <BaseAlertDialog.Trigger {...props} />;\n\nexport const AlertDialogClose = (\n  props: ComponentProps<typeof BaseAlertDialog.Close>\n) => <BaseAlertDialog.Close {...props} />;\n\nexport const AlertDialogContent = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseAlertDialog.Popup>) => (\n  <BaseAlertDialog.Portal>\n    <BaseAlertDialog.Backdrop className=\"fixed inset-0 z-50 bg-[rgba(8,12,9,0.68)] backdrop-blur-[2px] transition-opacity duration-[var(--duration-base)] ease-[var(--ease-out)] data-[starting-style]:opacity-0 data-[ending-style]:opacity-0\" />\n    <BaseAlertDialog.Popup\n      className={cn(\n        \"fixed top-1/2 left-1/2 z-50 w-[min(92vw,32rem)] rounded-[var(--radius-dialog)] border border-[var(--lilt-border)] bg-[var(--lilt-surface)] p-6 text-[var(--lilt-text)] outline-none transition-[opacity,transform] duration-[var(--duration-base)] ease-[var(--ease-out)] [transform:translate(-50%,-50%)] data-[starting-style]:opacity-0 data-[starting-style]:[transform:translate(-50%,calc(-50%+0.5rem))_scale(0.985)] data-[ending-style]:opacity-0 data-[ending-style]:[transform:translate(-50%,calc(-50%+0.5rem))_scale(0.985)] sm:p-7\",\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </BaseAlertDialog.Popup>\n  </BaseAlertDialog.Portal>\n);\n\nexport interface AlertDialogHeaderProps {\n  children: ReactNode;\n  className?: string;\n  /** Lilt's small uppercase note above the title. */\n  eyebrow?: ReactNode;\n}\n\nexport const AlertDialogHeader = ({\n  children,\n  className,\n  eyebrow = \"Hold on a second\",\n}: AlertDialogHeaderProps) => (\n  <div className={cn(className)}>\n    {eyebrow ? (\n      <p className=\"mb-2 font-display text-xs font-bold uppercase tracking-[0.15em] text-[var(--lilt-primary-text)]\">\n        {eyebrow}\n      </p>\n    ) : null}\n    {children}\n  </div>\n);\n\nexport const AlertDialogTitle = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseAlertDialog.Title>) => (\n  <BaseAlertDialog.Title\n    className={cn(\n      \"font-display text-2xl font-semibold tracking-[-0.035em]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const AlertDialogDescription = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseAlertDialog.Description>) => (\n  <BaseAlertDialog.Description\n    className={cn(\n      \"mt-3 max-w-[44ch] leading-7 text-[var(--lilt-text-muted)]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const AlertDialogFooter = ({\n  className,\n  ...props\n}: ComponentProps<\"div\">) => (\n  <div\n    className={cn(\"mt-6 flex flex-wrap items-center gap-3\", className)}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

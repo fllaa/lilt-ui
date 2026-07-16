@@ -22,13 +22,25 @@ const a11yNotes: Record<string, string[]> = {
   accordion: [
     "Triggers are buttons inside headings; arrow keys move between them.",
   ],
+  "alert-dialog": [
+    "Focus is trapped and clicking the backdrop does not dismiss — the user must pick an action.",
+    "Announced as role=alertdialog, named by its title.",
+  ],
   button: [
     "Icon-only buttons require an aria-label.",
     "Focus ring is a 2px Lilt-green ring with a 2px offset, visible in both modes.",
   ],
+  "context-menu": [
+    "Long-press opens it on touch; arrow keys and type-ahead navigate once open.",
+    "Context menus are a shortcut, not the only path — mirror actions somewhere clickable.",
+  ],
   dialog: [
     "Focus moves into the dialog on open and returns to the trigger on close.",
     "Escape closes. The title is announced via the dialog's accessible name.",
+  ],
+  drawer: [
+    "Same semantics as Dialog — focus trap, Escape closes, the title names the surface.",
+    "Swipe toward its edge to dismiss on touch; the close button always works too.",
   ],
   "dropdown-menu": [
     "Full keyboard navigation with type-ahead. Danger items are styled, not hidden.",
@@ -41,6 +53,10 @@ const a11yNotes: Record<string, string[]> = {
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
   ],
+  "hover-card": [
+    "Opens on keyboard focus as well as hover; Escape dismisses.",
+    "Touch users never see the preview — the link must stand on its own.",
+  ],
   "input-otp": [
     "Acts as one field: paste fills every slot, Backspace walks backward, SMS autofill works via one-time-code.",
     "Slots after the first carry 'Character N of L' labels so focus position is announced.",
@@ -48,6 +64,10 @@ const a11yNotes: Record<string, string[]> = {
   kbd: [
     "Real <kbd> elements — key names are plain text for screen readers.",
     "Prefer text like 'Ctrl' over symbol-only glyphs for ambiguous keys.",
+  ],
+  menubar: [
+    "One tab stop for the whole bar; arrows move across menus, Escape backs out level by level.",
+    "Triggers expose aria-haspopup and aria-expanded automatically.",
   ],
   "number-field": [
     "Arrow keys step, Shift+Arrow steps by 10; values clamp to min/max and steppers repeat on hold.",

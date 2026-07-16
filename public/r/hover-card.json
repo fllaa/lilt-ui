@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card",
+  "title": "Hover Card",
+  "description": "Link previews on hover and focus. The link must stand on its own for touch.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/hover-card.tsx",
+      "content": "\"use client\";\n\nimport { PreviewCard as BasePreviewCard } from \"@base-ui/react/preview-card\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const HoverCard = (\n  props: ComponentProps<typeof BasePreviewCard.Root>\n) => <BasePreviewCard.Root {...props} />;\n\nexport const HoverCardTrigger = ({\n  className,\n  delay = 600,\n  closeDelay = 300,\n  ...props\n}: ComponentProps<typeof BasePreviewCard.Trigger>) => (\n  <BasePreviewCard.Trigger\n    className={cn(\n      \"rounded-[var(--radius-control-sm)] underline decoration-[var(--lilt-border-strong)] underline-offset-4 outline-none transition-[text-decoration-color] duration-[var(--duration-fast)] hover:decoration-[var(--lilt-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] data-[popup-open]:decoration-[var(--lilt-text)]\",\n      className\n    )}\n    closeDelay={closeDelay}\n    delay={delay}\n    {...props}\n  />\n);\n\nexport const HoverCardContent = ({\n  children,\n  className,\n  sideOffset = 8,\n  ...props\n}: ComponentProps<typeof BasePreviewCard.Positioner>) => (\n  <BasePreviewCard.Portal>\n    <BasePreviewCard.Positioner\n      className=\"z-50\"\n      sideOffset={sideOffset}\n      {...props}\n    >\n      <BasePreviewCard.Popup\n        className={cn(\n          \"w-72 origin-[var(--transform-origin)] rounded-[var(--radius-card)] border border-[var(--lilt-border-strong)] bg-[var(--lilt-surface)] p-4 text-[var(--lilt-text)] outline-none transition-[opacity,transform] duration-[var(--duration-base)] ease-[var(--ease-out)] data-[starting-style]:translate-y-1 data-[starting-style]:scale-[0.985] data-[starting-style]:opacity-0 data-[ending-style]:translate-y-1 data-[ending-style]:scale-[0.985] data-[ending-style]:opacity-0\",\n          className\n        )}\n      >\n        {children}\n      </BasePreviewCard.Popup>\n    </BasePreviewCard.Positioner>\n  </BasePreviewCard.Portal>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -783,6 +783,104 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "Confirmation that requires an explicit choice. No backdrop dismiss, no X — pick an answer.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "Link previews on hover and focus. The link must stand on its own for touch.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "Right-click (or long-press) menu wearing the dropdown-menu skin, anchored to the pointer.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "A pill rail of menus with hover-switching and full keyboard navigation.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A swipeable sheet from the bottom, right, or left. Dialog semantics, drawer physics.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
