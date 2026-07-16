@@ -33,6 +33,10 @@ const a11yNotes: Record<string, string[]> = {
   "dropdown-menu": [
     "Full keyboard navigation with type-ahead. Danger items are styled, not hidden.",
   ],
+  "empty-state": [
+    "The title is a real heading, so screen-reader users can jump to it.",
+    "The icon slot is decorative (aria-hidden) — meaning lives in the text.",
+  ],
   field: [
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
@@ -41,9 +45,17 @@ const a11yNotes: Record<string, string[]> = {
     "Acts as one field: paste fills every slot, Backspace walks backward, SMS autofill works via one-time-code.",
     "Slots after the first carry 'Character N of L' labels so focus position is announced.",
   ],
+  kbd: [
+    "Real <kbd> elements — key names are plain text for screen readers.",
+    "Prefer text like 'Ctrl' over symbol-only glyphs for ambiguous keys.",
+  ],
   "number-field": [
     "Arrow keys step, Shift+Arrow steps by 10; values clamp to min/max and steppers repeat on hold.",
     "The scrub label still works as a plain label for assistive tech — scrubbing is pointer-only sugar.",
+  ],
+  progress: [
+    "Announced as a progressbar named by its label; the value is exposed via aria-valuenow.",
+    "value={null} renders indeterminate — it announces as busy, not as 0%.",
   ],
   select: [
     "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
@@ -52,6 +64,10 @@ const a11yNotes: Record<string, string[]> = {
   slider: [
     "Each thumb is a native range input: arrows step, Shift+Arrow large-steps, Home/End jump.",
     "Label single sliders with SliderLabel; pass thumbLabels for ranges.",
+  ],
+  spinner: [
+    "Announces 'Loading' via role=status; pass label to change it, or label={null} inside already-labeled buttons.",
+    "Reduced-motion users see a static arc instead of a spin.",
   ],
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",

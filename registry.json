@@ -569,6 +569,59 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "A labeled progress bar. Pass value null for indeterminate, honest busy state.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "A hand-drawn loading arc. Freezes politely under reduced motion.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Empty State",
+      "description": "A dashed-border resting place for nothing-yet moments, with room for one gentle joke.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/empty-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Keycap hints with a 2px bottom border for depth. Borders, still not shadows.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

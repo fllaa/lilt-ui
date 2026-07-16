@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner",
+  "title": "Spinner",
+  "description": "A hand-drawn loading arc. Freezes politely under reduced motion.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/spinner.tsx",
+      "content": "import { cn } from \"@/registry/lilt/lib/utils\";\n\nexport interface SpinnerProps {\n  className?: string;\n  /**\n   * Announced to screen readers. Pass `null` when the surrounding context\n   * already says what's loading (e.g. inside a labeled button).\n   */\n  label?: string | null;\n  size?: number;\n}\n\nexport const Spinner = ({\n  className,\n  label = \"Loading\",\n  size = 20,\n}: SpinnerProps) => (\n  <span\n    className={cn(\"inline-flex text-[var(--lilt-text-muted)]\", className)}\n    role={label === null ? undefined : \"status\"}\n  >\n    <svg\n      aria-hidden=\"true\"\n      className=\"animate-spin\"\n      fill=\"none\"\n      height={size}\n      stroke=\"currentColor\"\n      viewBox=\"0 0 24 24\"\n      width={size}\n    >\n      <path\n        d=\"M12.1 3.8c4.5.05 8.2 3.75 8.1 8.3-.1 4.5-3.75 8.15-8.3 8.1-4.5-.05-8.15-3.7-8.1-8.3\"\n        strokeLinecap=\"round\"\n        strokeWidth=\"1.8\"\n      />\n    </svg>\n    {label === null ? null : <span className=\"sr-only\">{label}</span>}\n  </span>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-state",
+  "title": "Empty State",
+  "description": "A dashed-border resting place for nothing-yet moments, with room for one gentle joke.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/empty-state.tsx",
+      "content": "import type { HTMLAttributes } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const EmptyState = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLDivElement>) => (\n  <div\n    className={cn(\n      \"flex flex-col items-center gap-2 rounded-[var(--radius-card)] border border-dashed border-[var(--lilt-border)] bg-[var(--lilt-surface)] px-6 py-10 text-center\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const EmptyStateIcon = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLDivElement>) => (\n  <div\n    aria-hidden=\"true\"\n    className={cn(\n      \"mb-2 flex size-12 items-center justify-center rounded-full bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const EmptyStateTitle = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLHeadingElement>) => (\n  // oxlint-disable-next-line jsx-a11y/heading-has-content -- passthrough primitive, callers supply children via props spread\n  <h3\n    className={cn(\n      \"font-display text-lg font-semibold tracking-[-0.02em]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const EmptyStateDescription = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLParagraphElement>) => (\n  <p\n    className={cn(\n      \"max-w-[36ch] text-sm leading-relaxed text-[var(--lilt-text-muted)]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const EmptyStateActions = ({\n  className,\n  ...props\n}: HTMLAttributes<HTMLDivElement>) => (\n  <div\n    className={cn(\n      \"mt-4 flex flex-wrap items-center justify-center gap-3\",\n      className\n    )}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

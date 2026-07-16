@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress",
+  "title": "Progress",
+  "description": "A labeled progress bar. Pass value null for indeterminate, honest busy state.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/progress.tsx",
+      "content": "\"use client\";\n\nimport { Progress as BaseProgress } from \"@base-ui/react/progress\";\nimport type { ComponentProps, ReactNode } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Progress = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseProgress.Root>) => (\n  <BaseProgress.Root className={cn(\"grid gap-2\", className)} {...props} />\n);\n\nexport const ProgressLabel = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseProgress.Label>) => (\n  <BaseProgress.Label\n    className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n    {...props}\n  />\n);\n\nexport const ProgressValue = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseProgress.Value>) => (\n  <BaseProgress.Value\n    className={cn(\n      \"text-sm text-[var(--lilt-text-muted)] tabular-nums\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const ProgressTrack = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseProgress.Track> & { children?: ReactNode }) => (\n  <BaseProgress.Track\n    className={cn(\n      \"h-2.5 overflow-hidden rounded-full border border-[var(--lilt-border)] bg-[var(--lilt-surface-2)]\",\n      className\n    )}\n    {...props}\n  >\n    {children}\n    <BaseProgress.Indicator className=\"h-full rounded-full bg-[var(--lilt-button)] transition-[width] duration-[var(--duration-base)] ease-[var(--ease-out)] data-[indeterminate]:w-1/3 data-[indeterminate]:animate-pulse\" />\n  </BaseProgress.Track>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
