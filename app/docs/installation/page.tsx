@@ -75,6 +75,17 @@ export default function InstallationPage() {
           installed when a component needs it.
         </p>
         <CodeBlock code={addCommand} lang="bash" />
+        <p className="leading-relaxed text-[var(--lilt-text-muted)]">
+          <strong className="text-[var(--lilt-text)]">
+            Fresh create-next-app?
+          </strong>{" "}
+          Delete the boilerplate <code>--background</code>/
+          <code>--foreground</code> variables and the unlayered{" "}
+          <code>body</code> rule from <code>globals.css</code> — unlayered
+          styles beat Lilt&apos;s <code>@layer base</code> body styling, so
+          the page keeps Next&apos;s default background until they&apos;re
+          gone.
+        </p>
       </section>
 
       <section className="grid gap-3">
@@ -88,6 +99,15 @@ export default function InstallationPage() {
           <code>--font-display</code> and <code>--font-sans</code>):
         </p>
         <CodeBlock code={fontsSnippet} lang="html" />
+        <p className="leading-relaxed text-[var(--lilt-text-muted)]">
+          If your <code>@theme</code> already defines <code>--font-sans</code>{" "}
+          (create-next-app sets it to Geist), the CLI keeps your value —
+          replace it with the DM Sans stack yourself:{" "}
+          <code>
+            --font-sans: &quot;DM Sans&quot;, ui-sans-serif, system-ui,
+            sans-serif;
+          </code>
+        </p>
       </section>
 
       <section className="grid gap-3">
