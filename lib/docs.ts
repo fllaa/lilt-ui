@@ -24,7 +24,6 @@ const packByName: Record<string, string> = {
   label: "Form",
   popover: "Overlay",
   "radio-group": "Form",
-  "segmented-nav": "Core",
   select: "Form",
   separator: "Display",
   skeleton: "Display",

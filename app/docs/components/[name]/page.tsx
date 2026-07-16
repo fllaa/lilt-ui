@@ -37,15 +37,13 @@ const a11yNotes: Record<string, string[]> = {
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
   ],
-  "segmented-nav": [
-    'Selected item carries aria-current="page". Use href items for real navigation.',
-  ],
   select: [
     "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
     "The trigger needs an aria-label when used without a visible label — or wrap it in a Field.",
   ],
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",
+    "The active pill glides between tabs; reduced-motion mode makes the change instant.",
   ],
   toast: [
     "Toasts are announced politely by screen readers and pause on hover or focus.",

@@ -293,19 +293,6 @@
       ]
     },
     {
-      "name": "segmented-nav",
-      "type": "registry:ui",
-      "title": "Segmented Nav",
-      "description": "Pill-shaped page navigation bar. Renders links or buttons per item.",
-      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
-      "files": [
-        {
-          "path": "registry/lilt/ui/segmented-nav.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
@@ -477,7 +464,7 @@
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
-      "description": "Base UI tabs wearing the Lilt pill skin. For page-level navigation links, use segmented-nav instead.",
+      "description": "Base UI tabs in the Lilt pill skin, with an active pill that glides between tabs. Works for page-style section switching too.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [

@@ -16,7 +16,6 @@ import InputDemo from "./input";
 import LabelDemo from "./label";
 import PopoverDemo from "./popover";
 import RadioGroupDemo from "./radio-group";
-import SegmentedNavDemo from "./segmented-nav";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
 import SkeletonDemo from "./skeleton";
@@ -44,7 +43,6 @@ export const demos: Record<string, ComponentType> = {
   label: LabelDemo,
   popover: PopoverDemo,
   "radio-group": RadioGroupDemo,
-  "segmented-nav": SegmentedNavDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
   skeleton: SkeletonDemo,

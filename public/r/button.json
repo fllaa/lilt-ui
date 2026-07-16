@@ -3,8 +3,14 @@
   "name": "button",
   "title": "Button",
   "description": "Pill-shaped for md/lg, 12px radius compact. Variants: primary, secondary, soft, danger. 2px hover lift.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/button.tsx",
