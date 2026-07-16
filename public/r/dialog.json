@@ -3,8 +3,14 @@
   "name": "dialog",
   "title": "Dialog",
   "description": "Base UI dialog in Lilt style: dialog radius, blurred green-black backdrop, eyebrow header, icon-only close. Borders, no shadows.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/dialog.tsx",

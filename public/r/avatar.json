@@ -3,8 +3,13 @@
   "name": "avatar",
   "title": "Avatar",
   "description": "Round avatar with mint-soft initials fallback.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/avatar.tsx",

@@ -3,7 +3,9 @@
   "name": "icons",
   "title": "Icons",
   "description": "Lilt's hand-drawn interface icon set.",
-  "registryDependencies": ["@lilt/theme"],
+  "registryDependencies": [
+    "@lilt/theme"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/icons.tsx",

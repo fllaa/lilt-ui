@@ -3,8 +3,13 @@
   "name": "radio-group",
   "title": "Radio Group",
   "description": "Base UI radio group: round items with inner dot indicator.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/radio-group.tsx",

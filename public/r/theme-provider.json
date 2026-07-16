@@ -3,7 +3,9 @@
   "name": "theme-provider",
   "title": "Theme Provider",
   "description": "Light/dark theme context with localStorage persistence and system-preference fallback.",
-  "registryDependencies": ["@lilt/theme"],
+  "registryDependencies": [
+    "@lilt/theme"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/theme-provider.tsx",

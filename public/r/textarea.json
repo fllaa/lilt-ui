@@ -3,7 +3,10 @@
   "name": "textarea",
   "title": "Textarea",
   "description": "Multi-line input matching the Input recipe.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/textarea.tsx",

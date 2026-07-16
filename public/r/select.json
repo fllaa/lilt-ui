@@ -3,8 +3,14 @@
   "name": "select",
   "title": "Select",
   "description": "Base UI select styled like Lilt inputs. Borderful popup, no shadows, dropdown positioning.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/select.tsx",

@@ -3,7 +3,10 @@
   "name": "segmented-nav",
   "title": "Segmented Nav",
   "description": "Pill-shaped page navigation bar. Renders links or buttons per item.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/segmented-nav.tsx",

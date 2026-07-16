@@ -3,8 +3,13 @@
   "name": "switch",
   "title": "Switch",
   "description": "Base UI switch: 48x28 pill track, mint when checked.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/switch.tsx",

@@ -3,8 +3,14 @@
   "name": "field",
   "title": "Field",
   "description": "Form field wiring labels, descriptions, and errors automatically (Base UI Field). Includes the 'Optional, no pressure' note.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/input"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/input"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/field.tsx",

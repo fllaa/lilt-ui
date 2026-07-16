@@ -3,8 +3,13 @@
   "name": "separator",
   "title": "Separator",
   "description": "Accessible 1px rule in both orientations.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/separator.tsx",

@@ -3,7 +3,10 @@
   "name": "table",
   "title": "Table",
   "description": "Semantic table with eyebrow-style headers inside a bordered, scrollable card.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/table.tsx",

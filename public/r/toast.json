@@ -3,8 +3,14 @@
   "name": "toast",
   "title": "Toast",
   "description": "Stacked, swipeable notifications. Exports a global toast manager plus a <Toaster /> to mount once.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/toast.tsx",

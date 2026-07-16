@@ -3,7 +3,10 @@
   "name": "badge",
   "title": "Badge",
   "description": "Pill badge. Pastel backgrounds always pair with AAA-minded text tokens.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/badge.tsx",

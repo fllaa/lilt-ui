@@ -3,8 +3,13 @@
   "name": "tabs",
   "title": "Tabs",
   "description": "Base UI tabs wearing the Lilt pill skin. For page-level navigation links, use segmented-nav instead.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/tabs.tsx",

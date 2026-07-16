@@ -3,7 +3,10 @@
   "name": "input",
   "title": "Input",
   "description": "Text input: 48px height, 16px radius, warm field surface, focus ring in Lilt green.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/input.tsx",

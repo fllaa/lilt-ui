@@ -3,7 +3,10 @@
   "name": "skeleton",
   "title": "Skeleton",
   "description": "Loading placeholder using the secondary surface. Opacity-only pulse, reduced-motion friendly.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/skeleton.tsx",

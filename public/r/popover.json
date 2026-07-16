@@ -3,8 +3,13 @@
   "name": "popover",
   "title": "Popover",
   "description": "Bordered surface popover with title and description parts.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/popover.tsx",

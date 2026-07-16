@@ -3,8 +3,13 @@
   "name": "tooltip",
   "title": "Tooltip",
   "description": "Inverted-surface tooltip (near-black on light, near-white on dark). Share timing with one TooltipProvider per app.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/tooltip.tsx",

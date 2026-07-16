@@ -3,7 +3,11 @@
   "name": "alert",
   "title": "Alert",
   "description": "Status block with hand-drawn icon. Variants: info, success, warning, danger.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/alert.tsx",

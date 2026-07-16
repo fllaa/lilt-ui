@@ -3,7 +3,11 @@
   "name": "breadcrumb",
   "title": "Breadcrumb",
   "description": "Breadcrumb navigation with Lilt's hand-drawn arrow separators.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/breadcrumb.tsx",

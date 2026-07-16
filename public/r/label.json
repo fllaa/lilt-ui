@@ -3,7 +3,10 @@
   "name": "label",
   "title": "Label",
   "description": "Form label in Lilt's small-semibold style.",
-  "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/label.tsx",

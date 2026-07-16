@@ -3,8 +3,14 @@
   "name": "accordion",
   "title": "Accordion",
   "description": "Border-separated accordion with hand-drawn chevron and smooth height transition.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/accordion.tsx",

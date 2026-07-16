@@ -3,8 +3,14 @@
   "name": "checkbox",
   "title": "Checkbox",
   "description": "Base UI checkbox with Lilt skin: 24px rounded box, hand-drawn check, indeterminate minus.",
-  "dependencies": ["@base-ui/react"],
-  "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
   "files": [
     {
       "path": "registry/lilt/ui/checkbox.tsx",
