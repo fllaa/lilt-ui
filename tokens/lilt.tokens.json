@@ -1,0 +1,129 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Lilt 0.2",
+  "description": "A precise, warm, playful design language for creative and developer products. Canonical source of truth for lilt-ui; keep registry/lilt/theme/lilt.css in lockstep.",
+  "color": {
+    "primitive": {
+      "nearWhite": { "$type": "color", "$value": "#F8F7F3" },
+      "paper": { "$type": "color", "$value": "#FDFCF8" },
+      "nearBlack": { "$type": "color", "$value": "#121713" },
+      "charcoal": { "$type": "color", "$value": "#101411" },
+      "mint": { "$type": "color", "$value": "#AEEACF" },
+      "mintSoft": { "$type": "color", "$value": "#E3F7ED" },
+      "peach": { "$type": "color", "$value": "#FFD0B5" },
+      "yellow": { "$type": "color", "$value": "#F8E8A6" },
+      "red": { "$type": "color", "$value": "#A62B3B" }
+    },
+    "light": {
+      "canvas": { "$type": "color", "$value": "{color.primitive.nearWhite}" },
+      "surface": { "$type": "color", "$value": "{color.primitive.paper}" },
+      "surfaceSecondary": { "$type": "color", "$value": "#EFEDE7" },
+      "field": { "$type": "color", "$value": "#FBFAF6" },
+      "text": { "$type": "color", "$value": "{color.primitive.nearBlack}" },
+      "textMuted": { "$type": "color", "$value": "#475249" },
+      "textSubtle": { "$type": "color", "$value": "#69746C" },
+      "border": { "$type": "color", "$value": "#C4CCC5" },
+      "borderStrong": { "$type": "color", "$value": "#7C887F" },
+      "button": { "$type": "color", "$value": "#121713" },
+      "buttonHover": { "$type": "color", "$value": "#283029" },
+      "buttonText": { "$type": "color", "$value": "#F7F8F3" },
+      "buttonBorder": { "$type": "color", "$value": "#121713" },
+      "primary": { "$type": "color", "$value": "{color.primitive.mint}" },
+      "primarySoft": { "$type": "color", "$value": "{color.primitive.mintSoft}" },
+      "primaryText": { "$type": "color", "$value": "#164C35" },
+      "focus": { "$type": "color", "$value": "#167F55" },
+      "warning": { "$type": "color", "$value": "{color.primitive.peach}" },
+      "highlight": { "$type": "color", "$value": "{color.primitive.yellow}" },
+      "danger": { "$type": "color", "$value": "{color.primitive.red}" },
+      "dangerSoft": { "$type": "color", "$value": "#FDE8EB" },
+      "dangerSoftHover": { "$type": "color", "$value": "#F9D7DC" },
+      "dangerText": { "$type": "color", "$value": "#7B1B2A" },
+      "selectionText": { "$type": "color", "$value": "#102117" }
+    },
+    "dark": {
+      "canvas": { "$type": "color", "$value": "{color.primitive.charcoal}" },
+      "surface": { "$type": "color", "$value": "#171C18" },
+      "surfaceSecondary": { "$type": "color", "$value": "#222923" },
+      "field": { "$type": "color", "$value": "#141915" },
+      "text": { "$type": "color", "$value": "#F1F4EE" },
+      "textMuted": { "$type": "color", "$value": "#C3CCC4" },
+      "textSubtle": { "$type": "color", "$value": "#9CA79F" },
+      "border": { "$type": "color", "$value": "#465149" },
+      "borderStrong": { "$type": "color", "$value": "#88948B" },
+      "button": { "$type": "color", "$value": "#EEF2EC" },
+      "buttonHover": { "$type": "color", "$value": "#DCE3DD" },
+      "buttonText": { "$type": "color", "$value": "#111612" },
+      "buttonBorder": { "$type": "color", "$value": "#EEF2EC" },
+      "primary": { "$type": "color", "$value": "#A5E5C6" },
+      "primarySoft": { "$type": "color", "$value": "#1D3B2D" },
+      "primaryText": { "$type": "color", "$value": "#B9F0D3" },
+      "focus": { "$type": "color", "$value": "#A5E5C6" },
+      "warning": { "$type": "color", "$value": "#7A4935" },
+      "highlight": { "$type": "color", "$value": "#5D532C" },
+      "danger": { "$type": "color", "$value": "#FF94A2" },
+      "dangerSoft": { "$type": "color", "$value": "#4B2028" },
+      "dangerSoftHover": { "$type": "color", "$value": "#5D2630" },
+      "dangerText": { "$type": "color", "$value": "#FFB3BD" },
+      "selectionText": { "$type": "color", "$value": "#102117" }
+    }
+  },
+  "typography": {
+    "family": {
+      "display": { "$type": "fontFamily", "$value": ["Space Grotesk", "DM Sans", "sans-serif"] },
+      "body": { "$type": "fontFamily", "$value": ["DM Sans", "system-ui", "sans-serif"] }
+    },
+    "size": {
+      "caption": { "$type": "dimension", "$value": "12px" },
+      "label": { "$type": "dimension", "$value": "14px" },
+      "body": { "$type": "dimension", "$value": "16px" },
+      "bodyLarge": { "$type": "dimension", "$value": "18px" },
+      "heading3": { "$type": "dimension", "$value": "24px" },
+      "heading2": { "$type": "dimension", "$value": "36px" },
+      "heading1": { "$type": "dimension", "$value": "56px" }
+    },
+    "lineHeight": {
+      "tight": { "$type": "number", "$value": 1.05 },
+      "heading": { "$type": "number", "$value": 1.15 },
+      "body": { "$type": "number", "$value": 1.65 }
+    },
+    "weight": {
+      "regular": { "$type": "fontWeight", "$value": 400 },
+      "medium": { "$type": "fontWeight", "$value": 500 },
+      "semibold": { "$type": "fontWeight", "$value": 600 },
+      "bold": { "$type": "fontWeight", "$value": 700 }
+    }
+  },
+  "space": {
+    "1": { "$type": "dimension", "$value": "4px" },
+    "2": { "$type": "dimension", "$value": "8px" },
+    "3": { "$type": "dimension", "$value": "12px" },
+    "4": { "$type": "dimension", "$value": "16px" },
+    "6": { "$type": "dimension", "$value": "24px" },
+    "8": { "$type": "dimension", "$value": "32px" },
+    "12": { "$type": "dimension", "$value": "48px" },
+    "16": { "$type": "dimension", "$value": "64px" },
+    "24": { "$type": "dimension", "$value": "96px" }
+  },
+  "radius": {
+    "compact": { "$type": "dimension", "$value": "12px" },
+    "control": { "$type": "dimension", "$value": "16px" },
+    "card": { "$type": "dimension", "$value": "16px" },
+    "dialog": { "$type": "dimension", "$value": "20px" },
+    "pill": { "$type": "dimension", "$value": "999px" }
+  },
+  "border": {
+    "thin": { "$type": "dimension", "$value": "1px" },
+    "focus": { "$type": "dimension", "$value": "2px" }
+  },
+  "motion": {
+    "duration": {
+      "fast": { "$type": "duration", "$value": "140ms" },
+      "base": { "$type": "duration", "$value": "220ms" },
+      "expressive": { "$type": "duration", "$value": "320ms" }
+    },
+    "easing": {
+      "out": { "$type": "cubicBezier", "$value": [0.2, 0.8, 0.2, 1] }
+    },
+    "hoverLift": { "$type": "dimension", "$value": "-2px" }
+  }
+}

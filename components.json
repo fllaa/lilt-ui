@@ -12,10 +12,12 @@
   },
   "aliases": {
     "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
+    "utils": "@/registry/lilt/lib/utils",
+    "ui": "@/registry/lilt/ui",
+    "lib": "@/registry/lilt/lib",
     "hooks": "@/hooks"
   },
-  "iconLibrary": "lucide"
+  "registries": {
+    "@lilt": "http://localhost:3000/r/{name}.json"
+  }
 }

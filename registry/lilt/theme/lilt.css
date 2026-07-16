@@ -1,0 +1,131 @@
+/*
+ * Lilt theme — canonical stylesheet.
+ * tokens/lilt.tokens.json documents these values; the `theme` item in
+ * registry.json distributes them. Keep all three in lockstep.
+ *
+ * Dark mode: variables flip on `.dark` (what the shadcn CLI emits).
+ * The widened dark variant below also honors [data-theme="dark"] markup.
+ */
+
+@custom-variant dark (&:where(.dark, [data-theme="dark"], .dark *, [data-theme="dark"] *));
+
+@theme {
+  --font-display: "Space Grotesk", "DM Sans", sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --radius-control-sm: 0.75rem;
+  --radius-control: 1rem;
+  --radius-card: 1rem;
+  --radius-dialog: 1.25rem;
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-expressive: 320ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root {
+  color-scheme: light;
+  --lilt-canvas: #f8f7f3;
+  --lilt-surface: #fdfcf8;
+  --lilt-surface-2: #efede7;
+  --lilt-field: #fbfaf6;
+  --lilt-text: #121713;
+  --lilt-text-muted: #475249;
+  --lilt-text-subtle: #69746c;
+  --lilt-border: #c4ccc5;
+  --lilt-border-strong: #7c887f;
+  --lilt-button: #121713;
+  --lilt-button-hover: #283029;
+  --lilt-button-text: #f7f8f3;
+  --lilt-button-border: #121713;
+  --lilt-primary: #aeeacf;
+  --lilt-primary-soft: #e3f7ed;
+  --lilt-primary-text: #164c35;
+  --lilt-focus: #167f55;
+  --lilt-warning: #ffd0b5;
+  --lilt-highlight: #f8e8a6;
+  --lilt-danger: #a62b3b;
+  --lilt-danger-soft: #fde8eb;
+  --lilt-danger-soft-hover: #f9d7dc;
+  --lilt-danger-text: #7b1b2a;
+  --lilt-selection-text: #102117;
+}
+
+.dark {
+  color-scheme: dark;
+  --lilt-canvas: #101411;
+  --lilt-surface: #171c18;
+  --lilt-surface-2: #222923;
+  --lilt-field: #141915;
+  --lilt-text: #f1f4ee;
+  --lilt-text-muted: #c3ccc4;
+  --lilt-text-subtle: #9ca79f;
+  --lilt-border: #465149;
+  --lilt-border-strong: #88948b;
+  --lilt-button: #eef2ec;
+  --lilt-button-hover: #dce3dd;
+  --lilt-button-text: #111612;
+  --lilt-button-border: #eef2ec;
+  --lilt-primary: #a5e5c6;
+  --lilt-primary-soft: #1d3b2d;
+  --lilt-primary-text: #b9f0d3;
+  --lilt-focus: #a5e5c6;
+  --lilt-warning: #7a4935;
+  --lilt-highlight: #5d532c;
+  --lilt-danger: #ff94a2;
+  --lilt-danger-soft: #4b2028;
+  --lilt-danger-soft-hover: #5d2630;
+  --lilt-danger-text: #ffb3bd;
+  --lilt-selection-text: #102117;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--lilt-canvas);
+    color: var(--lilt-text);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--lilt-primary);
+    color: var(--lilt-selection-text);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    button:hover,
+    a:hover,
+    article:hover {
+      transform: none !important;
+    }
+  }
+}
+
+@utility doodle-underline {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    position: absolute;
+    right: -0.03em;
+    bottom: -0.08em;
+    left: -0.03em;
+    height: 0.12em;
+    border-radius: 999px;
+    background: var(--lilt-primary);
+    content: "";
+    transform: rotate(-1deg);
+  }
+}

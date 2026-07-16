@@ -1,78 +1,163 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "lilt",
+  "homepage": "https://lilt-ui.vercel.app",
   "items": [
     {
-      "name": "hello-world",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": ["button"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
-          "type": "registry:component"
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "Lilt Theme",
+      "description": "Lilt design tokens: warm paper surfaces, pale mint accent, role-based radii, restrained motion. Borders over shadows.",
+      "cssVars": {
+        "theme": {
+          "font-display": "\"Space Grotesk\", \"DM Sans\", sans-serif",
+          "font-sans": "\"DM Sans\", ui-sans-serif, system-ui, sans-serif",
+          "radius-control-sm": "0.75rem",
+          "radius-control": "1rem",
+          "radius-card": "1rem",
+          "radius-dialog": "1.25rem",
+          "duration-fast": "140ms",
+          "duration-base": "220ms",
+          "duration-expressive": "320ms",
+          "ease-out": "cubic-bezier(0.2, 0.8, 0.2, 1)"
+        },
+        "light": {
+          "lilt-canvas": "#f8f7f3",
+          "lilt-surface": "#fdfcf8",
+          "lilt-surface-2": "#efede7",
+          "lilt-field": "#fbfaf6",
+          "lilt-text": "#121713",
+          "lilt-text-muted": "#475249",
+          "lilt-text-subtle": "#69746c",
+          "lilt-border": "#c4ccc5",
+          "lilt-border-strong": "#7c887f",
+          "lilt-button": "#121713",
+          "lilt-button-hover": "#283029",
+          "lilt-button-text": "#f7f8f3",
+          "lilt-button-border": "#121713",
+          "lilt-primary": "#aeeacf",
+          "lilt-primary-soft": "#e3f7ed",
+          "lilt-primary-text": "#164c35",
+          "lilt-focus": "#167f55",
+          "lilt-warning": "#ffd0b5",
+          "lilt-highlight": "#f8e8a6",
+          "lilt-danger": "#a62b3b",
+          "lilt-danger-soft": "#fde8eb",
+          "lilt-danger-soft-hover": "#f9d7dc",
+          "lilt-danger-text": "#7b1b2a",
+          "lilt-selection-text": "#102117"
+        },
+        "dark": {
+          "lilt-canvas": "#101411",
+          "lilt-surface": "#171c18",
+          "lilt-surface-2": "#222923",
+          "lilt-field": "#141915",
+          "lilt-text": "#f1f4ee",
+          "lilt-text-muted": "#c3ccc4",
+          "lilt-text-subtle": "#9ca79f",
+          "lilt-border": "#465149",
+          "lilt-border-strong": "#88948b",
+          "lilt-button": "#eef2ec",
+          "lilt-button-hover": "#dce3dd",
+          "lilt-button-text": "#111612",
+          "lilt-button-border": "#eef2ec",
+          "lilt-primary": "#a5e5c6",
+          "lilt-primary-soft": "#1d3b2d",
+          "lilt-primary-text": "#b9f0d3",
+          "lilt-focus": "#a5e5c6",
+          "lilt-warning": "#7a4935",
+          "lilt-highlight": "#5d532c",
+          "lilt-danger": "#ff94a2",
+          "lilt-danger-soft": "#4b2028",
+          "lilt-danger-soft-hover": "#5d2630",
+          "lilt-danger-text": "#ffb3bd",
+          "lilt-selection-text": "#102117"
         }
-      ]
+      },
+      "css": {
+        "@layer base": {
+          ":root": {
+            "color-scheme": "light"
+          },
+          ".dark": {
+            "color-scheme": "dark"
+          },
+          "body": {
+            "background": "var(--lilt-canvas)",
+            "color": "var(--lilt-text)",
+            "font-family": "var(--font-sans)",
+            "text-rendering": "optimizeLegibility"
+          },
+          "::selection": {
+            "background": "var(--lilt-primary)",
+            "color": "var(--lilt-selection-text)"
+          },
+          "@media (prefers-reduced-motion: reduce)": {
+            "*, *::before, *::after": {
+              "scroll-behavior": "auto !important",
+              "animation-duration": "0.01ms !important",
+              "animation-iteration-count": "1 !important",
+              "transition-duration": "0.01ms !important"
+            },
+            "button:hover, a:hover, article:hover": {
+              "transform": "none !important"
+            }
+          }
+        },
+        "@utility doodle-underline": {
+          "position": "relative",
+          "display": "inline-block",
+          "&::after": {
+            "position": "absolute",
+            "right": "-0.03em",
+            "bottom": "-0.08em",
+            "left": "-0.03em",
+            "height": "0.12em",
+            "border-radius": "999px",
+            "background": "var(--lilt-primary)",
+            "content": "\"\"",
+            "transform": "rotate(-1deg)"
+          }
+        }
+      },
+      "docs": "Lilt uses Space Grotesk (display) and DM Sans (body). Load them, e.g. via Google Fonts: https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap. Dark mode flips on the .dark class; if your project uses a different dark variant, add: @custom-variant dark (&:where(.dark, [data-theme=\"dark\"], .dark *, [data-theme=\"dark\"] *));"
     },
     {
-      "name": "example-form",
-      "type": "registry:component",
-      "title": "Example Form",
-      "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "cn() class-merge helper used by every Lilt component.",
+      "dependencies": ["clsx", "tailwind-merge"],
       "files": [
         {
-          "path": "registry/new-york/blocks/example-form/example-form.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "complex-component",
-      "type": "registry:component",
-      "title": "Complex Component",
-      "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
-      "files": [
-        {
-          "path": "registry/new-york/blocks/complex-component/page.tsx",
-          "type": "registry:page",
-          "target": "app/pokemon/page.tsx"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-card.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/components/pokemon-image.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/lib/pokemon.ts",
+          "path": "registry/lilt/lib/utils.ts",
           "type": "registry:lib"
-        },
-        {
-          "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
-          "type": "registry:hook"
         }
       ]
     },
     {
-      "name": "example-with-css",
-      "type": "registry:component",
-      "title": "Example with CSS",
-      "description": "A login form with a CSS file.",
+      "name": "icons",
+      "type": "registry:ui",
+      "title": "Icons",
+      "description": "Lilt's hand-drawn interface icon set.",
+      "registryDependencies": ["@lilt/theme"],
       "files": [
         {
-          "path": "registry/new-york/blocks/example-with-css/example-card.tsx",
-          "type": "registry:component"
-        },
+          "path": "registry/lilt/ui/icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "theme-provider",
+      "type": "registry:ui",
+      "title": "Theme Provider",
+      "description": "Light/dark theme context with localStorage persistence and system-preference fallback.",
+      "registryDependencies": ["@lilt/theme"],
+      "files": [
         {
-          "path": "registry/new-york/blocks/example-with-css/example-card.css",
-          "type": "registry:component"
+          "path": "registry/lilt/ui/theme-provider.tsx",
+          "type": "registry:ui"
         }
       ]
     }

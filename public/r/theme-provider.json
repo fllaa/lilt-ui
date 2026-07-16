@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme-provider",
+  "title": "Theme Provider",
+  "description": "Light/dark theme context with localStorage persistence and system-preference fallback.",
+  "registryDependencies": [
+    "@lilt/theme"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/theme-provider.tsx",
+      "content": "\"use client\";\n\nimport {\n  createContext,\n  useContext,\n  useEffect,\n  useMemo,\n  useState,\n  type ReactNode,\n} from \"react\";\n\ntype Theme = \"light\" | \"dark\";\n\ninterface ThemeContextValue {\n  theme: Theme;\n  setTheme: (theme: Theme) => void;\n  toggleTheme: () => void;\n}\n\nconst ThemeContext = createContext<ThemeContextValue | null>(null);\n\nfunction getInitialTheme(): Theme {\n  if (typeof window === \"undefined\") return \"light\";\n  const saved = window.localStorage.getItem(\"lilt-theme\");\n  if (saved === \"light\" || saved === \"dark\") return saved;\n  return window.matchMedia(\"(prefers-color-scheme: dark)\").matches\n    ? \"dark\"\n    : \"light\";\n}\n\nexport function ThemeProvider({ children }: { children: ReactNode }) {\n  const [theme, setTheme] = useState<Theme>(getInitialTheme);\n\n  useEffect(() => {\n    const root = document.documentElement;\n    root.classList.toggle(\"dark\", theme === \"dark\");\n    root.dataset.theme = theme;\n    root.style.colorScheme = theme;\n    window.localStorage.setItem(\"lilt-theme\", theme);\n  }, [theme]);\n\n  const value = useMemo(\n    () => ({\n      theme,\n      setTheme,\n      toggleTheme: () =>\n        setTheme((current) => (current === \"light\" ? \"dark\" : \"light\")),\n    }),\n    [theme],\n  );\n\n  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;\n}\n\nexport function useTheme() {\n  const value = useContext(ThemeContext);\n  if (!value) throw new Error(\"useTheme must be used within ThemeProvider\");\n  return value;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
