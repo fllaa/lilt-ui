@@ -7,3 +7,15 @@
   --font-display: var(--font-space-grotesk), "Space Grotesk", "DM Sans", sans-serif;
   --font-sans: var(--font-dm-sans), "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Shiki dual-theme switching (docs code blocks). */
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background-color: transparent !important;
+}
+
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark);
+}

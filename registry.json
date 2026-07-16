@@ -183,6 +183,9 @@
           "path": "registry/lilt/ui/button.tsx",
           "type": "registry:ui"
         }
+      ],
+      "dependencies": [
+        "@base-ui/react"
       ]
     },
     {

@@ -1,4 +1,8 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+"use client";
+
+import type { ReactNode } from "react";
+import { mergeProps } from "@base-ui/react/merge-props";
+import { useRender } from "@base-ui/react/use-render";
 import { ArrowIcon } from "@/registry/lilt/ui/icons";
 import { cn } from "@/registry/lilt/lib/utils";
 
@@ -21,7 +25,7 @@ const buttonSizes = {
 export type ButtonVariant = keyof typeof buttonVariants;
 export type ButtonSize = keyof typeof buttonSizes;
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends useRender.ComponentProps<"button"> {
   /** "arrow" renders Lilt's hand-drawn arrow that nudges on hover. */
   icon?: "arrow" | ReactNode;
   iconOnly?: boolean;
@@ -34,32 +38,39 @@ export function Button({
   className,
   icon,
   iconOnly = false,
+  render,
   size = "md",
-  type = "button",
   variant = "primary",
   ...props
 }: ButtonProps) {
-  return (
-    <button
-      className={cn(
-        "group inline-flex items-center justify-center gap-2 border font-semibold tracking-[-0.01em] outline-none transition-[transform,background-color,color,border-color] duration-[var(--duration-fast)] ease-[var(--ease-out)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] active:translate-y-0 disabled:pointer-events-none disabled:opacity-45",
-        buttonVariants[variant],
-        buttonSizes[size],
-        iconOnly && "aspect-square px-0",
-        className,
-      )}
-      type={type}
-      {...props}
-    >
-      {children}
-      {icon === "arrow" ? (
-        <ArrowIcon
-          className="transition-transform group-hover:translate-x-0.5"
-          size={19}
-        />
-      ) : (
-        icon
-      )}
-    </button>
-  );
+  return useRender({
+    defaultTagName: "button",
+    render,
+    props: mergeProps<"button">(
+      {
+        children: (
+          <>
+            {children}
+            {icon === "arrow" ? (
+              <ArrowIcon
+                className="transition-transform group-hover:translate-x-0.5"
+                size={19}
+              />
+            ) : (
+              icon
+            )}
+          </>
+        ),
+        className: cn(
+          "group inline-flex items-center justify-center gap-2 border font-semibold tracking-[-0.01em] outline-none transition-[transform,background-color,color,border-color] duration-[var(--duration-fast)] ease-[var(--ease-out)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] active:translate-y-0 disabled:pointer-events-none disabled:opacity-45",
+          buttonVariants[variant],
+          buttonSizes[size],
+          iconOnly && "aspect-square px-0",
+          className,
+        ),
+        type: render ? undefined : "button",
+      },
+      props,
+    ),
+  });
 }
