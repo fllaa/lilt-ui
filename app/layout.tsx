@@ -20,7 +20,19 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   description:
     "A precise, warm, playful component registry built on the Lilt design system.",
+  metadataBase: new URL("https://lilt-ui.vercel.app"),
+  openGraph: {
+    description:
+      "A precise, warm, playful component registry built on the Lilt design system.",
+    siteName: "Lilt UI",
+    title: "Lilt UI",
+    type: "website",
+    url: "/",
+  },
   title: "Lilt UI",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem("lilt-theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var r=document.documentElement;r.classList.toggle("dark",t==="dark");r.dataset.theme=t;r.style.colorScheme=t}catch(e){}})()`;

@@ -1,21 +1,47 @@
-# registry-template
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/brand/lilt-lockup-dark.svg">
+    <img alt="Lilt UI" src="public/brand/lilt-lockup-light.svg" width="380">
+  </picture>
+</p>
 
-You can use the `shadcn` CLI to run your own component registry. Running your own component registry allows you to distribute your custom components, hooks, pages, and other files to any React project.
+<p align="center">
+  Precision with a playful rhythm — a precise, warm, playful component registry
+  built on the <strong>Lilt</strong> design system.
+</p>
 
-> [!IMPORTANT]  
-> This template uses Tailwind v4. For Tailwind v3, see [registry-template-v3](https://github.com/shadcn-ui/registry-template-v3).
+---
 
-## Getting Started
+Lilt UI is a [shadcn-compatible](https://ui.shadcn.com/docs/registry) component registry: copy-paste React components built on [Base UI](https://base-ui.com) primitives and Tailwind v4, styled through semantic `--lilt-*` design tokens. Warm paper surfaces, a pale-mint accent, borders instead of shadows, and one gentle lift of motion.
 
-This is a template for creating a custom registry using Next.js.
+## Usage
 
-- The template uses a `registry.json` file to define components and their files.
-- The `shadcn build` command is used to build the registry.
-- The registry items are served as static files under `public/r/[name].json`.
-- The template also includes a route handler for serving registry items.
-- Every registry item are compatible with the `shadcn` CLI.
-- We have also added v0 integration using the `Open in v0` api.
+Add components straight from the registry with the `shadcn` CLI:
 
-## Documentation
+```bash
+npx shadcn add @lilt/button
+```
 
-Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
+Start with the theme to pull in the Lilt tokens:
+
+```bash
+npx shadcn add @lilt/theme
+```
+
+Browse all components and docs at [lilt-ui.vercel.app](https://lilt-ui.vercel.app).
+
+## Development
+
+```bash
+bun install
+bun run dev              # docs site + registry playground
+bun run registry:build   # rebuild public/r after editing registry/lilt
+```
+
+## Brand assets
+
+The logo (a lilting wave resolving into a spark) lives in `components/lilt-logo.tsx`. Lockups, favicons, and the OG-image path data are generated from it:
+
+```bash
+bun scripts/generate-brand.ts
+```

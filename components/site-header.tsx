@@ -1,7 +1,7 @@
 import Link from "next/link";
 
+import { LiltMark } from "@/components/lilt-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { SparkIcon } from "@/registry/lilt/ui/icons";
 
 export const SiteHeader = () => (
   <header className="sticky top-0 z-40 border-b border-[var(--lilt-border)] bg-[color-mix(in_oklab,var(--lilt-canvas)_86%,transparent)] backdrop-blur-md">
@@ -10,7 +10,7 @@ export const SiteHeader = () => (
         className="inline-flex items-center gap-2 rounded-full font-display text-lg font-semibold tracking-[-0.02em] outline-none focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
         href="/"
       >
-        <SparkIcon className="text-[var(--lilt-primary-text)]" size={22} />
+        <LiltMark className="text-[var(--lilt-primary-text)]" size={22} />
         Lilt UI
       </Link>
       <nav
