@@ -346,6 +346,142 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Base UI checkbox with Lilt skin: 24px rounded box, hand-drawn check, indeterminate minus.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "Base UI radio group: round items with inner dot indicator.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Base UI switch: 48x28 pill track, mint when checked.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Form field wiring labels, descriptions, and errors automatically (Base UI Field). Includes the 'Optional, no pressure' note.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/input"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Base UI select styled like Lilt inputs. Borderful popup, no shadows, dropdown positioning.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Round avatar with mint-soft initials fallback.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Accessible 1px rule in both orientations.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

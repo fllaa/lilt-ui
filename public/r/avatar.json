@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "title": "Avatar",
+  "description": "Round avatar with mint-soft initials fallback.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/avatar.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Avatar as BaseAvatar } from \"@base-ui/react/avatar\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Avatar({\n  className,\n  ...props\n}: ComponentProps<typeof BaseAvatar.Root>) {\n  return (\n    <BaseAvatar.Root\n      className={cn(\n        \"relative flex size-10 shrink-0 overflow-hidden rounded-full border border-[var(--lilt-border)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n\nexport function AvatarImage({\n  className,\n  ...props\n}: ComponentProps<typeof BaseAvatar.Image>) {\n  return (\n    <BaseAvatar.Image\n      className={cn(\"aspect-square h-full w-full object-cover\", className)}\n      {...props}\n    />\n  );\n}\n\nexport function AvatarFallback({\n  className,\n  ...props\n}: ComponentProps<typeof BaseAvatar.Fallback>) {\n  return (\n    <BaseAvatar.Fallback\n      className={cn(\n        \"flex h-full w-full items-center justify-center bg-[var(--lilt-primary-soft)] font-display text-sm font-semibold text-[var(--lilt-primary-text)]\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

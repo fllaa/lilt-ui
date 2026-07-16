@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator",
+  "title": "Separator",
+  "description": "Accessible 1px rule in both orientations.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/separator.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Separator as BaseSeparator } from \"@base-ui/react/separator\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Separator({\n  className,\n  ...props\n}: ComponentProps<typeof BaseSeparator>) {\n  return (\n    <BaseSeparator\n      className={cn(\n        \"shrink-0 bg-[var(--lilt-border)] data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px\",\n        className,\n      )}\n      {...props}\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

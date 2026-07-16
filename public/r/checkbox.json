@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox",
+  "title": "Checkbox",
+  "description": "Base UI checkbox with Lilt skin: 24px rounded box, hand-drawn check, indeterminate minus.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/checkbox.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Checkbox as BaseCheckbox } from \"@base-ui/react/checkbox\";\nimport { CheckIcon, MinusIcon } from \"@/registry/lilt/ui/icons\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function Checkbox({\n  className,\n  ...props\n}: ComponentProps<typeof BaseCheckbox.Root>) {\n  return (\n    <BaseCheckbox.Root\n      className={cn(\n        \"group flex size-6 shrink-0 items-center justify-center rounded-lg border border-[var(--lilt-border-strong)] bg-[var(--lilt-field)] outline-none transition-colors duration-[var(--duration-fast)] data-[checked]:border-[var(--lilt-button)] data-[checked]:bg-[var(--lilt-button)] data-[indeterminate]:border-[var(--lilt-button)] data-[indeterminate]:bg-[var(--lilt-button)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] data-[disabled]:pointer-events-none data-[disabled]:opacity-45\",\n        className,\n      )}\n      {...props}\n    >\n      <BaseCheckbox.Indicator className=\"flex text-[var(--lilt-button-text)] data-[unchecked]:hidden\">\n        <CheckIcon className=\"group-data-[indeterminate]:hidden\" size={15} />\n        <MinusIcon\n          className=\"hidden group-data-[indeterminate]:block\"\n          size={15}\n        />\n      </BaseCheckbox.Indicator>\n    </BaseCheckbox.Root>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

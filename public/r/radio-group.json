@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group",
+  "title": "Radio Group",
+  "description": "Base UI radio group: round items with inner dot indicator.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/radio-group.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport { Radio } from \"@base-ui/react/radio\";\nimport { RadioGroup as BaseRadioGroup } from \"@base-ui/react/radio-group\";\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport function RadioGroup({\n  className,\n  ...props\n}: ComponentProps<typeof BaseRadioGroup>) {\n  return (\n    <BaseRadioGroup\n      className={cn(\"flex flex-col gap-3\", className)}\n      {...props}\n    />\n  );\n}\n\nexport function RadioGroupItem({\n  className,\n  ...props\n}: ComponentProps<typeof Radio.Root>) {\n  return (\n    <Radio.Root\n      className={cn(\n        \"flex size-6 shrink-0 items-center justify-center rounded-full border border-[var(--lilt-border-strong)] bg-[var(--lilt-field)] outline-none transition-colors duration-[var(--duration-fast)] data-[checked]:border-[var(--lilt-button)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] data-[disabled]:pointer-events-none data-[disabled]:opacity-45\",\n        className,\n      )}\n      {...props}\n    >\n      <Radio.Indicator className=\"flex data-[unchecked]:hidden\">\n        <span className=\"size-2.5 rounded-full bg-[var(--lilt-button)]\" />\n      </Radio.Indicator>\n    </Radio.Root>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
