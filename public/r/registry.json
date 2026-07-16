@@ -482,6 +482,104 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Base UI dialog in Lilt style: dialog radius, blurred green-black backdrop, eyebrow header, icon-only close. Borders, no shadows.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Inverted-surface tooltip (near-black on light, near-white on dark). Share timing with one TooltipProvider per app.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Bordered surface popover with title and description parts.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Base UI menu with Lilt popup skin: groups, checkbox items, submenus, danger items in muted brick red.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Stacked, swipeable notifications. Exports a global toast manager plus a <Toaster /> to mount once.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
