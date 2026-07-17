@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/registry/lilt/lib/utils";
 
-interface SidebarGroup {
+export interface SidebarGroup {
   pack: string;
   entries: { name: string; title: string }[];
 }

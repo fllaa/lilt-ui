@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 
+import { DocsMobileNav } from "@/components/docs-mobile-nav";
 import { DocsSidebar } from "@/components/docs-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { docsByPack } from "@/lib/docs";
@@ -14,7 +15,10 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
             <DocsSidebar groups={docsByPack} />
           </div>
         </aside>
-        <div className="min-w-0">{children}</div>
+        <div className="min-w-0">
+          <DocsMobileNav groups={docsByPack} />
+          {children}
+        </div>
       </div>
     </>
   );
