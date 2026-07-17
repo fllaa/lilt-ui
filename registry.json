@@ -757,6 +757,112 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A month grid on react-day-picker: mint selections, soft mint ranges, bordered today. Single, multiple, or range.",
+      "dependencies": ["react-day-picker@^9"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "Calendar in a popover behind a plain-spoken button. Single date or range, controlled or not.",
+      "dependencies": ["react-day-picker@^9"],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/calendar",
+        "@lilt/popover",
+        "@lilt/button"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data Table",
+      "description": "TanStack Table on Lilt's table primitives: sorting, pagination, row selection, and column visibility in one generic component.",
+      "dependencies": ["@tanstack/react-table@^8"],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/table",
+        "@lilt/button",
+        "@lilt/dropdown-menu"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Recharts with Lilt manners: five palette tokens, bordered tooltip, quiet grid. Config-driven colors and legends.",
+      "dependencies": ["recharts@^3"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "cssVars": {
+        "light": {
+          "lilt-chart-1": "#167f55",
+          "lilt-chart-2": "#d97a4e",
+          "lilt-chart-3": "#b3902c",
+          "lilt-chart-4": "#a62b3b",
+          "lilt-chart-5": "#5c7263"
+        },
+        "dark": {
+          "lilt-chart-1": "#a5e5c6",
+          "lilt-chart-2": "#ffb98c",
+          "lilt-chart-3": "#f0d778",
+          "lilt-chart-4": "#ff94a2",
+          "lilt-chart-5": "#9cb3a4"
+        }
+      },
+      "files": [
+        {
+          "path": "registry/lilt/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "An Embla carousel with round paper arrows and keyboard scrolling. Horizontal or vertical; autoplay optional.",
+      "dependencies": ["embla-carousel-react@^8"],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/button"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/carousel.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "docs": "For autoplay, install embla-carousel-autoplay and pass plugins={[Autoplay({ delay: 4000 })]} — it pauses on interaction."
     }
   ]
 }

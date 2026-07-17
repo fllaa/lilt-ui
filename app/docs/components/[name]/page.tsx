@@ -30,6 +30,18 @@ const a11yNotes: Record<string, string[]> = {
     "Icon-only buttons require an aria-label.",
     "Focus ring is a 2px Lilt-green ring with a 2px offset, visible in both modes.",
   ],
+  calendar: [
+    "A real date grid: arrow keys move by day, PageUp/PageDown by month — roving focus comes from react-day-picker.",
+    "Today is marked with a border, not color alone; selected days announce via aria-selected and the nav buttons carry labels.",
+  ],
+  carousel: [
+    "A labeled region (aria-roledescription='carousel'); each slide announces as 'slide' and arrow keys scroll once focused.",
+    "Previous/Next are real buttons with labels and honest disabled states; if you add autoplay, pause it on hover and focus.",
+  ],
+  chart: [
+    "The demo enables recharts' accessibilityLayer, so charts are keyboard-navigable and announce data points; give each ChartContainer an aria-label.",
+    "Series never rely on hue alone — the tooltip and legend carry text labels, and the five chart tokens keep contrast in both modes.",
+  ],
   collapsible: [
     "The trigger is a real button with aria-expanded and aria-controls wired automatically.",
     "hiddenUntilFound lets browser find-in-page open the panel.",
@@ -41,6 +53,14 @@ const a11yNotes: Record<string, string[]> = {
   "context-menu": [
     "Long-press opens it on touch; arrow keys and type-ahead navigate once open.",
     "Context menus are a shortcut, not the only path — mirror actions somewhere clickable.",
+  ],
+  "data-table": [
+    "Sortable headers are real buttons inside th elements, and the th carries aria-sort so the current order is announced.",
+    "Row checkboxes carry per-row labels, the header checkbox announces its 'some selected' mixed state, and Previous/Next keep text labels.",
+  ],
+  "date-picker": [
+    "The trigger is a real button whose accessible name includes the chosen date; Escape closes the popover and returns focus to it.",
+    "Pair it with a visible Label (or aria-label) so the empty 'Pick a date' state still announces the field's purpose.",
   ],
   dialog: [
     "Focus moves into the dialog on open and returns to the trigger on close.",

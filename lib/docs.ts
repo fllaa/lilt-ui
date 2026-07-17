@@ -15,11 +15,16 @@ const packByName: Record<string, string> = {
   badge: "Display",
   breadcrumb: "Structure",
   button: "Core",
+  calendar: "Data",
   card: "Core",
+  carousel: "Display",
+  chart: "Data",
   checkbox: "Form",
   collapsible: "Structure",
   combobox: "Form",
   "context-menu": "Overlay",
+  "data-table": "Data",
+  "date-picker": "Data",
   dialog: "Core",
   drawer: "Overlay",
   "dropdown-menu": "Overlay",
@@ -53,7 +58,7 @@ const packByName: Record<string, string> = {
   tooltip: "Overlay",
 };
 
-const packOrder = ["Core", "Form", "Overlay", "Display", "Structure"];
+const packOrder = ["Core", "Form", "Overlay", "Display", "Structure", "Data"];
 
 export const docEntries: DocEntry[] = registry.items
   .filter((item) => packByName[item.name])

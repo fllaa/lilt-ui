@@ -7,11 +7,16 @@ import AvatarDemo from "./avatar";
 import BadgeDemo from "./badge";
 import BreadcrumbDemo from "./breadcrumb";
 import ButtonDemo from "./button";
+import CalendarDemo from "./calendar";
 import CardDemo from "./card";
+import CarouselDemo from "./carousel";
+import ChartDemo from "./chart";
 import CheckboxDemo from "./checkbox";
 import CollapsibleDemo from "./collapsible";
 import ComboboxDemo from "./combobox";
 import ContextMenuDemo from "./context-menu";
+import DataTableDemo from "./data-table";
+import DatePickerDemo from "./date-picker";
 import DialogDemo from "./dialog";
 import DrawerDemo from "./drawer";
 import DropdownMenuDemo from "./dropdown-menu";
@@ -52,11 +57,16 @@ export const demos: Record<string, ComponentType> = {
   badge: BadgeDemo,
   breadcrumb: BreadcrumbDemo,
   button: ButtonDemo,
+  calendar: CalendarDemo,
   card: CardDemo,
+  carousel: CarouselDemo,
+  chart: ChartDemo,
   checkbox: CheckboxDemo,
   collapsible: CollapsibleDemo,
   combobox: ComboboxDemo,
   "context-menu": ContextMenuDemo,
+  "data-table": DataTableDemo,
+  "date-picker": DatePickerDemo,
   dialog: DialogDemo,
   drawer: DrawerDemo,
   "dropdown-menu": DropdownMenuDemo,
