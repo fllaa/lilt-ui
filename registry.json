@@ -958,6 +958,73 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "A ⌘K palette: Base UI Autocomplete inline inside a dialog. Search, arrow, Enter, done.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/kbd"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "Site navigation with a shared mega-menu panel that resizes and slides between items. Borders, no shadows.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:ui",
+      "title": "Toolbar",
+      "description": "A pill rail that groups buttons, toggles, and links behind a single tab stop.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "A collapsible navigation rail: icons-only on a click, a drawer on phones, a cookie so it remembers.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/drawer",
+        "@lilt/separator"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

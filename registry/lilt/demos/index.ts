@@ -16,6 +16,7 @@ import CheckboxDemo from "./checkbox";
 import CheckboxGroupDemo from "./checkbox-group";
 import CollapsibleDemo from "./collapsible";
 import ComboboxDemo from "./combobox";
+import CommandDemo from "./command";
 import ContextMenuDemo from "./context-menu";
 import DataTableDemo from "./data-table";
 import DatePickerDemo from "./date-picker";
@@ -34,6 +35,7 @@ import InputOtpDemo from "./input-otp";
 import KbdDemo from "./kbd";
 import LabelDemo from "./label";
 import MenubarDemo from "./menubar";
+import NavigationMenuDemo from "./navigation-menu";
 import NumberFieldDemo from "./number-field";
 import PaginationDemo from "./pagination";
 import PopoverDemo from "./popover";
@@ -43,6 +45,7 @@ import RatingDemo from "./rating";
 import ScrollAreaDemo from "./scroll-area";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
+import SidebarDemo from "./sidebar";
 import SkeletonDemo from "./skeleton";
 import SliderDemo from "./slider";
 import SpinnerDemo from "./spinner";
@@ -54,6 +57,7 @@ import TextareaDemo from "./textarea";
 import ToastDemo from "./toast";
 import ToggleDemo from "./toggle";
 import ToggleGroupDemo from "./toggle-group";
+import ToolbarDemo from "./toolbar";
 import TooltipDemo from "./tooltip";
 
 export const demos: Record<string, ComponentType> = {
@@ -73,6 +77,7 @@ export const demos: Record<string, ComponentType> = {
   "checkbox-group": CheckboxGroupDemo,
   collapsible: CollapsibleDemo,
   combobox: ComboboxDemo,
+  command: CommandDemo,
   "context-menu": ContextMenuDemo,
   "data-table": DataTableDemo,
   "date-picker": DatePickerDemo,
@@ -91,6 +96,7 @@ export const demos: Record<string, ComponentType> = {
   kbd: KbdDemo,
   label: LabelDemo,
   menubar: MenubarDemo,
+  "navigation-menu": NavigationMenuDemo,
   "number-field": NumberFieldDemo,
   pagination: PaginationDemo,
   popover: PopoverDemo,
@@ -100,6 +106,7 @@ export const demos: Record<string, ComponentType> = {
   "scroll-area": ScrollAreaDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
+  sidebar: SidebarDemo,
   skeleton: SkeletonDemo,
   slider: SliderDemo,
   spinner: SpinnerDemo,
@@ -111,5 +118,6 @@ export const demos: Record<string, ComponentType> = {
   toast: ToastDemo,
   toggle: ToggleDemo,
   "toggle-group": ToggleGroupDemo,
+  toolbar: ToolbarDemo,
   tooltip: TooltipDemo,
 };

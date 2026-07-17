@@ -24,6 +24,7 @@ const packByName: Record<string, string> = {
   "checkbox-group": "Form",
   collapsible: "Structure",
   combobox: "Form",
+  command: "Overlay",
   "context-menu": "Overlay",
   "data-table": "Data",
   "date-picker": "Data",
@@ -42,6 +43,7 @@ const packByName: Record<string, string> = {
   kbd: "Display",
   label: "Form",
   menubar: "Overlay",
+  "navigation-menu": "Structure",
   "number-field": "Form",
   pagination: "Structure",
   popover: "Overlay",
@@ -51,6 +53,7 @@ const packByName: Record<string, string> = {
   "scroll-area": "Structure",
   select: "Form",
   separator: "Display",
+  sidebar: "Structure",
   skeleton: "Display",
   slider: "Form",
   spinner: "Display",
@@ -62,6 +65,7 @@ const packByName: Record<string, string> = {
   toast: "Overlay",
   toggle: "Form",
   "toggle-group": "Form",
+  toolbar: "Structure",
   tooltip: "Overlay",
 };
 

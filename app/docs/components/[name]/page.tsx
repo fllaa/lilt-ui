@@ -58,6 +58,10 @@ const a11yNotes: Record<string, string[]> = {
     "A real text input with combobox semantics — arrows navigate, Enter selects, Escape closes.",
     "Give it a visible label or wrap it in a Field; the clear and open buttons carry their own aria-labels.",
   ],
+  command: [
+    "One dialog, one combobox: focus lands in the search input, arrows walk the list, Enter runs the highlighted command, Escape closes.",
+    "The empty state is announced politely, and the trigger advertises the ⌘K shortcut as text, not just a glyph.",
+  ],
   "context-menu": [
     "Long-press opens it on touch; arrow keys and type-ahead navigate once open.",
     "Context menus are a shortcut, not the only path — mirror actions somewhere clickable.",
@@ -117,6 +121,10 @@ const a11yNotes: Record<string, string[]> = {
     "One tab stop for the whole bar; arrows move across menus, Escape backs out level by level.",
     "Triggers expose aria-haspopup and aria-expanded automatically.",
   ],
+  "navigation-menu": [
+    "A real nav landmark: Tab reaches each trigger, Enter/Space or hover opens, Escape closes, and links inside are plain anchors.",
+    "The panel's slide and resize animations collapse to instant cuts under prefers-reduced-motion — the theme handles it globally.",
+  ],
   "number-field": [
     "Arrow keys step, Shift+Arrow steps by 10; values clamp to min/max and steppers repeat on hold.",
     "The scrub label still works as a plain label for assistive tech — scrubbing is pointer-only sugar.",
@@ -140,6 +148,10 @@ const a11yNotes: Record<string, string[]> = {
   select: [
     "Full keyboard support: arrows, type-ahead, Home/End, Escape.",
     "The trigger needs an aria-label when used without a visible label — or wrap it in a Field.",
+  ],
+  sidebar: [
+    "Collapsing hides labels visually but keeps them for screen readers; the active item carries aria-current='page'.",
+    "Cmd/Ctrl+B toggles it; on mobile the sidebar becomes a drawer with full dialog semantics — focus trap, Escape closes.",
   ],
   slider: [
     "Each thumb is a native range input: arrows step, Shift+Arrow large-steps, Home/End jump.",
@@ -168,6 +180,10 @@ const a11yNotes: Record<string, string[]> = {
   "toggle-group": [
     "One tab stop; arrow keys move between options.",
     "The group needs an aria-label; each icon-only item needs its own.",
+  ],
+  toolbar: [
+    "One tab stop for the whole bar; arrow keys rove between controls and loop at the ends.",
+    "Disabled items stay focusable by default so shortcuts stay discoverable; give the bar an aria-label.",
   ],
   tooltip: ["Appears on focus as well as hover, and never traps the pointer."],
 };
