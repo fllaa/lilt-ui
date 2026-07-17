@@ -863,6 +863,101 @@
         }
       ],
       "docs": "For autoplay, install embla-carousel-autoplay and pass plugins={[Autoplay({ delay: 4000 })]} — it pauses on interaction."
+    },
+    {
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "title": "Autocomplete",
+      "description": "Free-text search with suggestions. You keep what you type; the list only helps. Need a required value? That's Combobox.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/autocomplete.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "A native form with consolidated error handling — client rules and server errors land in the same Field slots.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "fieldset",
+      "type": "registry:ui",
+      "title": "Fieldset",
+      "description": "A native fieldset with a stylable legend for grouping related fields under one name.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/fieldset.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group",
+      "type": "registry:ui",
+      "title": "Checkbox Group",
+      "description": "Shared state for a series of checkboxes, including the parent select-all with an honest mixed state.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/checkbox"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/checkbox-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tags-input",
+      "type": "registry:ui",
+      "title": "Tags Input",
+      "description": "Free-typed tags in a real text field. Enter or comma commits; Backspace takes the last one back.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/tags-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "Hand-drawn stars on radio bones. Hover previews, arrows adjust, nothing is a div pretending.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/rating.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File Upload",
+      "description": "A dashed drop zone wrapped around a native file input. Drag in or browse — same list either way.",
+      "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
+      "files": [
+        {
+          "path": "registry/lilt/ui/file-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

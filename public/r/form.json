@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "form",
+  "title": "Form",
+  "description": "A native form with consolidated error handling — client rules and server errors land in the same Field slots.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/form.tsx",
+      "content": "\"use client\";\n\nimport { Form as BaseForm } from \"@base-ui/react/form\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Form = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseForm>) => (\n  <BaseForm className={cn(\"grid gap-6\", className)} {...props} />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

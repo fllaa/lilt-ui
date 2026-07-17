@@ -26,6 +26,10 @@ const a11yNotes: Record<string, string[]> = {
     "Focus is trapped and clicking the backdrop does not dismiss — the user must pick an action.",
     "Announced as role=alertdialog, named by its title.",
   ],
+  autocomplete: [
+    "Combobox semantics on a free-text input: suggestions are optional, arrows navigate, Escape closes — what you typed always stands.",
+    "Give it a visible label or wrap it in a Field; the clear button carries its own aria-label.",
+  ],
   button: [
     "Icon-only buttons require an aria-label.",
     "Focus ring is a 2px Lilt-green ring with a 2px offset, visible in both modes.",
@@ -41,6 +45,10 @@ const a11yNotes: Record<string, string[]> = {
   chart: [
     "The demo enables recharts' accessibilityLayer, so charts are keyboard-navigable and announce data points; give each ChartContainer an aria-label.",
     "Series never rely on hue alone — the tooltip and legend carry text labels, and the five chart tokens keep contrast in both modes.",
+  ],
+  "checkbox-group": [
+    "Label the group with aria-labelledby and a sibling heading; each item's enclosing label makes the whole row clickable.",
+    "The parent checkbox reports mixed state as indeterminate — announced as 'mixed', shown as Lilt's minus.",
   ],
   collapsible: [
     "The trigger is a real button with aria-expanded and aria-controls wired automatically.",
@@ -81,6 +89,18 @@ const a11yNotes: Record<string, string[]> = {
     "Labels, descriptions, and errors are wired to the control automatically — no manual ids.",
     "Errors set aria-invalid on the control, which flips the border to the danger token.",
   ],
+  fieldset: [
+    "A native fieldset: the legend names the whole group, so screen readers announce it before each field inside.",
+    "Disabling the fieldset disables every control in it — one prop, no per-field bookkeeping.",
+  ],
+  "file-upload": [
+    "The keyboard and screen-reader path is the real file input inside the label — Enter/Space opens the picker; drag-and-drop is pointer-only sugar.",
+    "Adds and removes are announced politely, and each remove button names its file.",
+  ],
+  form: [
+    "Consolidated error handling: after submit, focus moves to the first invalid field and each error is tied to its control via Field.",
+    "Server errors passed through the errors prop are announced the same way as client-side ones — one system, no custom wiring.",
+  ],
   "hover-card": [
     "Opens on keyboard focus as well as hover; Escape dismisses.",
     "Touch users never see the preview — the link must stand on its own.",
@@ -109,6 +129,10 @@ const a11yNotes: Record<string, string[]> = {
     "Announced as a progressbar named by its label; the value is exposed via aria-valuenow.",
     "value={null} renders indeterminate — it announces as busy, not as 0%.",
   ],
+  rating: [
+    "Each star is a real radio labelled '1 star' through '5 stars' — one Tab stop, arrow keys adjust.",
+    "readOnly mode renders role='img' named 'N of 5 stars'; the star glyphs themselves are decorative.",
+  ],
   "scroll-area": [
     "The viewport is keyboard-focusable and shows the lilt focus ring, so arrow keys scroll.",
     "Scrolling stays native underneath — screen readers and trackpads behave normally.",
@@ -128,6 +152,10 @@ const a11yNotes: Record<string, string[]> = {
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",
     "The active pill glides between tabs; reduced-motion mode makes the change instant.",
+  ],
+  "tags-input": [
+    "The field stays a plain text input — Enter or comma commits, Backspace in an empty field takes the last tag back; changes are announced politely.",
+    "Every chip's remove button carries an aria-label naming its tag.",
   ],
   toast: [
     "Toasts are announced politely by screen readers and pause on hover or focus.",

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox-group",
+  "title": "Checkbox Group",
+  "description": "Shared state for a series of checkboxes, including the parent select-all with an honest mixed state.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/checkbox"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/checkbox-group.tsx",
+      "content": "\"use client\";\n\nimport { CheckboxGroup as BaseCheckboxGroup } from \"@base-ui/react/checkbox-group\";\nimport type { ComponentProps, ReactNode } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\nimport { Checkbox } from \"@/registry/lilt/ui/checkbox\";\n\nexport const CheckboxGroup = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseCheckboxGroup>) => (\n  <BaseCheckboxGroup\n    className={cn(\"flex flex-col items-start gap-3\", className)}\n    {...props}\n  />\n);\n\nexport const CheckboxGroupItem = ({\n  children,\n  ...props\n}: ComponentProps<typeof Checkbox> & { children?: ReactNode }) => (\n  <label className=\"flex items-center gap-3 text-sm font-medium text-[var(--lilt-text)]\">\n    <Checkbox {...props} />\n    {children}\n  </label>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

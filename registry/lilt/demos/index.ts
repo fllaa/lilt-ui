@@ -3,6 +3,7 @@ import type { ComponentType } from "react";
 import AccordionDemo from "./accordion";
 import AlertDemo from "./alert";
 import AlertDialogDemo from "./alert-dialog";
+import AutocompleteDemo from "./autocomplete";
 import AvatarDemo from "./avatar";
 import BadgeDemo from "./badge";
 import BreadcrumbDemo from "./breadcrumb";
@@ -12,6 +13,7 @@ import CardDemo from "./card";
 import CarouselDemo from "./carousel";
 import ChartDemo from "./chart";
 import CheckboxDemo from "./checkbox";
+import CheckboxGroupDemo from "./checkbox-group";
 import CollapsibleDemo from "./collapsible";
 import ComboboxDemo from "./combobox";
 import ContextMenuDemo from "./context-menu";
@@ -22,6 +24,9 @@ import DrawerDemo from "./drawer";
 import DropdownMenuDemo from "./dropdown-menu";
 import EmptyStateDemo from "./empty-state";
 import FieldDemo from "./field";
+import FieldsetDemo from "./fieldset";
+import FileUploadDemo from "./file-upload";
+import FormDemo from "./form";
 import HoverCardDemo from "./hover-card";
 import IconsDemo from "./icons";
 import InputDemo from "./input";
@@ -34,6 +39,7 @@ import PaginationDemo from "./pagination";
 import PopoverDemo from "./popover";
 import ProgressDemo from "./progress";
 import RadioGroupDemo from "./radio-group";
+import RatingDemo from "./rating";
 import ScrollAreaDemo from "./scroll-area";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
@@ -43,6 +49,7 @@ import SpinnerDemo from "./spinner";
 import SwitchDemo from "./switch";
 import TableDemo from "./table";
 import TabsDemo from "./tabs";
+import TagsInputDemo from "./tags-input";
 import TextareaDemo from "./textarea";
 import ToastDemo from "./toast";
 import ToggleDemo from "./toggle";
@@ -53,6 +60,7 @@ export const demos: Record<string, ComponentType> = {
   accordion: AccordionDemo,
   alert: AlertDemo,
   "alert-dialog": AlertDialogDemo,
+  autocomplete: AutocompleteDemo,
   avatar: AvatarDemo,
   badge: BadgeDemo,
   breadcrumb: BreadcrumbDemo,
@@ -62,6 +70,7 @@ export const demos: Record<string, ComponentType> = {
   carousel: CarouselDemo,
   chart: ChartDemo,
   checkbox: CheckboxDemo,
+  "checkbox-group": CheckboxGroupDemo,
   collapsible: CollapsibleDemo,
   combobox: ComboboxDemo,
   "context-menu": ContextMenuDemo,
@@ -72,6 +81,9 @@ export const demos: Record<string, ComponentType> = {
   "dropdown-menu": DropdownMenuDemo,
   "empty-state": EmptyStateDemo,
   field: FieldDemo,
+  fieldset: FieldsetDemo,
+  "file-upload": FileUploadDemo,
+  form: FormDemo,
   "hover-card": HoverCardDemo,
   icons: IconsDemo,
   input: InputDemo,
@@ -84,6 +96,7 @@ export const demos: Record<string, ComponentType> = {
   popover: PopoverDemo,
   progress: ProgressDemo,
   "radio-group": RadioGroupDemo,
+  rating: RatingDemo,
   "scroll-area": ScrollAreaDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
@@ -93,6 +106,7 @@ export const demos: Record<string, ComponentType> = {
   switch: SwitchDemo,
   table: TableDemo,
   tabs: TabsDemo,
+  "tags-input": TagsInputDemo,
   textarea: TextareaDemo,
   toast: ToastDemo,
   toggle: ToggleDemo,

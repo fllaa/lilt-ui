@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fieldset",
+  "title": "Fieldset",
+  "description": "A native fieldset with a stylable legend for grouping related fields under one name.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/fieldset.tsx",
+      "content": "\"use client\";\n\nimport { Fieldset as BaseFieldset } from \"@base-ui/react/fieldset\";\nimport type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Fieldset = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseFieldset.Root>) => (\n  <BaseFieldset.Root\n    // Native <fieldset> ships browser margin/border/padding — reset them here.\n    className={cn(\"m-0 grid min-w-0 gap-4 border-0 p-0\", className)}\n    {...props}\n  />\n);\n\nexport const FieldsetLegend = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseFieldset.Legend>) => (\n  // Renders a <div>, not a native <legend> — Base UI wires the association.\n  <BaseFieldset.Legend\n    className={cn(\n      \"w-full border-b border-[var(--lilt-border)] pb-2 font-display text-base font-semibold tracking-[-0.02em] text-[var(--lilt-text)]\",\n      className\n    )}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
