@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { LiltMark } from "@/components/lilt-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { GithubIcon } from "@/registry/lilt/ui/icons";
 
 export const SiteHeader = () => (
   <header className="sticky top-0 z-40 border-b border-[var(--lilt-border)] bg-[color-mix(in_oklab,var(--lilt-canvas)_86%,transparent)] backdrop-blur-md">
@@ -29,6 +30,15 @@ export const SiteHeader = () => (
         >
           Components
         </Link>
+        <a
+          aria-label="View source on GitHub"
+          className="inline-flex aspect-square min-h-10 items-center justify-center rounded-full border border-[var(--lilt-border-strong)] text-[var(--lilt-text)] outline-none transition-colors duration-[var(--duration-fast)] hover:bg-[var(--lilt-surface-2)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
+          href="https://github.com/fllaa/lilt-ui.git"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <GithubIcon size={18} />
+        </a>
         <ThemeToggle />
       </nav>
     </div>
