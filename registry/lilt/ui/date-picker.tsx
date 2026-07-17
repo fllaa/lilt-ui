@@ -182,6 +182,13 @@ export const DateRangePicker = ({
           mode="range"
           onSelect={handleSelect}
           required={false}
+          // Without resetOnSelect the first click yields a complete
+          // single-day range ({ from, to: day }) which would close the
+          // popover instantly, and clicking a finished range would only
+          // nudge its nearest endpoint — the start date could never change.
+          // With it, a click on an empty or finished range starts fresh, so
+          // `to` is only ever set by a genuine completing click.
+          resetOnSelect
           selected={range}
         />
       </PopoverContent>
