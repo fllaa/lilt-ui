@@ -126,7 +126,9 @@ export const Calendar = ({
           defaultClassNames.outside
         ),
         range_end: cn(
-          "rounded-full bg-[var(--lilt-primary)]",
+          // Soft band continues from the middle days and caps at the cell's
+          // outer edge; the cap hides behind the mint circle on the button.
+          "rounded-r-full bg-[var(--lilt-primary-soft)]",
           defaultClassNames.range_end
         ),
         range_middle: cn(
@@ -134,7 +136,7 @@ export const Calendar = ({
           defaultClassNames.range_middle
         ),
         range_start: cn(
-          "rounded-full bg-[var(--lilt-primary)]",
+          "rounded-l-full bg-[var(--lilt-primary-soft)]",
           defaultClassNames.range_start
         ),
         today: cn(defaultClassNames.today),
