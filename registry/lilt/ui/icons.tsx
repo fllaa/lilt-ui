@@ -189,6 +189,109 @@ export const WarningIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const CalendarIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <rect
+      height="15"
+      rx="3"
+      stroke="currentColor"
+      strokeWidth="1.65"
+      width="16.7"
+      x="3.7"
+      y="5.3"
+    />
+    <path
+      d="M8.1 3.4v3.1M15.9 3.5v3"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.7"
+    />
+    <path
+      d="M4.3 9.9c5.3-.15 10.2-.1 15.4 0"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.65"
+    />
+  </IconBase>
+);
+
+export const ChevronsUpDownIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path
+      d="m8.2 9.3 3.8-3.7 3.9 3.6M8.2 14.7l3.8 3.8 3.9-3.7"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+    />
+  </IconBase>
+);
+
+export const SearchIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <circle
+      cx="10.8"
+      cy="10.6"
+      r="6.3"
+      stroke="currentColor"
+      strokeWidth="1.7"
+    />
+    <path
+      d="M15.4 15.5c1.9 1.75 3.6 3.4 5.1 5"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.8"
+    />
+  </IconBase>
+);
+
+export interface StarIconProps extends IconProps {
+  /** Fills the star with currentColor for selected/active states. */
+  filled?: boolean;
+}
+
+export const StarIcon = ({ filled = false, ...props }: StarIconProps) => (
+  <IconBase {...props}>
+    <path
+      d="M12 3.4l2.55 5.3 5.75.75-4.2 4.05 1.05 5.7L12 16.5l-5.2 2.7 1.1-5.7-4.25-4.1 5.8-.7L12 3.4Z"
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.65"
+    />
+  </IconBase>
+);
+
+export const GripIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path
+      d="M9.4 6.6h.1M9.45 12h.1M9.4 17.4h.1M14.6 6.65h.1M14.55 12.05h.1M14.6 17.35h.1"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="2.2"
+    />
+  </IconBase>
+);
+
+export const FileIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path
+      d="M14 3.2H7.1c-.6 0-1.1.5-1.1 1.1v15.3c0 .6.5 1.1 1.1 1.1h9.8c.6 0 1.1-.5 1.1-1.1V7.3L14 3.2Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.65"
+    />
+    <path
+      d="M13.9 3.4c.05 1.5.05 2.7.1 3.8 1.3.1 2.6.1 3.9.05"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.65"
+    />
+  </IconBase>
+);
+
 export const ScribbleArrow = ({ className }: { className?: string }) => (
   <svg
     aria-hidden="true"

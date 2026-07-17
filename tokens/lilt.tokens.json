@@ -41,7 +41,12 @@
       "dangerSoft": { "$type": "color", "$value": "#FDE8EB" },
       "dangerSoftHover": { "$type": "color", "$value": "#F9D7DC" },
       "dangerText": { "$type": "color", "$value": "#7B1B2A" },
-      "selectionText": { "$type": "color", "$value": "#102117" }
+      "selectionText": { "$type": "color", "$value": "#102117" },
+      "chart1": { "$type": "color", "$value": "#167F55" },
+      "chart2": { "$type": "color", "$value": "#D97A4E" },
+      "chart3": { "$type": "color", "$value": "#B3902C" },
+      "chart4": { "$type": "color", "$value": "#A62B3B" },
+      "chart5": { "$type": "color", "$value": "#5C7263" }
     },
     "dark": {
       "canvas": { "$type": "color", "$value": "{color.primitive.charcoal}" },
@@ -67,7 +72,12 @@
       "dangerSoft": { "$type": "color", "$value": "#4B2028" },
       "dangerSoftHover": { "$type": "color", "$value": "#5D2630" },
       "dangerText": { "$type": "color", "$value": "#FFB3BD" },
-      "selectionText": { "$type": "color", "$value": "#102117" }
+      "selectionText": { "$type": "color", "$value": "#102117" },
+      "chart1": { "$type": "color", "$value": "#A5E5C6" },
+      "chart2": { "$type": "color", "$value": "#FFB98C" },
+      "chart3": { "$type": "color", "$value": "#F0D778" },
+      "chart4": { "$type": "color", "$value": "#FF94A2" },
+      "chart5": { "$type": "color", "$value": "#9CB3A4" }
     }
   },
   "typography": {

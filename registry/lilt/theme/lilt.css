@@ -48,6 +48,11 @@
   --lilt-danger-soft-hover: #f9d7dc;
   --lilt-danger-text: #7b1b2a;
   --lilt-selection-text: #102117;
+  --lilt-chart-1: #167f55;
+  --lilt-chart-2: #d97a4e;
+  --lilt-chart-3: #b3902c;
+  --lilt-chart-4: #a62b3b;
+  --lilt-chart-5: #5c7263;
 }
 
 .dark {
@@ -76,6 +81,11 @@
   --lilt-danger-soft-hover: #5d2630;
   --lilt-danger-text: #ffb3bd;
   --lilt-selection-text: #102117;
+  --lilt-chart-1: #a5e5c6;
+  --lilt-chart-2: #ffb98c;
+  --lilt-chart-3: #f0d778;
+  --lilt-chart-4: #ff94a2;
+  --lilt-chart-5: #9cb3a4;
 }
 
 @layer base {
