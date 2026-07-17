@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "timeline",
+  "title": "Timeline",
+  "description": "An ordered list dressed as a timeline: dots, connectors, and honest time elements.",
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/timeline.tsx",
+      "content": "import type { ComponentProps } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Timeline = ({ className, ...props }: ComponentProps<\"ol\">) => (\n  <ol className={cn(\"flex flex-col\", className)} {...props} />\n);\n\nexport const TimelineItem = ({ className, ...props }: ComponentProps<\"li\">) => (\n  <li\n    className={cn(\"relative flex gap-4 pb-8 last:pb-0\", className)}\n    {...props}\n  />\n);\n\nconst timelineDotVariants = {\n  danger: \"border-transparent bg-[var(--lilt-danger)]\",\n  default: \"border-[var(--lilt-border-strong)] bg-[var(--lilt-surface)]\",\n  mint: \"border-transparent bg-[var(--lilt-primary)]\",\n};\n\nexport type TimelineDotVariant = keyof typeof timelineDotVariants;\n\nexport const TimelineDot = ({\n  className,\n  variant = \"default\",\n  ...props\n}: { variant?: TimelineDotVariant } & ComponentProps<\"span\">) => (\n  <span\n    aria-hidden=\"true\"\n    className={cn(\n      \"relative z-10 mt-1.5 size-3 shrink-0 rounded-full border\",\n      timelineDotVariants[variant],\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const TimelineConnector = ({\n  className,\n  ...props\n}: ComponentProps<\"span\">) => (\n  <span\n    aria-hidden=\"true\"\n    className={cn(\n      \"absolute left-[5px] top-5 h-[calc(100%-1rem)] w-px bg-[var(--lilt-border)]\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const TimelineContent = ({\n  className,\n  ...props\n}: ComponentProps<\"div\">) => (\n  <div\n    className={cn(\"flex min-w-0 flex-1 flex-col gap-1\", className)}\n    {...props}\n  />\n);\n\nexport const TimelineTitle = ({\n  className,\n  ...props\n}: ComponentProps<\"h3\">) => (\n  // oxlint-disable-next-line jsx-a11y/heading-has-content -- passthrough primitive, callers supply children via props spread\n  <h3 className={cn(\"text-sm font-semibold\", className)} {...props} />\n);\n\nexport const TimelineTime = ({\n  className,\n  ...props\n}: ComponentProps<\"time\">) => (\n  <time\n    className={cn(\"text-xs text-[var(--lilt-text-subtle)]\", className)}\n    {...props}\n  />\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -121,6 +121,10 @@ const a11yNotes: Record<string, string[]> = {
     "One tab stop for the whole bar; arrows move across menus, Escape backs out level by level.",
     "Triggers expose aria-haspopup and aria-expanded automatically.",
   ],
+  meter: [
+    "Announced as a meter named by its label, with the current value exposed via aria-valuenow and formatted text.",
+    "Unlike Progress there is no indeterminate state — a meter always reports a real value within its range.",
+  ],
   "navigation-menu": [
     "A real nav landmark: Tab reaches each trigger, Enter/Space or hover opens, Escape closes, and links inside are plain anchors.",
     "The panel's slide and resize animations collapse to instant cuts under prefers-reduced-motion — the theme handles it globally.",
@@ -140,6 +144,10 @@ const a11yNotes: Record<string, string[]> = {
   rating: [
     "Each star is a real radio labelled '1 star' through '5 stars' — one Tab stop, arrow keys adjust.",
     "readOnly mode renders role='img' named 'N of 5 stars'; the star glyphs themselves are decorative.",
+  ],
+  resizable: [
+    "Each handle is a real role='separator' with aria-valuenow — arrow keys resize, Home/End snap, and it shows the lilt focus ring.",
+    "The visible line is 1px but the pointer hit target is widened by the library, keeping drags forgiving.",
   ],
   "scroll-area": [
     "The viewport is keyboard-focusable and shows the lilt focus ring, so arrow keys scroll.",
@@ -161,6 +169,10 @@ const a11yNotes: Record<string, string[]> = {
     "Announces 'Loading' via role=status; pass label to change it, or label={null} inside already-labeled buttons.",
     "Reduced-motion users see a static arc instead of a spin.",
   ],
+  stepper: [
+    "A real ordered list — screen readers announce position and count; the current step carries aria-current='step'.",
+    "With onValueChange steps are real buttons; without it nothing is focusable — no dead tab stops in display mode.",
+  ],
   tabs: [
     "Arrow keys move between tabs; the panel is focusable and rings on focus.",
     "The active pill glides between tabs; reduced-motion mode makes the change instant.",
@@ -168,6 +180,10 @@ const a11yNotes: Record<string, string[]> = {
   "tags-input": [
     "The field stays a plain text input — Enter or comma commits, Backspace in an empty field takes the last tag back; changes are announced politely.",
     "Every chip's remove button carries an aria-label naming its tag.",
+  ],
+  timeline: [
+    "An ordered list under the hood — item count and position come free for screen readers.",
+    "Dates are real time elements with dateTime; dots and connectors are aria-hidden decoration.",
   ],
   toast: [
     "Toasts are announced politely by screen readers and pause on hover or focus.",

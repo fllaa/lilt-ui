@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable",
+  "title": "Resizable",
+  "description": "Split panes you can drag or arrow-key, with a hand-drawn grip to hold onto.",
+  "dependencies": [
+    "react-resizable-panels@^4"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils",
+    "@lilt/icons"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/resizable.tsx",
+      "content": "\"use client\";\n\nimport type { ComponentProps } from \"react\";\nimport {\n  Group,\n  Panel,\n  Separator as BaseSeparator,\n} from \"react-resizable-panels\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\nimport { GripIcon } from \"@/registry/lilt/ui/icons\";\n\n/**\n * A group of resizable panels laid out along one axis.\n *\n * Wraps react-resizable-panels v4 `Group` (renamed from `PanelGroup` in v4).\n * Use the `orientation` prop (\"horizontal\" | \"vertical\") — the v3 `direction`\n * prop was renamed in v4.\n */\nexport const ResizablePanelGroup = ({\n  className,\n  ...props\n}: ComponentProps<typeof Group>) => (\n  <Group className={cn(\"h-full w-full\", className)} {...props} />\n);\n\n/**\n * A single resizable region inside a `ResizablePanelGroup`.\n *\n * Note: `className` lands on an INNER div that already fills the panel\n * (flex-grow: 1, overflow: auto), so flex/centering classes work directly.\n */\nexport const ResizablePanel = (props: ComponentProps<typeof Panel>) => (\n  <Panel {...props} />\n);\n\n/**\n * The draggable separator between two panels.\n *\n * Wraps react-resizable-panels v4 `Separator` (renamed from\n * `PanelResizeHandle` in v4). The separator's `aria-orientation` is the\n * OPPOSITE of the group orientation: a horizontal group renders a vertical\n * 1px separator bar, and vice versa.\n */\nexport const ResizableHandle = ({\n  className,\n  withHandle,\n  ...props\n}: ComponentProps<typeof BaseSeparator> & { withHandle?: boolean }) => (\n  <BaseSeparator\n    className={cn(\n      \"group/handle relative flex shrink-0 items-center justify-center bg-[var(--lilt-border)] outline-none transition-colors duration-[var(--duration-fast)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--lilt-canvas)] aria-[orientation=vertical]:w-px aria-[orientation=horizontal]:h-px data-[separator=hover]:bg-[var(--lilt-border-strong)] data-[separator=active]:bg-[var(--lilt-focus)]\",\n      className\n    )}\n    {...props}\n  >\n    {withHandle && (\n      <span className=\"z-10 flex h-5 w-3.5 items-center justify-center rounded-[6px] border border-[var(--lilt-border)] bg-[var(--lilt-surface)] text-[var(--lilt-text-subtle)] group-aria-[orientation=horizontal]/handle:rotate-90\">\n        <GripIcon size={12} />\n      </span>\n    )}\n  </BaseSeparator>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

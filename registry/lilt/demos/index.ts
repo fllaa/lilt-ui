@@ -35,6 +35,7 @@ import InputOtpDemo from "./input-otp";
 import KbdDemo from "./kbd";
 import LabelDemo from "./label";
 import MenubarDemo from "./menubar";
+import MeterDemo from "./meter";
 import NavigationMenuDemo from "./navigation-menu";
 import NumberFieldDemo from "./number-field";
 import PaginationDemo from "./pagination";
@@ -42,6 +43,7 @@ import PopoverDemo from "./popover";
 import ProgressDemo from "./progress";
 import RadioGroupDemo from "./radio-group";
 import RatingDemo from "./rating";
+import ResizableDemo from "./resizable";
 import ScrollAreaDemo from "./scroll-area";
 import SelectDemo from "./select";
 import SeparatorDemo from "./separator";
@@ -49,11 +51,13 @@ import SidebarDemo from "./sidebar";
 import SkeletonDemo from "./skeleton";
 import SliderDemo from "./slider";
 import SpinnerDemo from "./spinner";
+import StepperDemo from "./stepper";
 import SwitchDemo from "./switch";
 import TableDemo from "./table";
 import TabsDemo from "./tabs";
 import TagsInputDemo from "./tags-input";
 import TextareaDemo from "./textarea";
+import TimelineDemo from "./timeline";
 import ToastDemo from "./toast";
 import ToggleDemo from "./toggle";
 import ToggleGroupDemo from "./toggle-group";
@@ -96,6 +100,7 @@ export const demos: Record<string, ComponentType> = {
   kbd: KbdDemo,
   label: LabelDemo,
   menubar: MenubarDemo,
+  meter: MeterDemo,
   "navigation-menu": NavigationMenuDemo,
   "number-field": NumberFieldDemo,
   pagination: PaginationDemo,
@@ -103,6 +108,7 @@ export const demos: Record<string, ComponentType> = {
   progress: ProgressDemo,
   "radio-group": RadioGroupDemo,
   rating: RatingDemo,
+  resizable: ResizableDemo,
   "scroll-area": ScrollAreaDemo,
   select: SelectDemo,
   separator: SeparatorDemo,
@@ -110,11 +116,13 @@ export const demos: Record<string, ComponentType> = {
   skeleton: SkeletonDemo,
   slider: SliderDemo,
   spinner: SpinnerDemo,
+  stepper: StepperDemo,
   switch: SwitchDemo,
   table: TableDemo,
   tabs: TabsDemo,
   "tags-input": TagsInputDemo,
   textarea: TextareaDemo,
+  timeline: TimelineDemo,
   toast: ToastDemo,
   toggle: ToggleDemo,
   "toggle-group": ToggleGroupDemo,

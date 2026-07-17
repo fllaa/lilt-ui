@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "meter",
+  "title": "Meter",
+  "description": "A labeled readout of a value within a range — storage, quota, capacity. Mint fill, honest number.",
+  "dependencies": [
+    "@base-ui/react"
+  ],
+  "registryDependencies": [
+    "@lilt/theme",
+    "@lilt/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/lilt/ui/meter.tsx",
+      "content": "\"use client\";\n\nimport { Meter as BaseMeter } from \"@base-ui/react/meter\";\nimport type { ComponentProps, ReactNode } from \"react\";\n\nimport { cn } from \"@/registry/lilt/lib/utils\";\n\nexport const Meter = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseMeter.Root>) => (\n  <BaseMeter.Root className={cn(\"grid gap-2\", className)} {...props} />\n);\n\nexport const MeterLabel = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseMeter.Label>) => (\n  <BaseMeter.Label\n    className={cn(\"text-sm font-semibold text-[var(--lilt-text)]\", className)}\n    {...props}\n  />\n);\n\nexport const MeterValue = ({\n  className,\n  ...props\n}: ComponentProps<typeof BaseMeter.Value>) => (\n  <BaseMeter.Value\n    className={cn(\n      \"text-sm text-[var(--lilt-text-muted)] tabular-nums\",\n      className\n    )}\n    {...props}\n  />\n);\n\nexport const MeterTrack = ({\n  children,\n  className,\n  ...props\n}: ComponentProps<typeof BaseMeter.Track> & { children?: ReactNode }) => (\n  <BaseMeter.Track\n    className={cn(\n      \"h-2.5 overflow-hidden rounded-full border border-[var(--lilt-border)] bg-[var(--lilt-surface-2)]\",\n      className\n    )}\n    {...props}\n  >\n    {children}\n    <BaseMeter.Indicator className=\"h-full rounded-full bg-[var(--lilt-primary)] transition-[width] duration-[var(--duration-base)] ease-[var(--ease-out)]\" />\n  </BaseMeter.Track>\n);\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
