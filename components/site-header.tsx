@@ -12,7 +12,7 @@ export const SiteHeader = () => (
         href="/"
       >
         <LiltMark className="text-[var(--lilt-primary-text)]" size={22} />
-        Lilt UI
+        LiltUI
       </Link>
       <nav
         aria-label="Site"

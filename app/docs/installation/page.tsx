@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { CodeBlock } from "@/components/code-block";
 
 export const metadata: Metadata = {
-  title: "Installation — Lilt UI",
+  title: "Installation — LiltUI",
 };
 
 const registryConfig = `{
@@ -50,7 +50,7 @@ export default function InstallationPage() {
           Get Lilt into your project
         </h1>
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
-          Lilt UI works in any React project with Tailwind v4 — Next.js, Vite,
+          LiltUI works in any React project with Tailwind v4 — Next.js, Vite,
           anything the shadcn CLI supports.
         </p>
       </header>

@@ -8,7 +8,7 @@ import {
 } from "@/components/lilt-brand.generated";
 import { LILT_WAVE_PATH } from "@/components/lilt-logo";
 
-export const alt = "Lilt UI — a precise, warm, playful component registry";
+export const alt = "LiltUI — a precise, warm, playful component registry";
 export const size = { height: 630, width: 1200 };
 export const contentType = "image/png";
 

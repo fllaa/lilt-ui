@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/brand/lilt-lockup-dark.svg">
-    <img alt="Lilt UI" src="public/brand/lilt-lockup-light.svg" width="380">
+    <img alt="LiltUI" src="public/brand/lilt-lockup-light.svg" width="380">
   </picture>
 </p>
 
@@ -12,7 +12,7 @@
 
 ---
 
-Lilt UI is a [shadcn-compatible](https://ui.shadcn.com/docs/registry) component registry: copy-paste React components built on [Base UI](https://base-ui.com) primitives and Tailwind v4, styled through semantic `--lilt-*` design tokens. Warm paper surfaces, a pale-mint accent, borders instead of shadows, and one gentle lift of motion.
+LiltUI is a [shadcn-compatible](https://ui.shadcn.com/docs/registry) component registry: copy-paste React components built on [Base UI](https://base-ui.com) primitives and Tailwind v4, styled through semantic `--lilt-*` design tokens. Warm paper surfaces, a pale-mint accent, borders instead of shadows, and one gentle lift of motion.
 
 ## Usage
 

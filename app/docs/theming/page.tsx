@@ -4,7 +4,7 @@ import { CodeBlock } from "@/components/code-block";
 import tokens from "@/tokens/lilt.tokens.json";
 
 export const metadata: Metadata = {
-  title: "Theming — Lilt UI",
+  title: "Theming — LiltUI",
 };
 
 const rebrandSnippet = `:root {

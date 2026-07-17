@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "A precise, warm, playful component registry built on the Lilt design system.",
-    siteName: "Lilt UI",
-    title: "Lilt UI",
+    siteName: "LiltUI",
+    title: "LiltUI",
     type: "website",
     url: "/",
   },
-  title: "Lilt UI",
+  title: "LiltUI",
   twitter: {
     card: "summary_large_image",
   },

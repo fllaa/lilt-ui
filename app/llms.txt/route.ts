@@ -7,7 +7,7 @@ const BASE = registry.homepage;
 
 export const GET = () => {
   const lines = [
-    "# Lilt UI",
+    "# LiltUI",
     "",
     "> A shadcn-compatible React component registry built on the Lilt design system:",
     "> precise structure, warm paper surfaces, a swappable pale-mint accent, hand-drawn",
@@ -20,7 +20,7 @@ export const GET = () => {
     "",
     "## Docs",
     "",
-    `- [Introduction](${BASE}/docs): What Lilt UI is, how the registry works, and the design rules.`,
+    `- [Introduction](${BASE}/docs): What LiltUI is, how the registry works, and the design rules.`,
     `- [Installation](${BASE}/docs/installation): Point the shadcn CLI at the @lilt registry, fonts, and ThemeProvider setup.`,
     `- [Theming](${BASE}/docs/theming): Semantic --lilt-* design tokens for color, radius, motion, type, and elevation.`,
     "",

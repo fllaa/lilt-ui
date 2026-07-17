@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/registry/lilt/ui/button";
 
 export const metadata: Metadata = {
-  title: "Introduction — Lilt UI",
+  title: "Introduction — LiltUI",
 };
 
 const rules = [
@@ -24,10 +24,10 @@ export default function DocsPage() {
           Introduction
         </p>
         <h1 className="font-display text-4xl font-semibold tracking-[-0.035em]">
-          What is Lilt UI?
+          What is LiltUI?
         </h1>
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
-          Lilt UI is a shadcn-compatible component registry for the Lilt design
+          LiltUI is a shadcn-compatible component registry for the Lilt design
           language: precise structure, warm near-white and neutral-charcoal
           surfaces, a swappable pale-mint accent, hand-drawn icons, and
           restrained physical interaction.
@@ -74,7 +74,7 @@ export default function DocsPage() {
 
       <div className="flex flex-wrap gap-3">
         <Button icon="arrow" render={<Link href="/docs/installation" />}>
-          Install Lilt UI
+          Install LiltUI
         </Button>
         <Button render={<Link href="/docs/theming" />} variant="secondary">
           Explore the tokens

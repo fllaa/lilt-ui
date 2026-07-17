@@ -15,7 +15,7 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const { name } = await params;
   const entry = getDocEntry(name);
-  return { title: `${entry?.title ?? name} — Lilt UI` };
+  return { title: `${entry?.title ?? name} — LiltUI` };
 };
 
 const a11yNotes: Record<string, string[]> = {

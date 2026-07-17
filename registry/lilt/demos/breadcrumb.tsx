@@ -22,7 +22,7 @@ export default function BreadcrumbDemo() {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage>Lilt UI</BreadcrumbPage>
+          <BreadcrumbPage>LiltUI</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
