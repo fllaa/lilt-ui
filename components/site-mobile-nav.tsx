@@ -32,6 +32,7 @@ export const SiteMobileNav = () => {
     <Drawer onOpenChange={setOpen} open={open} side="left">
       <DrawerTrigger
         aria-label="Open navigation menu"
+        id="site-mobile-nav-trigger"
         className="inline-flex aspect-square min-h-10 items-center justify-center rounded-full border border-[var(--lilt-border-strong)] text-[var(--lilt-text)] outline-none transition-colors duration-[var(--duration-fast)] hover:bg-[var(--lilt-surface-2)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] md:hidden"
       >
         <MenuIcon size={18} />
