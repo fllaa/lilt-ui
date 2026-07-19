@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "meter",
   "title": "Meter",
-  "description": "A labeled readout of a value within a range — storage, quota, capacity. Mint fill, honest number.",
+  "description": "A labeled readout of a value within a range — storage, quota, capacity. Pine fill, honest number.",
   "dependencies": [
     "@base-ui/react"
   ],

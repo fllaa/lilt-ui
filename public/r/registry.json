@@ -7,7 +7,7 @@
       "name": "theme",
       "type": "registry:theme",
       "title": "Lilt Theme",
-      "description": "Lilt design tokens: warm paper surfaces, pale mint accent, role-based radii, restrained motion. Borders over shadows.",
+      "description": "Lilt design tokens: warm paper surfaces, deep pine accent with pale mint washes, role-based radii, restrained motion. Borders over shadows.",
       "cssVars": {
         "theme": {
           "font-display": "\"Space Grotesk\", \"DM Sans\", sans-serif",
@@ -35,7 +35,8 @@
           "lilt-button-hover": "#283029",
           "lilt-button-text": "#f7f8f3",
           "lilt-button-border": "#121713",
-          "lilt-primary": "#aeeacf",
+          "lilt-primary": "#167f55",
+          "lilt-primary-tint": "#aeeacf",
           "lilt-primary-soft": "#e3f7ed",
           "lilt-primary-text": "#164c35",
           "lilt-focus": "#167f55",
@@ -67,6 +68,7 @@
           "lilt-button-text": "#111612",
           "lilt-button-border": "#eef2ec",
           "lilt-primary": "#a5e5c6",
+          "lilt-primary-tint": "#a5e5c6",
           "lilt-primary-soft": "#1d3b2d",
           "lilt-primary-text": "#b9f0d3",
           "lilt-focus": "#a5e5c6",
@@ -99,7 +101,7 @@
             "text-rendering": "optimizeLegibility"
           },
           "::selection": {
-            "background": "var(--lilt-primary)",
+            "background": "var(--lilt-primary-tint)",
             "color": "var(--lilt-selection-text)"
           },
           "@media (prefers-reduced-motion: reduce)": {
@@ -124,7 +126,7 @@
             "left": "-0.03em",
             "height": "0.12em",
             "border-radius": "999px",
-            "background": "var(--lilt-primary)",
+            "background": "var(--lilt-primary-tint)",
             "content": "\"\"",
             "transform": "rotate(-1deg)"
           }
@@ -334,7 +336,7 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
-      "description": "Base UI switch: 48x28 pill track, mint when checked.",
+      "description": "Base UI switch: 48x28 pill track, pine when checked.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
@@ -514,7 +516,7 @@
       "name": "toggle",
       "type": "registry:ui",
       "title": "Toggle",
-      "description": "A pressed/unpressed button. Mint when on, honest aria-pressed underneath.",
+      "description": "A pressed/unpressed button. Pine when on, honest aria-pressed underneath.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
@@ -542,7 +544,7 @@
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
-      "description": "Single or range slider on native range inputs. Mint fill, 24px thumbs.",
+      "description": "Single or range slider on native range inputs. Pine fill, 24px thumbs.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [
@@ -762,7 +764,7 @@
       "name": "calendar",
       "type": "registry:ui",
       "title": "Calendar",
-      "description": "A month grid on react-day-picker: mint selections, soft mint ranges, bordered today. Single, multiple, or range.",
+      "description": "A month grid on react-day-picker: pine selections, soft mint ranges, bordered today. Single, multiple, or range.",
       "dependencies": ["react-day-picker@^9"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
@@ -1030,7 +1032,7 @@
       "name": "stepper",
       "type": "registry:ui",
       "title": "Stepper",
-      "description": "Numbered steps with mint checkmarks for the road already walked.",
+      "description": "Numbered steps with pine checkmarks for the road already walked.",
       "registryDependencies": ["@lilt/theme", "@lilt/utils", "@lilt/icons"],
       "files": [
         {
@@ -1056,7 +1058,7 @@
       "name": "meter",
       "type": "registry:ui",
       "title": "Meter",
-      "description": "A labeled readout of a value within a range — storage, quota, capacity. Mint fill, honest number.",
+      "description": "A labeled readout of a value within a range — storage, quota, capacity. Pine fill, honest number.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["@lilt/theme", "@lilt/utils"],
       "files": [

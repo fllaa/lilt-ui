@@ -35,7 +35,7 @@ export const DoodleUnderline = ({
       {children}
       <motion.span
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-[0.08em] -left-[0.03em] -right-[0.03em] h-[0.12em] origin-left rounded-full bg-[var(--lilt-primary)]"
+        className="pointer-events-none absolute -bottom-[0.08em] -left-[0.03em] -right-[0.03em] h-[0.12em] origin-left rounded-full bg-[var(--lilt-primary-tint)]"
         initial={{ rotate: -1, scaleX: 0 }}
         transition={{ delay, duration: DUR.expressive * 1.6, ease: EASE }}
         {...(trigger === "load"

@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme",
   "title": "Lilt Theme",
-  "description": "Lilt design tokens: warm paper surfaces, pale mint accent, role-based radii, restrained motion. Borders over shadows.",
+  "description": "Lilt design tokens: warm paper surfaces, deep pine accent with pale mint washes, role-based radii, restrained motion. Borders over shadows.",
   "cssVars": {
     "theme": {
       "font-display": "\"Space Grotesk\", \"DM Sans\", sans-serif",
@@ -30,7 +30,8 @@
       "lilt-button-hover": "#283029",
       "lilt-button-text": "#f7f8f3",
       "lilt-button-border": "#121713",
-      "lilt-primary": "#aeeacf",
+      "lilt-primary": "#167f55",
+      "lilt-primary-tint": "#aeeacf",
       "lilt-primary-soft": "#e3f7ed",
       "lilt-primary-text": "#164c35",
       "lilt-focus": "#167f55",
@@ -62,6 +63,7 @@
       "lilt-button-text": "#111612",
       "lilt-button-border": "#eef2ec",
       "lilt-primary": "#a5e5c6",
+      "lilt-primary-tint": "#a5e5c6",
       "lilt-primary-soft": "#1d3b2d",
       "lilt-primary-text": "#b9f0d3",
       "lilt-focus": "#a5e5c6",
@@ -94,7 +96,7 @@
         "text-rendering": "optimizeLegibility"
       },
       "::selection": {
-        "background": "var(--lilt-primary)",
+        "background": "var(--lilt-primary-tint)",
         "color": "var(--lilt-selection-text)"
       },
       "@media (prefers-reduced-motion: reduce)": {
@@ -119,7 +121,7 @@
         "left": "-0.03em",
         "height": "0.12em",
         "border-radius": "999px",
-        "background": "var(--lilt-primary)",
+        "background": "var(--lilt-primary-tint)",
         "content": "\"\"",
         "transform": "rotate(-1deg)"
       }

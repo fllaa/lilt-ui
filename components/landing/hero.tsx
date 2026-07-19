@@ -58,8 +58,8 @@ export const Hero = () => (
       >
         LiltUI is a shadcn-compatible registry of 63 copy-paste React
         components, built on Base UI and Tailwind v4 and dressed in warm paper
-        surfaces, hand-drawn icons, and a swappable mint accent. Yours to own,
-        edit, and rebrand.
+        surfaces, hand-drawn icons, and a swappable pine-and-mint accent. Yours
+        to own, edit, and rebrand.
       </Reveal>
 
       <Reveal

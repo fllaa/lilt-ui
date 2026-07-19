@@ -18,7 +18,7 @@ export default function PopoverDemo() {
       <PopoverContent>
         <PopoverTitle>Precision with a playful rhythm</PopoverTitle>
         <PopoverDescription>
-          Warm paper surfaces, a swappable mint accent, borders instead of
+          Warm paper surfaces, a swappable pine accent, borders instead of
           shadows, and one gentle 2px lift.
         </PopoverDescription>
       </PopoverContent>

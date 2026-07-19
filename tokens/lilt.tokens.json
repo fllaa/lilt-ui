@@ -10,6 +10,7 @@
       "charcoal": { "$type": "color", "$value": "#101411" },
       "mint": { "$type": "color", "$value": "#AEEACF" },
       "mintSoft": { "$type": "color", "$value": "#E3F7ED" },
+      "pine": { "$type": "color", "$value": "#167F55" },
       "peach": { "$type": "color", "$value": "#FFD0B5" },
       "yellow": { "$type": "color", "$value": "#F8E8A6" },
       "red": { "$type": "color", "$value": "#A62B3B" }
@@ -28,7 +29,8 @@
       "buttonHover": { "$type": "color", "$value": "#283029" },
       "buttonText": { "$type": "color", "$value": "#F7F8F3" },
       "buttonBorder": { "$type": "color", "$value": "#121713" },
-      "primary": { "$type": "color", "$value": "{color.primitive.mint}" },
+      "primary": { "$type": "color", "$value": "{color.primitive.pine}" },
+      "primaryTint": { "$type": "color", "$value": "{color.primitive.mint}" },
       "primarySoft": {
         "$type": "color",
         "$value": "{color.primitive.mintSoft}"
@@ -63,6 +65,7 @@
       "buttonText": { "$type": "color", "$value": "#111612" },
       "buttonBorder": { "$type": "color", "$value": "#EEF2EC" },
       "primary": { "$type": "color", "$value": "#A5E5C6" },
+      "primaryTint": { "$type": "color", "$value": "#A5E5C6" },
       "primarySoft": { "$type": "color", "$value": "#1D3B2D" },
       "primaryText": { "$type": "color", "$value": "#B9F0D3" },
       "focus": { "$type": "color", "$value": "#A5E5C6" },

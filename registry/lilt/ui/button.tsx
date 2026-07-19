@@ -14,7 +14,7 @@ const buttonVariants = {
     "border-[var(--lilt-button-border)] bg-[var(--lilt-button)] text-[var(--lilt-button-text)] hover:bg-[var(--lilt-button-hover)]",
   secondary:
     "border-[var(--lilt-border-strong)] bg-transparent text-[var(--lilt-text)] hover:bg-[var(--lilt-surface-2)]",
-  soft: "border-transparent bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)] hover:bg-[var(--lilt-primary)] hover:text-[var(--lilt-selection-text)]",
+  soft: "border-transparent bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)] hover:bg-[var(--lilt-primary-tint)] hover:text-[var(--lilt-selection-text)]",
 };
 
 const buttonSizes = {

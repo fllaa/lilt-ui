@@ -30,7 +30,7 @@ export default function HoverCardDemo() {
           </div>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-[var(--lilt-text-muted)]">
-          A design language with a spring in its step. Warm paper, one mint
+          A design language with a spring in its step. Warm paper, one pine
           accent, borders over shadows — always.
         </p>
       </HoverCardContent>

@@ -29,7 +29,7 @@ export default function DocsPage() {
         <p className="text-lg leading-relaxed text-[var(--lilt-text-muted)]">
           LiltUI is a shadcn-compatible component registry for the Lilt design
           language: precise structure, warm near-white and neutral-charcoal
-          surfaces, a swappable pale-mint accent, hand-drawn icons, and
+          surfaces, a swappable pine-and-mint accent, hand-drawn icons, and
           restrained physical interaction.
         </p>
       </header>

@@ -12,7 +12,7 @@
 
 ---
 
-LiltUI is a [shadcn-compatible](https://ui.shadcn.com/docs/registry) component registry: copy-paste React components built on [Base UI](https://base-ui.com) primitives and Tailwind v4, styled through semantic `--lilt-*` design tokens. Warm paper surfaces, a pale-mint accent, borders instead of shadows, and one gentle lift of motion.
+LiltUI is a [shadcn-compatible](https://ui.shadcn.com/docs/registry) component registry: copy-paste React components built on [Base UI](https://base-ui.com) primitives and Tailwind v4, styled through semantic `--lilt-*` design tokens. Warm paper surfaces, a deep-pine accent with pale-mint washes, borders instead of shadows, and one gentle lift of motion.
 
 ## Usage
 

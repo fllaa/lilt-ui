@@ -20,15 +20,19 @@ const swatches: { className: string; name: string; token: string }[] = [
   { className: "bg-[var(--lilt-text)]", name: "Text", token: "--lilt-text" },
   {
     className: "bg-[var(--lilt-primary)]",
-    name: "Mint",
+    name: "Pine",
     token: "--lilt-primary",
+  },
+  {
+    className: "bg-[var(--lilt-primary-tint)]",
+    name: "Mint",
+    token: "--lilt-primary-tint",
   },
   {
     className: "bg-[var(--lilt-primary-soft)]",
     name: "Mint soft",
     token: "--lilt-primary-soft",
   },
-  { className: "bg-[var(--lilt-focus)]", name: "Focus", token: "--lilt-focus" },
   {
     className: "bg-[var(--lilt-warning)]",
     name: "Warning",
@@ -71,18 +75,19 @@ const swatches: { className: string; name: string; token: string }[] = [
   },
 ];
 
-const rebrandSnippet = `/* Rebrand: replace these four tokens, keep everything else. */
+const rebrandSnippet = `/* Rebrand: replace these five tokens, keep everything else. */
 :root {
-  --lilt-primary: #aeeacf;       /* swap the mint for your brand */
-  --lilt-primary-soft: #e3f7ed;  /* soft fills & badges          */
-  --lilt-primary-text: #164c35;  /* text on soft fills           */
-  --lilt-focus: #167f55;         /* focus rings                  */
+  --lilt-primary: #167f55;       /* strong fills: switch, slider, toggle */
+  --lilt-primary-tint: #aeeacf;  /* pale wash: selection, soft hovers    */
+  --lilt-primary-soft: #e3f7ed;  /* soft fills & badges                  */
+  --lilt-primary-text: #164c35;  /* text on soft fills                   */
+  --lilt-focus: #167f55;         /* focus rings                          */
 }`;
 
 export const Theming = () => (
   <Section id="theming">
     <SectionHeading
-      description="Components read semantic --lilt-* variables, never raw hex. Warm paper surfaces, AAA-minded text, and a pale-mint accent that stays a guest — swap four tokens and the whole registry follows you into a new brand."
+      description="Components read semantic --lilt-* variables, never raw hex. Warm paper surfaces, AAA-minded text, a deep-pine accent, and a pale-mint wash that stays a guest. Swap five tokens and the whole registry follows you into a new brand."
       eyebrow="Theming"
       title="Mint is a guest, not a landlord"
     />
@@ -124,12 +129,12 @@ export const Theming = () => (
     >
       <div className="grid gap-4">
         <h3 className="font-display text-xl font-semibold tracking-[-0.02em]">
-          Rebrand in four tokens
+          Rebrand in five tokens
         </h3>
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
-          Every accent in LiltUI traces back to the same four variables, in both
+          Every accent in LiltUI traces back to the same five variables, in both
           light and dark. Override them once and buttons, badges, focus rings,
-          links, and charts all shift together — no component edits, no theme
+          links, and charts all shift together. No component edits, no theme
           fork to maintain.
         </p>
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">

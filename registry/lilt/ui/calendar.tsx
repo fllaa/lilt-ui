@@ -37,9 +37,9 @@ export const CalendarDayButton = ({
     <button
       className={cn(
         "flex aspect-square size-10 items-center justify-center rounded-full border border-transparent text-sm font-medium text-[var(--lilt-text)] outline-none transition-colors duration-[var(--duration-fast)] ease-[var(--ease-out)] hover:bg-[var(--lilt-surface-2)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)] disabled:pointer-events-none disabled:opacity-45",
-        "data-[selected-single=true]:bg-[var(--lilt-primary)] data-[selected-single=true]:text-[var(--lilt-selection-text)] data-[selected-single=true]:hover:bg-[var(--lilt-primary)]",
-        "data-[range-start=true]:bg-[var(--lilt-primary)] data-[range-start=true]:text-[var(--lilt-selection-text)] data-[range-start=true]:hover:bg-[var(--lilt-primary)]",
-        "data-[range-end=true]:bg-[var(--lilt-primary)] data-[range-end=true]:text-[var(--lilt-selection-text)] data-[range-end=true]:hover:bg-[var(--lilt-primary)]",
+        "data-[selected-single=true]:bg-[var(--lilt-primary)] data-[selected-single=true]:text-[var(--lilt-button-text)] data-[selected-single=true]:hover:bg-[var(--lilt-primary)]",
+        "data-[range-start=true]:bg-[var(--lilt-primary)] data-[range-start=true]:text-[var(--lilt-button-text)] data-[range-start=true]:hover:bg-[var(--lilt-primary)]",
+        "data-[range-end=true]:bg-[var(--lilt-primary)] data-[range-end=true]:text-[var(--lilt-button-text)] data-[range-end=true]:hover:bg-[var(--lilt-primary)]",
         "data-[range-middle=true]:rounded-none data-[range-middle=true]:bg-transparent data-[range-middle=true]:text-[var(--lilt-primary-text)] data-[range-middle=true]:hover:bg-transparent",
         modifiers.today &&
           !modifiers.selected &&
@@ -127,7 +127,7 @@ export const Calendar = ({
         ),
         range_end: cn(
           // Soft band continues from the middle days and caps at the cell's
-          // outer edge; the cap hides behind the mint circle on the button.
+          // outer edge; the cap hides behind the selected circle on the button.
           "rounded-r-full bg-[var(--lilt-primary-soft)]",
           defaultClassNames.range_end
         ),

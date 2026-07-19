@@ -11,7 +11,7 @@ import { Section, SectionHeading } from "./section";
 const faqs: { answer: string; question: string }[] = [
   {
     answer:
-      "A shadcn-compatible component registry for the Lilt design language: 63 copy-paste React components built on Base UI and Tailwind v4, with warm paper surfaces, a swappable mint accent, hand-drawn icons, and restrained motion.",
+      "A shadcn-compatible component registry for the Lilt design language: 63 copy-paste React components built on Base UI and Tailwind v4, with warm paper surfaces, a swappable pine-and-mint accent, hand-drawn icons, and restrained motion.",
     question: "What exactly is LiltUI?",
   },
   {
@@ -31,8 +31,8 @@ const faqs: { answer: string; question: string }[] = [
   },
   {
     answer:
-      "Override four semantic tokens — --lilt-primary, --lilt-primary-soft, --lilt-primary-text, and --lilt-focus — in both light and dark. Every component follows along; no per-component edits.",
-    question: "How do I change the mint accent?",
+      "Override five semantic tokens (--lilt-primary, --lilt-primary-tint, --lilt-primary-soft, --lilt-primary-text, and --lilt-focus) in both light and dark. Every component follows along; no per-component edits.",
+    question: "How do I change the accent?",
   },
   {
     answer:

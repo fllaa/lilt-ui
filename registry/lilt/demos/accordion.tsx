@@ -11,10 +11,10 @@ export default function AccordionDemo() {
   return (
     <Accordion className="w-full max-w-md" multiple={false}>
       <AccordionItem>
-        <AccordionTrigger>Can I swap the mint accent?</AccordionTrigger>
+        <AccordionTrigger>Can I swap the pine accent?</AccordionTrigger>
         <AccordionPanel>
-          Yes — mint is a default, not a commitment. Replace the semantic
-          primary tokens and every component follows.
+          Yes. Pine and mint are defaults, not a commitment. Replace the
+          semantic primary tokens and every component follows.
         </AccordionPanel>
       </AccordionItem>
       <AccordionItem>

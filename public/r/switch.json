@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "switch",
   "title": "Switch",
-  "description": "Base UI switch: 48x28 pill track, mint when checked.",
+  "description": "Base UI switch: 48x28 pill track, pine when checked.",
   "dependencies": [
     "@base-ui/react"
   ],

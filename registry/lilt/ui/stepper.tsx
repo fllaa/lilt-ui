@@ -156,7 +156,7 @@ export const StepperTrigger = ({
 
 const stepperIndicatorStateClasses: Record<StepState, string> = {
   completed:
-    "border-transparent bg-[var(--lilt-primary)] text-[var(--lilt-selection-text)]",
+    "border-transparent bg-[var(--lilt-primary)] text-[var(--lilt-button-text)]",
   current: "border-2 border-[var(--lilt-focus)] bg-[var(--lilt-surface)]",
   upcoming:
     "border-[var(--lilt-border)] bg-[var(--lilt-surface-2)] text-[var(--lilt-text-subtle)]",

@@ -8,13 +8,15 @@ export const metadata: Metadata = {
 };
 
 const rebrandSnippet = `:root {
-  --lilt-primary: #c7b9ff;      /* your accent */
+  --lilt-primary: #5b46b8;      /* your accent, deep enough to fill controls */
+  --lilt-primary-tint: #c7b9ff; /* its pale wash: selection, soft hovers */
   --lilt-primary-soft: #efeaff; /* its soft tint */
   --lilt-primary-text: #3a2d73; /* AAA text on the tint */
   --lilt-focus: #5b46b8;        /* focus ring, AA on canvas */
 }
 .dark {
   --lilt-primary: #b6a6f5;
+  --lilt-primary-tint: #b6a6f5;
   --lilt-primary-soft: #2c2352;
   --lilt-primary-text: #cfc3ff;
   --lilt-focus: #b6a6f5;
@@ -105,9 +107,10 @@ export default function ThemingPage() {
           Rebranding: mint is a guest
         </h2>
         <p className="leading-relaxed text-[var(--lilt-text-muted)]">
-          The pale mint accent is a swappable default. To rebrand, replace four
-          semantic values per mode and keep the contrast rules — every button,
-          badge, focus ring, and selection follows automatically:
+          The pine accent and its mint wash are swappable defaults. To rebrand,
+          replace five semantic values per mode and keep the contrast rules: a
+          deep primary that can fill controls in light mode, a pale one in dark.
+          Every button, badge, focus ring, and selection follows automatically:
         </p>
         <CodeBlock code={rebrandSnippet} lang="css" />
       </section>

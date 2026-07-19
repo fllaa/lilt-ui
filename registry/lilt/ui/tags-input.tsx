@@ -116,7 +116,7 @@ export const TagsInput = ({
           {tag}
           <button
             aria-label={`Remove ${tag}`}
-            className="-mr-0.5 flex size-4 items-center justify-center rounded-full outline-none transition-colors duration-[var(--duration-fast)] ease-[var(--ease-out)] hover:bg-[var(--lilt-primary)] hover:text-[var(--lilt-selection-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
+            className="-mr-0.5 flex size-4 items-center justify-center rounded-full outline-none transition-colors duration-[var(--duration-fast)] ease-[var(--ease-out)] hover:bg-[var(--lilt-primary-tint)] hover:text-[var(--lilt-selection-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
             disabled={disabled}
             onClick={() => removeTag(tag)}
             type="button"
