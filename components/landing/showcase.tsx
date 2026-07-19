@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
+import { ParallaxItem } from "@/components/landing/motion/parallax";
+import { Reveal } from "@/components/landing/motion/reveal";
 import AvatarDemo from "@/registry/lilt/demos/avatar";
 import BadgeDemo from "@/registry/lilt/demos/badge";
 import ButtonDemo from "@/registry/lilt/demos/button";
@@ -30,7 +32,7 @@ const ShowcaseFrame = ({
 }) => (
   <figure
     className={cn(
-      "mb-4 flex break-inside-avoid flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--lilt-border)] bg-[var(--lilt-canvas)]",
+      "flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-[var(--lilt-border)] bg-[var(--lilt-canvas)]",
       className
     )}
   >
@@ -51,6 +53,32 @@ const ShowcaseFrame = ({
   </figure>
 );
 
+const frames: { demo: ReactNode; href: string; name: string }[] = [
+  { demo: <ChartDemo />, href: "/docs/components/chart", name: "Chart" },
+  { demo: <ButtonDemo />, href: "/docs/components/button", name: "Button" },
+  {
+    demo: <CalendarDemo />,
+    href: "/docs/components/calendar",
+    name: "Calendar",
+  },
+  { demo: <BadgeDemo />, href: "/docs/components/badge", name: "Badge" },
+  { demo: <CommandDemo />, href: "/docs/components/command", name: "Command" },
+  { demo: <SliderDemo />, href: "/docs/components/slider", name: "Slider" },
+  { demo: <RatingDemo />, href: "/docs/components/rating", name: "Rating" },
+  { demo: <MeterDemo />, href: "/docs/components/meter", name: "Meter" },
+  { demo: <AvatarDemo />, href: "/docs/components/avatar", name: "Avatar" },
+  { demo: <SwitchDemo />, href: "/docs/components/switch", name: "Switch" },
+  {
+    demo: <TimelineDemo />,
+    href: "/docs/components/timeline",
+    name: "Timeline",
+  },
+];
+
+// Gentle, alternating scroll drift so the columns feel like they breathe at
+// slightly different speeds. Kept small so nothing reads as "floating".
+const drift = [8, -5, 3];
+
 export const Showcase = () => (
   <Section className="bg-[var(--lilt-surface)]" id="showcase">
     <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
@@ -59,52 +87,34 @@ export const Showcase = () => (
         eyebrow="Live, not screenshots"
         title="Sixty-three components, one gentle rhythm"
       />
-      <Link
-        className="group inline-flex shrink-0 items-center gap-2 rounded-full font-semibold text-[var(--lilt-text)] outline-none transition-colors hover:text-[var(--lilt-primary-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
-        href="/docs/components/button"
-      >
-        Browse all 63
-        <ArrowIcon
-          className="transition-transform group-hover:translate-x-0.5"
-          size={19}
-        />
-      </Link>
+      <Reveal as="div" className="shrink-0" delay={0.1}>
+        <Link
+          className="group inline-flex items-center gap-2 rounded-full font-semibold text-[var(--lilt-text)] outline-none transition-colors hover:text-[var(--lilt-primary-text)] focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
+          href="/docs/components/button"
+        >
+          Browse all 63
+          <ArrowIcon
+            className="transition-transform group-hover:translate-x-0.5"
+            size={19}
+          />
+        </Link>
+      </Reveal>
     </div>
 
     <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-      <ShowcaseFrame href="/docs/components/chart" name="Chart">
-        <ChartDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/button" name="Button">
-        <ButtonDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/calendar" name="Calendar">
-        <CalendarDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/badge" name="Badge">
-        <BadgeDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/command" name="Command">
-        <CommandDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/slider" name="Slider">
-        <SliderDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/rating" name="Rating">
-        <RatingDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/meter" name="Meter">
-        <MeterDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/avatar" name="Avatar">
-        <AvatarDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/switch" name="Switch">
-        <SwitchDemo />
-      </ShowcaseFrame>
-      <ShowcaseFrame href="/docs/components/timeline" name="Timeline">
-        <TimelineDemo />
-      </ShowcaseFrame>
+      {frames.map((frame, index) => (
+        <ParallaxItem
+          className="mb-4 break-inside-avoid"
+          key={frame.name}
+          offset={drift[index % drift.length]}
+        >
+          <Reveal amount={0.25} delay={(index % 3) * 0.05}>
+            <ShowcaseFrame href={frame.href} name={frame.name}>
+              {frame.demo}
+            </ShowcaseFrame>
+          </Reveal>
+        </ParallaxItem>
+      ))}
     </div>
   </Section>
 );

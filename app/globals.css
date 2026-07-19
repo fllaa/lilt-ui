@@ -21,3 +21,28 @@
 .dark .shiki span {
   color: var(--shiki-dark);
 }
+
+/* Landing marquee (components/landing/motion/marquee.tsx). The track holds two
+   copies of the content, so -50% is one seamless loop. */
+@keyframes lilt-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Site header entrance. CSS (not a motion component) so it does not sit above
+   the Base UI useId consumers in the header and cause a hydration mismatch.
+   The reduced-motion block in lilt.css neutralizes the duration. */
+@keyframes lilt-header-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

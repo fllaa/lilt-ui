@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { Reveal } from "@/components/landing/motion/reveal";
 import { LiltMark } from "@/components/lilt-logo";
 import { GithubIcon } from "@/registry/lilt/ui/icons";
 
@@ -35,7 +36,11 @@ const linkClass =
 
 export const SiteFooter = () => (
   <footer className="border-t border-[var(--lilt-border)]">
-    <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-14 sm:grid-cols-[1.6fr_1fr_1fr]">
+    <Reveal
+      as="div"
+      className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-14 sm:grid-cols-[1.6fr_1fr_1fr]"
+      y={12}
+    >
       <div className="grid content-start gap-3">
         <Link
           className="inline-flex w-fit items-center gap-2 rounded-full font-display text-lg font-semibold tracking-[-0.02em] outline-none focus-visible:ring-2 focus-visible:ring-[var(--lilt-focus)]"
@@ -77,7 +82,7 @@ export const SiteFooter = () => (
           )}
         </nav>
       ))}
-    </div>
+    </Reveal>
     <div className="border-t border-[var(--lilt-border)]">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 py-6 text-sm text-[var(--lilt-text-muted)]">
         <p>Lilt — a precise, warm, playful design language.</p>

@@ -1,10 +1,9 @@
 import { CodeBlock } from "@/components/code-block";
+import { Stagger, StaggerItem } from "@/components/landing/motion/stagger";
 import {
-  Timeline,
   TimelineConnector,
   TimelineContent,
   TimelineDot,
-  TimelineItem,
   TimelineTitle,
 } from "@/registry/lilt/ui/timeline";
 
@@ -50,9 +49,18 @@ export const GettingStarted = () => (
       eyebrow="Getting started"
       title="Install what you want, own what you keep"
     />
-    <Timeline className="mt-12 max-w-2xl">
+    <Stagger
+      amount={0.15}
+      as="ol"
+      className="mt-12 flex max-w-2xl flex-col"
+      gap={0.12}
+    >
       {steps.map((step, index) => (
-        <TimelineItem key={step.title}>
+        <StaggerItem
+          as="li"
+          className="relative flex gap-4 pb-8 last:pb-0"
+          key={step.title}
+        >
           <TimelineDot variant="mint" />
           {index < steps.length - 1 ? <TimelineConnector /> : null}
           <TimelineContent className="gap-3 pb-10">
@@ -64,8 +72,8 @@ export const GettingStarted = () => (
             </p>
             <CodeBlock code={step.code} lang={step.lang} />
           </TimelineContent>
-        </TimelineItem>
+        </StaggerItem>
       ))}
-    </Timeline>
+    </Stagger>
   </Section>
 );

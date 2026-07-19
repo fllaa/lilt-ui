@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 
+import { Stagger, StaggerItem } from "@/components/landing/motion/stagger";
 import { Card, CardDescription, CardTitle } from "@/registry/lilt/ui/card";
 import {
   CheckIcon,
@@ -63,19 +64,25 @@ export const FeatureGrid = () => (
       eyebrow="Why LiltUI"
       title="Opinionated where it counts, yours everywhere else"
     />
-    <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <Stagger
+      as="div"
+      className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      gap={0.08}
+    >
       {features.map((feature) => {
         const Icon = feature.icon;
         return (
-          <Card className="grid gap-3" interactive key={feature.title}>
-            <span className="flex size-10 items-center justify-center rounded-[var(--radius-control-sm)] bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)]">
-              <Icon size={20} />
-            </span>
-            <CardTitle>{feature.title}</CardTitle>
-            <CardDescription>{feature.description}</CardDescription>
-          </Card>
+          <StaggerItem as="div" className="h-full" key={feature.title}>
+            <Card className="grid h-full gap-3" interactive>
+              <span className="flex size-10 items-center justify-center rounded-[var(--radius-control-sm)] bg-[var(--lilt-primary-soft)] text-[var(--lilt-primary-text)]">
+                <Icon size={20} />
+              </span>
+              <CardTitle>{feature.title}</CardTitle>
+              <CardDescription>{feature.description}</CardDescription>
+            </Card>
+          </StaggerItem>
         );
       })}
-    </div>
+    </Stagger>
   </Section>
 );

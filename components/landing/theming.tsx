@@ -1,4 +1,7 @@
 import { CodeBlock } from "@/components/code-block";
+import { Reveal } from "@/components/landing/motion/reveal";
+import { Stagger, StaggerItem } from "@/components/landing/motion/stagger";
+import { popItem } from "@/components/landing/motion/variants";
 import { cn } from "@/registry/lilt/lib/utils";
 
 import { Section, SectionHeading } from "./section";
@@ -84,9 +87,19 @@ export const Theming = () => (
       title="Mint is a guest, not a landlord"
     />
 
-    <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
+    <Stagger
+      amount={0.2}
+      as="div"
+      className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7"
+      gap={0.04}
+    >
       {swatches.map((swatch) => (
-        <div className="grid gap-2" key={swatch.token}>
+        <StaggerItem
+          as="div"
+          className="grid gap-2"
+          key={swatch.token}
+          variants={popItem}
+        >
           <span
             className={cn(
               "h-14 rounded-[var(--radius-control)] border border-[var(--lilt-border)]",
@@ -101,11 +114,14 @@ export const Theming = () => (
               {swatch.token}
             </code>
           </div>
-        </div>
+        </StaggerItem>
       ))}
-    </div>
+    </Stagger>
 
-    <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-center">
+    <Reveal
+      as="div"
+      className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-center"
+    >
       <div className="grid gap-4">
         <h3 className="font-display text-xl font-semibold tracking-[-0.02em]">
           Rebrand in four tokens
@@ -122,6 +138,6 @@ export const Theming = () => (
         </p>
       </div>
       <CodeBlock code={rebrandSnippet} lang="css" />
-    </div>
+    </Reveal>
   </Section>
 );

@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/landing/motion/reveal";
 import {
   Accordion,
   AccordionItem,
@@ -52,13 +53,15 @@ export const Faq = () => (
       eyebrow="FAQ"
       title="Questions, answered plainly"
     />
-    <Accordion className="mt-10 max-w-3xl" multiple={false}>
-      {faqs.map((faq) => (
-        <AccordionItem key={faq.question}>
-          <AccordionTrigger>{faq.question}</AccordionTrigger>
-          <AccordionPanel>{faq.answer}</AccordionPanel>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <Reveal as="div" className="mt-10 max-w-3xl">
+      <Accordion multiple={false}>
+        {faqs.map((faq) => (
+          <AccordionItem key={faq.question}>
+            <AccordionTrigger>{faq.question}</AccordionTrigger>
+            <AccordionPanel>{faq.answer}</AccordionPanel>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Reveal>
   </Section>
 );

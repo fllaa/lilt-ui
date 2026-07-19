@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { cn } from "@/registry/lilt/lib/utils";
 import { Badge } from "@/registry/lilt/ui/badge";
 
+import { Reveal } from "./motion/reveal";
+
 /**
  * Full-bleed landing section: a top border for the divider rhythm, an inner
  * max-w-6xl container, and consistent vertical spacing. Pass a background via
@@ -38,7 +40,7 @@ export const SectionHeading = ({
   eyebrow: string;
   title: ReactNode;
 }) => (
-  <div className={cn("grid gap-4", className)}>
+  <Reveal as="div" className={cn("grid gap-4", className)}>
     <Badge className="w-fit" variant="outline">
       {eyebrow}
     </Badge>
@@ -50,5 +52,5 @@ export const SectionHeading = ({
         {description}
       </p>
     ) : null}
-  </div>
+  </Reveal>
 );
