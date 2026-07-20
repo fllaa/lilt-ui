@@ -292,6 +292,18 @@ export const FileIcon = (props: IconProps) => (
   </IconBase>
 );
 
+export const FolderIcon = (props: IconProps) => (
+  <IconBase {...props}>
+    <path
+      d="M3.4 6.5c0-.6.5-1.1 1.1-1.1h4.1c.35 0 .68.16.88.44l1.42 1.96h7.6c.6 0 1.1.5 1.1 1.1v9.5c0 .6-.5 1.1-1.1 1.1H4.5c-.6 0-1.1-.5-1.1-1.1V6.5Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.65"
+    />
+  </IconBase>
+);
+
 export const GithubIcon = (props: IconProps) => (
   <IconBase {...props}>
     <path

@@ -71,6 +71,7 @@ const packByName: Record<string, string> = {
   "toggle-group": "Form",
   toolbar: "Structure",
   tooltip: "Overlay",
+  tree: "Structure",
 };
 
 const packOrder = ["Core", "Form", "Overlay", "Display", "Structure", "Data"];

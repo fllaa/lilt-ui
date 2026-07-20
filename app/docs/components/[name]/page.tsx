@@ -202,6 +202,12 @@ const a11yNotes: Record<string, string[]> = {
     "Disabled items stay focusable by default so shortcuts stay discoverable; give the bar an aria-label.",
   ],
   tooltip: ["Appears on focus as well as hover, and never traps the pointer."],
+  tree: [
+    "One tab stop for the whole tree: arrows walk it, Right opens a branch, Left closes or climbs, and typing jumps by name.",
+    "Single-select trees announce via aria-selected; turn on multiSelect or checkboxSelection and they switch to aria-checked, never both.",
+    "Alt+Shift+arrows reorder without a mouse — dragging is never the only way — and every move is announced politely.",
+    "Give the tree an aria-label; the pattern requires a named tree and nothing else supplies the name.",
+  ],
 };
 
 export default async function ComponentPage({

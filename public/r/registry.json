@@ -1081,6 +1081,28 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "tree",
+      "type": "registry:ui",
+      "title": "Tree",
+      "description": "Folders that open, rows that drag, checkboxes that tell the truth about what's underneath.",
+      "registryDependencies": [
+        "@lilt/theme",
+        "@lilt/utils",
+        "@lilt/icons",
+        "@lilt/spinner"
+      ],
+      "files": [
+        {
+          "path": "registry/lilt/ui/tree.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/lilt/lib/tree.ts",
+          "type": "registry:lib"
+        }
+      ]
     }
   ]
 }

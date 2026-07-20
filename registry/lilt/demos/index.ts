@@ -63,6 +63,7 @@ import ToggleDemo from "./toggle";
 import ToggleGroupDemo from "./toggle-group";
 import ToolbarDemo from "./toolbar";
 import TooltipDemo from "./tooltip";
+import TreeDemo from "./tree";
 
 export const demos: Record<string, ComponentType> = {
   accordion: AccordionDemo,
@@ -128,4 +129,5 @@ export const demos: Record<string, ComponentType> = {
   "toggle-group": ToggleGroupDemo,
   toolbar: ToolbarDemo,
   tooltip: TooltipDemo,
+  tree: TreeDemo,
 };
